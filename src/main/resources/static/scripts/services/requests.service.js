@@ -15,4 +15,16 @@ class RequestService {
     GetLibrary(callback) {
         $.get(this.Request("library"), callback);
     }
+
+    PlayFile(fileName) {
+        return $.get(this.Request("play", fileName), () => {});
+    }
+
+    PlayPrevious() {
+        return $.get(this.Request("play/previous"), () => {});
+    }
+
+    PlayNext() {
+        return $.get(this.Request("play/next"), () => {});
+    }
 }

@@ -1,4 +1,3 @@
-import business.Status;
 import business.library.Library;
 import business.player.PlayList;
 import business.player.Player;
@@ -8,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.util.concurrent.TimeUnit;
+
+import static business.Status.SetStatus;
 
 @SpringBootApplication
 @ComponentScan({"controllers"})
@@ -55,11 +56,5 @@ public class Main {
             // Some playlist error... ehh?
             e.printStackTrace();
         }
-    }
-
-    /* Utils */
-    private static void SetStatus(String status) {
-        System.out.println(status);
-        Status.status = status;
     }
 }

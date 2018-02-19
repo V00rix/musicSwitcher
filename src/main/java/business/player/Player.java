@@ -1,5 +1,6 @@
 package business.player;
 
+import business.Status;
 import business.library.Library;
 import javafx.application.Application;
 import javafx.beans.property.ReadOnlyObjectProperty;
@@ -12,16 +13,20 @@ import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static business.Status.SetStatus;
+
 public class Player extends Application {
     private static MediaPlayer player;
     private static Duration seekLocation = new Duration(0);
+    private static String fileName;
 
     public static void SetFile(File file) {
         SetFile(file.toURI().toString());
     }
 
     public static void SetFile(String fileUri) {
-        System.out.println("File changed: " + fileUri);
+        SetStatus("File changed: " + fileUri);
+        fileName = fileUri;
         Media audio = new Media(fileUri);
         player = new MediaPlayer(audio);
     }
@@ -29,6 +34,7 @@ public class Player extends Application {
     public static void Play() {
         if (player != null) {
             player.seek(seekLocation);
+            SetStatus("Playing: " + fileName);
             player.play();
         }
     }
@@ -36,6 +42,7 @@ public class Player extends Application {
     public static void Stop() {
         if (player != null) {
             seekLocation = new Duration(0);
+            SetStatus("Ready to play music");
             player.stop();
         }
     }
@@ -43,12 +50,15 @@ public class Player extends Application {
     public static void Pause() {
         if (player != null) {
             seekLocation = player.getCurrentTime();
+            SetStatus("Paused: " + fileName);
             player.pause();
         }
     }
 
     @Override
     public void start(Stage primaryStage) {
-
+        // todo: well, remember the TASK stuff you were talking about?
+        // todo: so you set this thing down below
+        SetStatus("Ready to play music");
     }
 }

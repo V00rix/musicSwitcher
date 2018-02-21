@@ -6,53 +6,52 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import java.io.IOException;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
-
-import static business.Status.SetStatus;
-import static business.Status.playerLatch;
+import static business.utiliy.Status.SetStatus;
+import static business.utiliy.Status.playerLatch;
+import static business.utiliy.TimeTrack.Track;
 
 @SpringBootApplication
 @ComponentScan({"controllers"})
 public class Main {
-    public static void main(String[] args) throws InterruptedException, IOException {
-        // Launch REST services
+    public static void main(String[] args) throws Exception {
+        // 1. Launch REST services
         SpringApplication.run(Main.class, args);
         SetStatus("Spring application launched");
 
-        // Get library from cached library
-        // todo
-
-        // Assemble library
-        Library library = new Library("C:/Users/vlado/Music");
-        Library.files = library.ListFilesRecursively(null, "mp3");
-
-        SetStatus("Library read");
-
-        // Get Metadata, sort
-        for (int i = 0; i < Library.files.length - 1; i++) {
-//            Library.GetMetadata(Library.files[i]);
-        }
-
-        // Launch player thread
+        // 2. Launch player thread
         Runnable task = () -> {
             SetStatus("Launching player");
             Application.launch(Player.class, args);
         };
-
         Thread thread = new Thread(task);
         thread.start();
 
-        playerLatch.await();
+        // 3. Initialize library
+        Library library = new Library("C:/Users/vlado/Music");
 
-        // Set basic playlist
-        try {
-            PlayList.SetList(Library.files);
-            SetStatus("Basic playlist set");
-        } catch (Exception e) {
-            // Some playlist error... ehh?
-            e.printStackTrace();
-        }
+        // 4. Read cache
+        Track(() -> {
+            library.ReadCache("app_data/metadata");
+            return null;
+        }, "Reading Cache");
+
+        // 5. Set playlist
+        playerLatch.await();
+        PlayList.SetList(Library.files);
+
+        // 6. Update library etc.
+        Track(() -> {
+            library.UpdateFiles();
+            return null;
+        }, "Updating library");
+
+        // 7. Update playlist
+        PlayList.SetList(Library.files);
+
+        // 8. Update cache file
+        Track(() -> {
+            library.SaveCache("app_data/metadata");
+            return null;
+        }, "Saving Cache");
     }
 }

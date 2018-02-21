@@ -1,22 +1,15 @@
 package business.player;
 
-import business.Status;
-import business.library.Library;
 import javafx.application.Application;
-import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.File;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
-import static business.Status.SetStatus;
-import static business.Status.playerLatch;
+import static business.utiliy.Status.SetStatus;
+import static business.utiliy.Status.playerLatch;
 
 public class Player extends Application {
     private static MediaPlayer player;

@@ -1,6 +1,6 @@
 package controllers;
 
-import business.Status;
+import business.utiliy.Status;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -1,15 +1,17 @@
 package business.player;
 
-import business.library.Library;
+import models.AudioFile;
 
-import java.io.File;
+import java.util.ArrayList;
+
+import static business.utiliy.Status.SetStatus;
 
 /**
  *
  */
 public abstract class PlayList {
-    private static File[] files;
-    private static File currentFile;
+    private static ArrayList<AudioFile> files;
+    private static AudioFile currentFile;
     private static int currentFileIndex;
     private static boolean playing = false;
 
@@ -18,16 +20,18 @@ public abstract class PlayList {
      * @param fileList Files for play queue
      * @throws Exception Some exception???
      */
-    public static void SetList(File[] fileList) throws Exception {
-        if (fileList == null || fileList.length < 1) {
+    public static void SetList(ArrayList<AudioFile> fileList) throws Exception {
+        if (fileList == null || fileList.size() < 1) {
             throw new Exception("File list was not initialized or is empty!");
         }
         files = fileList;
 
         currentFileIndex = 0;
-        currentFile = files[currentFileIndex];
+        currentFile = files.get(currentFileIndex);
 
-        Player.SetFile(currentFile);
+        Player.SetFile(currentFile.file);
+
+        SetStatus("Basic playlist set");
     }
 
     /**
@@ -48,9 +52,9 @@ public abstract class PlayList {
      */
     public static void PlayNext() {
         Player.Stop();
-        currentFileIndex = currentFileIndex + 1 < files.length ? currentFileIndex + 1 : 0;
-        currentFile = files[currentFileIndex];
-        Player.SetFile(currentFile);
+        currentFileIndex = currentFileIndex + 1 < files.size() ? currentFileIndex + 1 : 0;
+        currentFile = files.get(currentFileIndex);
+        Player.SetFile(currentFile.file);
         playing = true;
         Player.Play();
     }
@@ -60,9 +64,9 @@ public abstract class PlayList {
      */
     public static void PlayPrevious() {
         Player.Stop();
-        currentFileIndex = currentFileIndex - 1 >= 0 ? currentFileIndex - 1 : files.length - 1;
-        currentFile = files[currentFileIndex];
-        Player.SetFile(currentFile);
+        currentFileIndex = currentFileIndex - 1 >= 0 ? currentFileIndex - 1 : files.size() - 1;
+        currentFile = files.get(currentFileIndex);
+        Player.SetFile(currentFile.file);
         playing = true;
         Player.Play();
     }

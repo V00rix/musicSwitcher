@@ -1,12 +1,10 @@
 package business.library;
 
+import models.AudioFile;
 import org.apache.tika.metadata.Metadata;
-import org.apache.tika.parser.DefaultParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
-import org.apache.tika.parser.ParsingReader;
 import org.apache.tika.parser.mp3.Mp3Parser;
-import org.gagravarr.tika.FlacParser;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -16,16 +14,31 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static business.utiliy.Status.SetStatus;
+import static business.utiliy.Status.TrackProgress;
+import static business.utiliy.Status.progressCompleted;
+import static business.utiliy.TimeTrack.Track;
+
 public class Library {
-    public String root;
+    public static ArrayList<AudioFile> files = null;
+
+    private String root;
     private File rootFolder;
 
+    private static ContentHandler contentHandler = new DefaultHandler();
+    private static Metadata metadata = new Metadata();
+    private static Parser parser = new Mp3Parser();
+    private static ParseContext parseContext = new ParseContext();
+
+    /**
+     * Constructor
+     * @param root Root for music files
+     */
     public Library(String root) {
         this.root = root;
         this.rootFolder = new File(root);
+        SetStatus("Library created");
     }
-
-    public static File[] files = null;
 
     /* List Files */
 
@@ -125,17 +138,113 @@ public class Library {
         return allFiles.toArray(new File[0]);
     }
 
+    /**
+     * Update files from library
+     *
+     * @throws Exception
+     */
+    public void UpdateFiles() throws Exception {
+        File[] recFiles = ListFilesRecursively(null, "mp3");
+
+        files = new ArrayList<AudioFile>();
+
+        for (File file : recFiles) {
+            AudioFile f = new AudioFile();
+            f.file = file;
+            f.filePath = file.getName();
+            files.add(f);
+        }
+
+        this.GetMetadata();
+    }
+
+    /* Metadata */
+
+    /**
+     * @param file
+     */
+    public void GetMetadata(AudioFile file) throws IOException {
+        SetStatus("Getting metadata for " + file.filePath);
+        progressCompleted++;
+
+        try {
+
+            InputStream stream = new FileInputStream(file.file);
+            parser.parse(stream, contentHandler, metadata, parseContext);
+            stream.close();
+
+            file.title = metadata.get("title");
+            file.album = metadata.get("xmpDM:album");
+            file.artist = metadata.get("xmpDM:artist");
+            file.track = Integer.parseInt(metadata.get("xmpDM:trackNumber").split("/")[0]);
+            file.genre = metadata.get("xmpDM:genre");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Fill library files with metadata
+     */
+    public void GetMetadata() throws Exception {
+        TrackProgress(() -> {
+            for (AudioFile file : files) {
+                this.GetMetadata(file);
+            }
+            return null;
+        }, files.size());
+    }
+
+    /* Cache */
+
+    /**
+     * Save Cache
+     */
+    public void SaveCache(String filePath) throws IOException {
+        File f = new File(filePath);
+        if (f.exists()) {
+            f.delete();
+        }
+        f.createNewFile();
+
+        FileOutputStream fos = new FileOutputStream(filePath);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(files);
+        oos.flush();
+        oos.close();
+    }
+
+
+    /**
+     * Read Cache
+     */
+    public void ReadCache(String filePath) throws IOException, ClassNotFoundException {
+        File f = new File(filePath);
+        if (!f.exists()) {
+            throw new FileNotFoundException();
+        }
+
+        FileInputStream fis = new FileInputStream(filePath);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        files = (ArrayList<AudioFile>) ois.readObject();
+        ois.close();
+
+        System.out.println(files);
+    }
+
     /* Helpers */
 
     /**
      * Iterate through subdirectories
+     *
      * @param dirs
      * @param allFiles
      */
     private void IterateSubdirectories(File[] dirs, ArrayList<File> allFiles, final String... fileTypes) {
         for (File dir : dirs) {
             File[] fls = ListFilesRecursively(dir.getAbsolutePath(), fileTypes);
-            for (File file: fls) {
+            for (File file : fls) {
                 System.out.println(file);
             }
             allFiles.addAll(Arrays.asList(fls));
@@ -154,32 +263,5 @@ public class Library {
             fileNames.add(file.getName());
         }
         return fileNames;
-    }
-
-    /**
-     * @param file
-     */
-    public static void GetMetadata(File file) throws IOException {
-        System.out.println("Getting metadata for " + file.getName());
-
-        try {
-
-            InputStream stream = new FileInputStream(file); // the document to be parsed
-            ContentHandler contentHandler = new DefaultHandler();
-            Metadata metadata = new Metadata();
-            Parser parser = new Mp3Parser();
-            ParseContext parseContext = new ParseContext();
-            parser.parse(stream, contentHandler, metadata, parseContext);
-            stream.close();
-
-            System.out.println("Title: " + metadata.get("title"));
-            System.out.println("Artist: " + metadata.get("xmpDM:artist"));
-            System.out.println("Composer: " + metadata.get("xmpDM:composer"));
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
-//        System.in.read();
     }
 }

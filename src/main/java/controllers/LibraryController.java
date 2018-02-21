@@ -1,11 +1,10 @@
 package controllers;
 
+import models.AudioFile;
 import business.library.Library;
-import business.player.PlayList;
-import business.player.Player;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @RestController
 public class LibraryController {
@@ -14,7 +13,7 @@ public class LibraryController {
     @RequestMapping(value = "/library", method = RequestMethod.GET)
     @CrossOrigin(origins = "http://localhost:8080")
     public @ResponseBody
-    List<String> library() {
-        return Library.GetNames(Library.files);
+    ArrayList<AudioFile> library() {
+        return Library.files;
     }
 }

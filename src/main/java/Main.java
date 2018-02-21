@@ -6,14 +6,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import static business.Status.SetStatus;
+import static business.Status.playerLatch;
 
 @SpringBootApplication
 @ComponentScan({"controllers"})
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         // Launch REST services
         SpringApplication.run(Main.class, args);
         SetStatus("Spring application launched");
@@ -28,9 +31,9 @@ public class Main {
         SetStatus("Library read");
 
         // Get Metadata, sort
-        // TODO
-        Library.GetMetadata(Library.files[0]);
-
+        for (int i = 0; i < Library.files.length - 1; i++) {
+//            Library.GetMetadata(Library.files[i]);
+        }
 
         // Launch player thread
         Runnable task = () -> {
@@ -41,12 +44,7 @@ public class Main {
         Thread thread = new Thread(task);
         thread.start();
 
-        // Wait one second to make sure player has launched... todo: wait, what?
-        // I should actually create some task (promise) and react on complete
-        // and place it somewhere at, say, constructor on a high level functionality
-        TimeUnit.SECONDS.sleep(1);
-        SetStatus("Player Launched");
-
+        playerLatch.await();
 
         // Set basic playlist
         try {

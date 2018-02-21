@@ -1,8 +1,18 @@
 package business.library;
 
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.DefaultParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.parser.ParsingReader;
+import org.apache.tika.parser.mp3.Mp3Parser;
+import org.gagravarr.tika.FlacParser;
+import org.xml.sax.ContentHandler;
+import org.xml.sax.helpers.DefaultHandler;
+
+
 import javax.swing.filechooser.FileNameExtensionFilter;
-import java.io.File;
-import java.io.FileFilter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -89,9 +99,7 @@ public class Library {
 
         File[] dirs = this.ListSubdirectories(root);
 
-        ArrayList<File> allFiles = new ArrayList<File>();
-
-        allFiles.addAll(Arrays.asList(files));
+        ArrayList<File> allFiles = new ArrayList<File>(Arrays.asList(files));
 
         IterateSubdirectories(dirs, allFiles);
 
@@ -110,9 +118,7 @@ public class Library {
 
         File[] dirs = this.ListSubdirectories(root);
 
-        ArrayList<File> allFiles = new ArrayList<File>();
-
-        allFiles.addAll(Arrays.asList(files));
+        ArrayList<File> allFiles = new ArrayList<File>(Arrays.asList(files));
 
         IterateSubdirectories(dirs, allFiles, fileTypes);
 
@@ -150,7 +156,30 @@ public class Library {
         return fileNames;
     }
 
-    public static void GetMetadata(File file) {
-        System.out.println("Getting metadata");
+    /**
+     * @param file
+     */
+    public static void GetMetadata(File file) throws IOException {
+        System.out.println("Getting metadata for " + file.getName());
+
+        try {
+
+            InputStream stream = new FileInputStream(file); // the document to be parsed
+            ContentHandler contentHandler = new DefaultHandler();
+            Metadata metadata = new Metadata();
+            Parser parser = new Mp3Parser();
+            ParseContext parseContext = new ParseContext();
+            parser.parse(stream, contentHandler, metadata, parseContext);
+            stream.close();
+
+            System.out.println("Title: " + metadata.get("title"));
+            System.out.println("Artist: " + metadata.get("xmpDM:artist"));
+            System.out.println("Composer: " + metadata.get("xmpDM:composer"));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+//        System.in.read();
     }
 }

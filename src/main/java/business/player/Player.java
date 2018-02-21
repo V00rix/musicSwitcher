@@ -12,8 +12,11 @@ import javafx.util.Duration;
 import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import static business.Status.SetStatus;
+import static business.Status.playerLatch;
 
 public class Player extends Application {
     private static MediaPlayer player;
@@ -59,6 +62,7 @@ public class Player extends Application {
     public void start(Stage primaryStage) {
         // todo: well, remember the TASK stuff you were talking about?
         // todo: so you set this thing down below
-        SetStatus("Ready to play music");
+        SetStatus("Player Launched");
+        playerLatch.countDown();
     }
 }

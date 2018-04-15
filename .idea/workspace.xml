@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e62531b-0bb3-46d4-9f7e-6250cd9ca816" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/utiliy/Ip.java" />
+    <list default="true" id="5e62531b-0bb3-46d4-9f7e-6250cd9ca816" name="Default" comment="Refactoring, spring IOC, code documentation, JavaFx Audio player thread">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app_data/metadata" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/audioPlayer/api/IAudioPlayer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/business/audioPlayer/implementation/AudioPlayer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/config/Config.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/ControllerBase.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/domain/enumeration/ErrorCodes.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/domain/enumeration/Severities.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/domain/exeptions/BaseException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/domain/exeptions/UnprovidedException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/IProviderBase.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/Library.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/PlayList.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/TimeTrack.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/player/api/IPlayerProvider.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/player/implementation/PlayerProvider.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/status/api/IStatusProvider.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/providers/status/implementation/StatusProvider.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_14_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/musicSwitcher.iml" afterPath="$PROJECT_DIR$/musicSwitcher.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/library/Library.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/player/PlayList.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/player/Player.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/utiliy/Ip.java" afterPath="$PROJECT_DIR$/src/main/java/providers/Ip.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/utiliy/Status.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/business/utiliy/TimeTrack.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/LibraryController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/LibraryController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/PlayerController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/PlayerController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StatusController.java" afterPath="$PROJECT_DIR$/src/main/java/controllers/StatusController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AudioFile.java" afterPath="$PROJECT_DIR$/src/main/java/domain/AudioFile.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Test.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/library/Library$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/library/Library$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/library/Library$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/library/Library.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/player/PlayList.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/player/Player.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/utiliy/Status.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/business/utiliy/TimeTrack.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/LibraryController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/LibraryController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/PlayerController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/PlayerController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/StatusController.class" afterPath="$PROJECT_DIR$/target/classes/controllers/StatusController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/AudioFile.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Test.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,90 +59,119 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ControllerBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ControllerBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="589">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <file leaf-file-name="BaseException.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/exeptions/BaseException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="method#main#0;class#Main#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="707">
+              <caret line="63" column="47" lean-forward="true" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Ip.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/utiliy/Ip.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/providers/Ip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="372">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#GetIp#0;class#Ip#0" expanded="false" />
                 <element signature="method#GetIp#0;class#Ip#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <file leaf-file-name="TimeTrack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/providers/TimeTrack.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/business/player/Player.java">
+      <file leaf-file-name="PlayerProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/providers/player/implementation/PlayerProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            <state relative-caret-position="614">
+              <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2585#2586#0" expanded="true" />
+                <element signature="e#2624#2625#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IProviderBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/providers/IProviderBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="IAudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/business/audioPlayer/api/IAudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Test.java">
+      <file leaf-file-name="AudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/business/audioPlayer/implementation/AudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="434">
+              <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compiler.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/config/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="899">
+              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PlayerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,6 +182,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -120,9 +197,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utiliy/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/inplementation/PlayList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/library/Library.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utiliy/TimeTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/inplementation/DefaultPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utiliy/api/IStatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utility/TimeTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utility/Ip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utility/api/IStatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/config/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/utility/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/api/ControllerBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/providers/api/IStatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/providers/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/providers/status/api/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/providers/status/api/IStatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/providers/status/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/AudioFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/StatusController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/player/DefaultPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/player/IPlayerProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/player/implementation/DefaultPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/api/implementation/AudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/api/implementation/IAudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/player/api/IPlayerProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/status/api/IStatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/status/implementation/statusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/LibraryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/enumeration/Severity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/enumeration/Severities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/exeptions/BaseException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/enumeration/ErrorCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/PlayerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/api/IProviderBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/status/implementation/StatusProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/exeptions/UnprovidedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/IProviderBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/business/utiliy/Ip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/PlayList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/Library.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/ControllerBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/api/IAudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/player/implementation/AudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/business/audioPlayer/implementation/AudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/config/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/Ip.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/TimeTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/providers/player/implementation/PlayerProvider.java" />
       </list>
     </option>
   </component>
@@ -132,11 +257,25 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-3" />
-    <option name="y" value="-13" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="2123" />
+    <option name="y" value="-32" />
+    <option name="width" value="1136" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -153,9 +292,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -172,6 +310,11 @@
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
               <item name="musicSwitcher" type="462c0819:PsiDirectoryNode" />
+              <item name="app_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -193,7 +336,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -201,8 +344,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-              <item name="utiliy" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -210,18 +352,52 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.16" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="SearchEverywhereHistoryKey" value="mai&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/src/main/java/Main.java&#10;iPro&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/src/main/java/providers/IProviderBase.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="providers.api" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="providers.player" />
+      <recent name="controllers.api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\app_data" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -345,14 +521,15 @@
       <workItem from="1519392973656" duration="1187000" />
       <workItem from="1519395424766" duration="275000" />
       <workItem from="1519396150046" duration="1092000" />
+      <workItem from="1523708422728" duration="28663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2554000" />
+    <option name="totallyTimeSpent" value="31217000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -367,18 +544,19 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2769151" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23051947" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.49749464" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947916" sideWeight="0.50250536" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -386,7 +564,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,11 +572,89 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Refactoring, spring IOC, code documentation, JavaFx Audio player thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring, spring IOC, code documentation, JavaFx Audio player thread" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/Ip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;method#GetIp#0;class#Ip#0" expanded="false" />
+            <element signature="method#GetIp#0;class#Ip#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/player/implementation/PlayerProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -408,7 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -429,7 +684,7 @@
         <state relative-caret-position="456">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -446,38 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/player/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -492,40 +715,478 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="248">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/business/utiliy/Ip.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/musicSwitcher.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3821">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="51" column="55" lean-forward="false" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#GetIp#0;class#Ip#0" expanded="false" />
-            <element signature="method#GetIp#0;class#Ip#0" expanded="false" />
+            <marker date="1523715980280" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1523715980280" expanded="false" signature="154:2649" ph="..." />
+            <marker date="1523715980280" expanded="true" signature="4289:5966" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="6033:6104" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="6179:6582" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="6670:6943" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="7008:7019" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="7049:7055" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="7124:7252" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="7303:7314" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="7339:7345" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="7410:7941" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="8009:8131" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="8186:8197" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="8228:8234" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="8366:8725" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="8862:9216" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="9321:9656" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="9790:10121" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="10260:10591" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="10698:11015" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="11118:11270" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="11378:11525" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="11601:11729" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="11865:12146" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="12287:12568" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="12677:12944" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="13103:13463" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="13627:13982" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="14114:14437" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="14598:14930" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="15096:15428" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="15562:15880" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="15991:16183" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="16299:16486" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="16570:16738" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="16898:17259" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="17424:17780" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="17913:18237" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="18325:18450" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="18543:18663" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="18724:18825" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="18933:19248" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="19361:19671" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="19752:20043" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="20231:20560" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="20753:21082" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="21243:21558" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="21767:22124" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="22338:22695" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="22877:23220" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="23346:23772" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="23919:24373" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="24589:24760" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="24981:25152" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="25351:25438" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="25642:26832" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="26944:27534" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="27621:27703" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="27788:27867" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="27971:28064" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="28164:28250" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="28315:28326" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="28355:28361" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="28416:28497" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="28583:28779" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="28620:28631" ph="{}" />
+            <marker date="1523715980280" expanded="true" signature="28720:28773" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="28882:29859" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="29044:29348" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="29443:29853" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="29954:34837" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="30079:30094" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="30124:30134" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="30237:30605" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="30691:34831" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="31096:31189" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="32498:32616" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="33609:33719" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="34912:37640" ph="{...}" />
+            <marker date="1523715980280" expanded="false" signature="35046:35061" ph=" { " />
+            <marker date="1523715980280" expanded="false" signature="35094:35104" ph=" }" />
+            <marker date="1523715980280" expanded="true" signature="35186:36891" ph="{...}" />
+            <marker date="1523715980280" expanded="true" signature="36990:37634" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1738">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.14.RELEASE/spring-beans-4.3.14.RELEASE.jar!/org/springframework/beans/factory/BeanFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/LibraryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="225" column="23" lean-forward="false" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="1523" column="18" lean-forward="false" selection-start-line="1523" selection-start-column="18" selection-end-line="1523" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/enumeration/Severities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/enumeration/ErrorCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#361#362#0" expanded="false" />
+            <element signature="e#397#398#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#544#545#0" expanded="false" />
+            <element signature="e#696#697#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/java.base/java/util/concurrent/CountDownLatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="198" column="11" lean-forward="false" selection-start-line="198" selection-start-column="11" selection-end-line="198" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.4.RELEASE/spring-context-4.3.4.RELEASE.jar!/org/springframework/context/annotation/ConfigurationClassEnhancer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="127" column="76" lean-forward="false" selection-start-line="127" selection-start-column="76" selection-end-line="127" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/player/api/IPlayerProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="248">
+          <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
           <folding>
-            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <marker date="1523805186396" expanded="true" signature="458:858" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/status/implementation/StatusProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/status/api/IStatusProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/PlayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <marker date="1523804942865" expanded="false" signature="2999:3005" ph="&lt;~&gt;" />
+            <marker date="1523804942865" expanded="false" signature="3562:3568" ph="&lt;~&gt;" />
+            <marker date="1523804942865" expanded="false" signature="7159:7167" ph="&lt;~&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/exeptions/UnprovidedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/AudioFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/StatusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/player/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/audioPlayer/api/IAudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/business/audioPlayer/implementation/AudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/Ip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="method#GetIp#0;class#Ip#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/TimeTrack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/player/implementation/PlayerProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="85" column="25" lean-forward="false" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2585#2586#0" expanded="true" />
+            <element signature="e#2624#2625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/providers/IProviderBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/ControllerBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/exeptions/BaseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="63" column="47" lean-forward="true" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jquery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>musicSwitcher</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: c3p0:c3p0:0.9.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

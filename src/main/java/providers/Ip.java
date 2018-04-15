@@ -1,4 +1,4 @@
-package business.utiliy;
+package providers;
 
 import java.net.Inet6Address;
 import java.net.InetAddress;
@@ -10,7 +10,7 @@ public abstract class Ip {
     /**
      * Get device's IpV4 address
      * @return {String} Address
-     * @throws SocketException
+     * @throws SocketException SocketException
      */
     public static String GetIp() throws SocketException {
         String ip = null;

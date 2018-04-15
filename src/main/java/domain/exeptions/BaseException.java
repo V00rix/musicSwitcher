@@ -7,10 +7,15 @@ import domain.enumeration.Severities;
  * Base application exception
  */
 public class BaseException extends Exception {
-    // private fields
+    //region Defaults
+
     private static final String messageDefault = "Error has occurred!";
     private static final ErrorCodes codeDefault = ErrorCodes.BASE;
     private static final Severities severityDefault = Severities.ERROR;
+
+    //endregion
+
+    //region Fields
 
     /**
      * Error message
@@ -26,6 +31,10 @@ public class BaseException extends Exception {
      * Error severity
      */
     public final Severities severity;
+
+    //endregion
+
+    //region Constructors
 
     /**
      * Base application exception
@@ -70,4 +79,6 @@ public class BaseException extends Exception {
             System.exit(code.getNumVal());
         }
     }
+
+    //endregion
 }

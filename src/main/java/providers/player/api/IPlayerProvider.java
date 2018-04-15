@@ -1,16 +1,14 @@
 package providers.player.api;
 
-import java.io.File;
+import components.audioPlayer.api.IAudioPlayer;
 
-
+/**
+ * Player provider API
+ */
 public interface IPlayerProvider {
-    void setFile(File file);
-
-    void setFile(String fileUri);
-
-    void play();
-
-    void stop();
-
-    void pause();
+    /**
+     * Get audio player instance
+     * @return Audio player
+     */
+    IAudioPlayer audioPlayer();
 }

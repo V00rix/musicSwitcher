@@ -8,16 +8,20 @@ public enum ErrorCodes {
      * Base exception code
      */
     BASE(1001),
-
     /**
      * Unprovided exception code
      */
-    UNPROVIDED(1002);
+    UNPROVIDED(1002),
+    /**
+     * Null or empty exception code
+     */
+    NULL_OR_EMPTY(1003);
 
     private int numVal;
 
     /**
      * Get error code from number
+     *
      * @param numVal Error code as number
      */
     ErrorCodes(int numVal) {
@@ -26,6 +30,7 @@ public enum ErrorCodes {
 
     /**
      * Get numeric value of error code
+     *
      * @return Error code as int
      */
     public int getNumVal() {
@@ -34,6 +39,7 @@ public enum ErrorCodes {
 
     /**
      * Get error name and code
+     *
      * @return Name and code as string: e.g. "BASE (1101)"
      */
     @Override

@@ -7,7 +7,13 @@ import domain.enumeration.Severities;
  * Unprovided exception: missing provider for component
  */
 public class UnprovidedException extends BaseException {
+    //region Defaults
+
     private static final ErrorCodes code = ErrorCodes.UNPROVIDED;
+
+    //endregion
+
+    //region Constructors
 
     /**
      * Unprovided exception: missing provider for component
@@ -21,4 +27,6 @@ public class UnprovidedException extends BaseException {
                 + resource
                 + ")", Severities.FATAl, code);
     }
+
+    //endregion
 }

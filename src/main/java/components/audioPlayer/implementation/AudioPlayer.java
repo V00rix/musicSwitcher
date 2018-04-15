@@ -1,10 +1,12 @@
-package business.audioPlayer.implementation;
+package components.audioPlayer.implementation;
 
-import business.audioPlayer.api.IAudioPlayer;
+import components.audioPlayer.api.IAudioPlayer;
 import domain.exeptions.UnprovidedException;
 import javafx.application.Application;
+import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
 
@@ -14,10 +16,23 @@ import java.util.concurrent.CountDownLatch;
  * Audio player implementation
  */
 public class AudioPlayer extends Application implements IAudioPlayer, IProviderBase {
+    //region Fields
+
+    //region Providers
+
     private static IStatusProvider statusProvider;
+
+    //endregion
+
     private static MediaPlayer player;
     private static CountDownLatch latch;
     private static Thread thread;
+    private static String fileName;
+    private static Duration seekLocation = new Duration(0);
+
+    //endregion
+
+    //region Constructors
 
     /**
      * Empty constructor for JavaFx application to run
@@ -35,7 +50,7 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
      */
     public AudioPlayer(IStatusProvider _statusProvider, CountDownLatch _latch) throws Exception {
         // Close previous thread if is running
-        this.stop(); // stops javaFx
+        stop(); // stops javaFx
         if (thread != null) {
             thread.interrupt(); // interrupt thread
         }
@@ -47,14 +62,49 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         (thread = new Thread(Application::launch)).start();
     }
 
+    //endregion
+
+    //region Implementation
+
     @Override
     public void start(Stage primaryStage) {
         latch.countDown();
     }
 
     @Override
-    public void play() {
-        statusProvider.setStatus("Playing");
-        // todo
+    public void setFile(String fileUri) {
+        statusProvider.setStatus("File changed: " + fileUri);
+        fileName = fileUri;
+        Media audio = new Media(fileUri);
+        player = new MediaPlayer(audio);
     }
+
+    @Override
+    public void play() {
+        if (player != null) {
+            player.seek(seekLocation);
+            statusProvider.setStatus(("Playing: " + fileName));
+            player.play();
+        }
+    }
+
+    @Override
+    public void stop() {
+        if (player != null) {
+            seekLocation = new Duration(0);
+            statusProvider.setStatus("Ready to play music");
+            player.stop();
+        }
+    }
+
+    @Override
+    public void pause() {
+        if (player != null) {
+            seekLocation = player.getCurrentTime();
+            statusProvider.setStatus(("Paused: " + fileName));
+            player.pause();
+        }
+    }
+
+    //endregion
 }

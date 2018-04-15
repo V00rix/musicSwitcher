@@ -2,6 +2,7 @@ package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+import providers.playList.api.IPlayListProvider;
 import providers.player.api.IPlayerProvider;
 import providers.status.api.IStatusProvider;
 
@@ -22,6 +23,12 @@ public abstract class ControllerBase {
      */
     @Autowired
     protected IPlayerProvider playerProvider;
+
+    /**
+     * Play list provider
+     */
+    @Autowired
+    protected IPlayListProvider playListProvider;
 
     // todo: declare services here
 }

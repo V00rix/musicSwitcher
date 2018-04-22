@@ -1,5 +1,7 @@
 package controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -9,13 +11,18 @@ import org.springframework.web.bind.annotation.*;
 public class LibraryController extends ControllerBase {
     /**
      * Return library data
+     *
      * @return TODO
      */
     @RequestMapping(value = "/library", method = RequestMethod.GET)
-    @CrossOrigin(origins = "http://localhost:8080")
     public @ResponseBody
     String library() {
-        // TODO
-        return this.statusProvider.setStatus("status2");
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.writeValueAsString(this.libraryProvider.getFiles());
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

@@ -49,6 +49,8 @@ public class Main {
         ArrayList<AudioFile> audioFiles = new ArrayList<AudioFile>();
         boolean filesRetrieved = false;
 
+        System.out.println(cachePath);
+
         try {
             audioFiles = timeTrackProvider.track(() -> {
                 return libraryProvider.getLibraryCache(cachePath);

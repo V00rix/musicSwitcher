@@ -41,7 +41,6 @@ frontend/protractor.conf.js
 frontend/tsconfig.json
 frontend/tslint.json
 frontend/node_modules
-!/frontend/musicSwitcher.frontend.iml
 !/frontend/tslint.json
 !/frontend/package-lock.json
 !/frontend/README.md
@@ -54,7 +53,4 @@ frontend/node_modules
 !/frontend/.angular-cli.json
 !/frontend/.editorconfig
 !/frontend/e2e/
-frontend/musicSwitcher.frontend.iml
 frontend/src/
-untitled/
-untitled1/

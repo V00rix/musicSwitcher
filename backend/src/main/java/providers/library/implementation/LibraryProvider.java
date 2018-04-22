@@ -65,6 +65,8 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
     @Override
     public ArrayList<AudioFile> getLibraryCache(String filepath) throws Exception {
         return this.timeTrackProvider.track(() -> {
+
+            System.out.println(filepath);
             File f = new File(filepath);
             if (!f.exists()) {
                 throw new FileNotFoundException();
@@ -127,6 +129,12 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
         oos.flush();
         oos.close();
     }
+
+    @Override
+    public ArrayList<AudioFile> getFiles() {
+        return this.files;
+    };
+
     //endregion
 
     //region Helpers

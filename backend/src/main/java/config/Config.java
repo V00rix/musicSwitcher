@@ -1,8 +1,10 @@
 package config;
 
 import domain.exeptions.UnprovidedException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import providers.library.api.ILibraryProvider;
 import providers.library.implementation.LibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -13,12 +15,14 @@ import providers.status.api.IStatusProvider;
 import providers.status.implementation.StatusProvider;
 import providers.timeTrack.api.ITimeTrackProvider;
 import providers.timeTrack.implementation.TimeTrackProvider;
+import org.springframework.core.env.Environment;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * Spring beans configuration
  */
 @Configuration
-public class Config {
+public class Config extends WebMvcConfigurerAdapter {
     //region Fields
 
     private IStatusProvider statusProvider;
@@ -28,6 +32,17 @@ public class Config {
     private ITimeTrackProvider timeTrackProvider;
 
     //endregion
+
+
+    @Autowired
+    private Environment environment;
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:8080", "http://localhost:4200");
+    }
+
 
     //region Beans
 

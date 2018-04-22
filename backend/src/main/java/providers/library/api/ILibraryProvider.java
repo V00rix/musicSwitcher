@@ -35,4 +35,9 @@ public interface ILibraryProvider {
      * Save Cache
      */
     void SaveCache(ArrayList<AudioFile> audioFiles, String filePath) throws IOException;
+
+    /**
+     * Get audio files
+     */
+    ArrayList<AudioFile> getFiles();
 }

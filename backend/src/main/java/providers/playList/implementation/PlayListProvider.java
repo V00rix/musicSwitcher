@@ -56,16 +56,22 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     //region Implementation
 
     @Override
-    public void setList(ArrayList<AudioFile> fileList) throws Exception {
-        NullOrEmpty.check(fileList);
-        this.files = fileList;
+    public void setList(ArrayList<AudioFile> fileList) {
+        try {
+            NullOrEmpty.check(fileList);
 
-        this.currentFileIndex = 0;
-        this.currentFile = this.files.get(this.currentFileIndex);
+            this.files = fileList;
 
-        this.audioPlayer.setFile(this.currentFile.file);
+            this.currentFileIndex = 0;
+            this.currentFile = this.files.get(this.currentFileIndex);
 
-        this.statusProvider.setStatus("Basic playlist set");
+            this.audioPlayer.setFile(this.currentFile.file);
+
+            this.statusProvider.setStatus("Basic playlist set");
+        } catch (NullOrEmpty.NullOrEmptyException e) {
+
+            this.statusProvider.setStatus("No audio files to play");
+        }
     }
 
     @Override

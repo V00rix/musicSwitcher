@@ -23,7 +23,7 @@ public class Main {
     //region Defaults
 
     private static String rootPath = "C:/Users/vlado/Music";
-    private static String cachePath = "app_data/metadata";
+    private static String cachePath = "backend/app_data/metadata";
 
     //endregion
 
@@ -97,7 +97,7 @@ public class Main {
 
         ArrayList<AudioFile> finalAudioFiles = audioFiles;
         timeTrackProvider.track(() -> {
-            libraryProvider.SaveCache(finalAudioFiles, "app_data/metadata");
+            libraryProvider.SaveCache(finalAudioFiles, cachePath);
             return null;
         }, "Saving Cache");
 

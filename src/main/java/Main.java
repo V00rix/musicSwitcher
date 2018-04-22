@@ -19,6 +19,7 @@ import java.util.Arrays;
 @SpringBootApplication
 @ComponentScan({"controllers", "config"})
 public class Main {
+
     //region Defaults
 
     private static String rootPath = "C:/Users/vlado/Music";
@@ -27,7 +28,6 @@ public class Main {
     //endregion
 
     public static void main(String[] args) throws Exception {
-
         //region Basic initialization
 
         // Launch spring services
@@ -85,6 +85,8 @@ public class Main {
 
         //endregion
 
+        // todo: save current playing file
+
         //region Update playlist
 
         playListProvider.setList(audioFiles);
@@ -100,6 +102,5 @@ public class Main {
         }, "Saving Cache");
 
         //endregion
-
     }
 }

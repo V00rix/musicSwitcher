@@ -1,5 +1,6 @@
 package providers.playList.implementation;
 
+import components.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
 import domain.exeptions.NullOrEmpty;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 /**
  * Play list provider implementation
  */
-public class PlayListProvider implements IPlayListProvider, IProviderBase {
+public class PlayListProvider implements IPlayListProvider, IProviderBase, IRichConsole {
     //region Fields
 
     //region Providers
@@ -69,12 +70,12 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase {
 
     @Override
     public void togglePlay() {
+        System.out.println(playing);
         if (playing) {
             this.audioPlayer.pause();
-            playing = false;
+            this.playing = false;
         } else {
-            this.audioPlayer.play();
-            playing = true;
+            this.onPlay();
         }
     }
 
@@ -84,8 +85,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase {
         this.currentFileIndex = this.currentFileIndex + 1 < this.files.size() ? this.currentFileIndex + 1 : 0;
         this.currentFile = this.files.get(this.currentFileIndex);
         this.audioPlayer.setFile(this.currentFile.file);
-        this.playing = true;
-        this.audioPlayer.play();
+        this.onPlay();
     }
 
     @Override
@@ -94,9 +94,20 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase {
         this.currentFileIndex = this.currentFileIndex - 1 >= 0 ? this.currentFileIndex - 1 : this.files.size() - 1;
         this.currentFile = this.files.get(this.currentFileIndex);
         this.audioPlayer.setFile(this.currentFile.file);
-        this.playing = true;
-        this.audioPlayer.play();
+        this.onPlay();
     }
 
+    //endregion
+
+
+    //region Helpers
+
+    /**
+     * On play helper method
+     */
+    private void onPlay() {
+        this.playing = true;
+        this.audioPlayer.play(this::playNext);
+    }
     //endregion
 }

@@ -38,6 +38,7 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
      * Empty constructor for JavaFx application to run
      * THIS SHOULD NOT BE USED FROM OUTSIDE
      */
+    @Deprecated
     public AudioPlayer() {
     }
 
@@ -80,8 +81,10 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     }
 
     @Override
-    public void play() {
+    public void play(Runnable onEnd) {
         if (player != null) {
+            player.setOnEndOfMedia(onEnd);
+
             player.seek(seekLocation);
             statusProvider.setStatus(("Playing: " + fileName));
             player.play();
@@ -91,6 +94,7 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     @Override
     public void stop() {
         if (player != null) {
+            player.setOnEndOfMedia(() -> {});
             seekLocation = new Duration(0);
             statusProvider.setStatus("Ready to play music");
             player.stop();
@@ -100,6 +104,7 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     @Override
     public void pause() {
         if (player != null) {
+            player.setOnEndOfMedia(() -> {});
             seekLocation = player.getCurrentTime();
             statusProvider.setStatus(("Paused: " + fileName));
             player.pause();

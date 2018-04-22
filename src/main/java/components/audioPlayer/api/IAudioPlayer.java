@@ -8,7 +8,7 @@ import java.io.File;
 public interface IAudioPlayer {
     /**
      * Set current file to be played
-     * @param file
+     * @param file File
      */
     default void setFile(File file) {
         this.setFile(file.toURI().toString());
@@ -16,14 +16,21 @@ public interface IAudioPlayer {
 
     /**
      * Set current file to be played
-     * @param fileUri
+     * @param fileUri File path
      */
     void setFile(String fileUri);
 
     /**
      * Play current file
      */
-    void play();
+    default void play() {
+        this.play(() -> {});
+    }
+
+    /**
+     * Play current file
+     */
+    void play(Runnable onEnd);
 
     /**
      * Stop playing

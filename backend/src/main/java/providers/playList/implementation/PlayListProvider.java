@@ -3,7 +3,9 @@ package providers.playList.implementation;
 import components.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
-import domain.exeptions.NullOrEmpty;
+import domain.exeptions.BaseException;
+import domain.exeptions.checks.BoundariesCheck;
+import domain.exeptions.checks.NullCheck;
 import domain.exeptions.UnprovidedException;
 import providers.IProviderBase;
 import providers.playList.api.IPlayListProvider;
@@ -58,7 +60,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     @Override
     public void setList(ArrayList<AudioFile> fileList) {
         try {
-            NullOrEmpty.check(fileList);
+            NullCheck.check(fileList);
 
             this.files = fileList;
 
@@ -68,7 +70,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
             this.audioPlayer.setFile(this.currentFile.file);
 
             this.statusProvider.setStatus("Basic playlist set");
-        } catch (NullOrEmpty.NullOrEmptyException e) {
+        } catch (NullCheck.NullOrEmptyException e) {
 
             this.statusProvider.setStatus("No audio files to play");
         }
@@ -76,7 +78,6 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
 
     @Override
     public void togglePlay() {
-        System.out.println(playing);
         if (playing) {
             this.audioPlayer.pause();
             this.playing = false;
@@ -86,18 +87,19 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     }
 
     @Override
-    public void playNext() {
-        this.audioPlayer.stop();
-        this.currentFileIndex = this.currentFileIndex + 1 < this.files.size() ? this.currentFileIndex + 1 : 0;
-        this.currentFile = this.files.get(this.currentFileIndex);
-        this.audioPlayer.setFile(this.currentFile.file);
-        this.onPlay();
+    public void playNext() throws BaseException {
+        this.playFile(this.currentFileIndex + 1 < this.files.size() ? this.currentFileIndex + 1 : 0);
     }
 
     @Override
-    public void playPrevious() {
+    public void playPrevious() throws BaseException {
+        this.playFile(this.currentFileIndex - 1 >= 0 ? this.currentFileIndex - 1 : this.files.size() - 1);
+    }
+
+    @Override
+    public void playFile(int index) throws BaseException {
         this.audioPlayer.stop();
-        this.currentFileIndex = this.currentFileIndex - 1 >= 0 ? this.currentFileIndex - 1 : this.files.size() - 1;
+        this.currentFileIndex = BoundariesCheck.check(index, this.files);
         this.currentFile = this.files.get(this.currentFileIndex);
         this.audioPlayer.setFile(this.currentFile.file);
         this.onPlay();
@@ -113,7 +115,13 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
      */
     private void onPlay() {
         this.playing = true;
-        this.audioPlayer.play(this::playNext);
+        this.audioPlayer.play(() -> {
+            try {
+                playNext();
+            } catch (BaseException e) {
+                e.printStackTrace();
+            }
+        });
     }
     //endregion
 }

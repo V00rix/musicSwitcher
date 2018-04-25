@@ -1,15 +1,15 @@
-package domain.exeptions;
+package domain.exeptions.checks;
 
 import domain.enumeration.ErrorCodes;
 import domain.enumeration.Severities;
+import domain.exeptions.BaseException;
 
 import java.util.ArrayList;
 
 /**
  * Interface to check for null or empty arrays
- * @param <T>
  */
-public interface NullOrEmpty<T> {
+public interface NullCheck {
     /**
      * Check if array is null or empty
      * @param list List

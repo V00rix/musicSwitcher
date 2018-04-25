@@ -1,5 +1,7 @@
 package controllers;
 
+import domain.HttpResponse;
+import domain.exeptions.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import providers.library.api.ILibraryProvider;
@@ -13,7 +15,6 @@ import providers.timeTrack.api.ITimeTrackProvider;
  */
 @RestController
 public abstract class ControllerBase {
-
     /**
      * Status provider
      */
@@ -45,4 +46,53 @@ public abstract class ControllerBase {
     protected ILibraryProvider libraryProvider;
 
     // todo: declare services here
+
+    //region Response creators
+
+    /**
+     * Ok response
+     *
+     * @return Ok response
+     */
+    HttpResponse ok() {
+        return new HttpResponse();
+    }
+
+    /**
+     * Ok response
+     *
+     * @return Ok response
+     */
+    <T> HttpResponse ok(T data) {
+        return new HttpResponse<>(data);
+    }
+
+    /**
+     * Error response
+     *
+     * @return Error response
+     */
+    <T> HttpResponse err(T data) {
+        return new HttpResponse<>(data);
+    }
+
+    /**
+     * Error response
+     *
+     * @return Error response
+     */
+    HttpResponse err(Exception e) {
+        return new HttpResponse<>(e);
+    }
+
+    /**
+     * Error response
+     *
+     * @return Error response
+     */
+    HttpResponse err(BaseException e) {
+        return new HttpResponse<>(e);
+    }
+
+    //endregion
 }

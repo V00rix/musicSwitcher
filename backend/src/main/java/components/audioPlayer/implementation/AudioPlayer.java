@@ -16,7 +16,14 @@ import java.util.concurrent.CountDownLatch;
  * Audio player implementation
  */
 public class AudioPlayer extends Application implements IAudioPlayer, IProviderBase {
+
     //region Fields
+
+    //region Configuration
+
+    private static final double volumeStep = 0.1;
+
+    //endregion
 
     //region Providers
 
@@ -67,6 +74,8 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
 
     //region Implementation
 
+    //region File control
+
     @Override
     public void start(Stage primaryStage) {
         latch.countDown();
@@ -79,6 +88,10 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         Media audio = new Media(fileUri);
         player = new MediaPlayer(audio);
     }
+
+    //endregion
+
+    //region Play control
 
     @Override
     public void play(Runnable onEnd) {
@@ -94,7 +107,8 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     @Override
     public void stop() {
         if (player != null) {
-            player.setOnEndOfMedia(() -> {});
+            player.setOnEndOfMedia(() -> {
+            });
             seekLocation = new Duration(0);
             statusProvider.setStatus("Ready to play music");
             player.stop();
@@ -104,12 +118,42 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     @Override
     public void pause() {
         if (player != null) {
-            player.setOnEndOfMedia(() -> {});
+            player.setOnEndOfMedia(() -> {
+            });
             seekLocation = player.getCurrentTime();
             statusProvider.setStatus(("Paused: " + fileName));
             player.pause();
         }
     }
+
+    @Override
+    public void seek(long millis) {
+        // todo check (newDuration <= songDuration)
+        //        player.getMedia().getDuration();
+        seekLocation = new Duration(millis);
+    }
+
+    //endregion
+
+    //region Volume control
+
+    @Override
+    public void volume(double volume) {
+        volume = (volume < 0) ? 0 : ((volume > 1) ? 1 : volume);
+        player.setVolume(volume);
+    }
+
+    @Override
+    public void volumeIncrement() {
+        volume(player.getVolume() + volumeStep);
+    }
+
+    @Override
+    public void volumeDecrement() {
+        volume(player.getVolume() - volumeStep);
+    }
+
+    //endregion
 
     //endregion
 }

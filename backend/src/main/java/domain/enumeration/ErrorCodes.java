@@ -15,12 +15,18 @@ public enum ErrorCodes {
     /**
      * Null or empty exception code
      */
-    NULL_OR_EMPTY(1003);
+    NULL_OR_EMPTY(1003),
+    /**
+     * Out of boundaries exception code
+     */
+    OUT_OF_BOUNDARIES(1004);
+
+    //region Rich value support
 
     private int numVal;
 
     /**
-     * Get error code from number
+     * Create error code from number
      *
      * @param numVal Error code as number
      */
@@ -36,6 +42,8 @@ public enum ErrorCodes {
     public int getNumVal() {
         return numVal;
     }
+
+    //endregion
 
     /**
      * Get error name and code

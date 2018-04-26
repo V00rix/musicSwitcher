@@ -2,11 +2,10 @@ package controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.AudioFile;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.Collections;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Library controller
@@ -16,7 +15,7 @@ public class LibraryController extends ControllerBase {
     /**
      * Return library data
      *
-     * @return TODO
+     * @return Array of audio files
      */
     @RequestMapping(value = "/library", method = RequestMethod.GET)
     public @ResponseBody

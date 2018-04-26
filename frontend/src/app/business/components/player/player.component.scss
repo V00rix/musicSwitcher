@@ -1,0 +1,49 @@
+.player-content {
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.gradient {
+  height: 100%;
+  top: 0;
+}
+
+.image.fz {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.controls-container {
+  margin-top: -50vh;
+  padding-top: 25vh;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 30%, black 40%, black 75%, transparent 100%);
+}
+
+.flow-buttons {
+  margin: 50px 0;
+  > * {
+    margin: 0 25px;
+  }
+}
+
+.app-volume-control {
+  max-width: 600px;
+  position: relative;
+}
+
+.song-info {
+  margin: 50px;
+}
+
+h3 {
+
+}
+
+.app-icon-button {
+  display: block;
+}

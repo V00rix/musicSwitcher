@@ -1,0 +1,29 @@
+:host {
+  height: 2.8em;
+  display: inline-block;
+  margin: 10px;
+
+  &:hover {
+    & /deep/ .image {
+      transform: translateY(-5px);
+    }
+  }
+
+  & /deep/ * {
+    transition: all .15s ease-in-out;
+    display: inline-block;
+    vertical-align: center;
+  }
+
+  & /deep/ .image {
+    height: 2.8em;
+    width: 2.8em;
+    box-shadow: none;
+  }
+  & /deep/ label {
+    font-size: 1.4em;
+    position: relative;
+    top: -0.7em;
+    padding: 0 5px;
+  }
+}

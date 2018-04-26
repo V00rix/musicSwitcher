@@ -1,6 +1,17 @@
 .song {
   margin: 15px 0;
   width: 100%;
+  transition: all .15s ease-in;
+
+  &:hover {
+    transform: translateX(15px);
+    border-radius: 5px;
+    z-index: 100;
+
+    > .image {
+
+    }
+  }
 
   > * {
     position: relative;
@@ -8,10 +19,6 @@
     vertical-align: top;
   }
 
-  > .image {
-    width: 48px;
-    height: 48px;
-  }
   > .text {
     width: calc(100% - 72px);
     height: 40px;

@@ -1,3 +1,12 @@
-<p>
-  player-small works!
-</p>
+<div class="song-info pointer" (click)="expandPlayer()">
+  <div class="image small image-note"></div><!-- NoWhiteSpace
+  --><div class="description">
+    <div *ngIf="song; else noSong">
+      <label class="title truncate small pointer">{{song.title}}</label>
+      <label class="artist accent truncate tiny light pointer">{{song.artist}}</label>
+    </div>
+    <ng-template #noSong>
+      <label class="title truncate small pointer">Not Playing</label>
+    </ng-template>
+  </div>
+</div>

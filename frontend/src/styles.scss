@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme";
+
 html {
   min-height: 100%;
 }
@@ -7,21 +9,76 @@ body {
   min-height: 100%;
   background: black;
   font-family: "Source Sans Pro", serif;
-  color: rgba(255,255,255, .95);
+  color: rgba(255, 255, 255, .95);
   margin: 0;
 }
 
 .image {
   width: 64px;
   height: 64px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.43);
-  &.small {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .43);
+  background-size: cover;
 
+  &.small {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.tiny {
+    width: 32px;
+    height: 32px;
   }
 }
+
+.ib {
+  display: inline-block;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
 .image-note {
-  background: url("assets/images/note.png");
-  background-size: cover;
+  background-image: url("assets/images/note.png");
+}
+.image-shuffle {
+  background-image: url("assets/images/shuffle.png");
+}
+.image-repeat {
+  background-image: url("assets/images/repeat.png");
+}
+.image-add {
+  background-image: url("assets/images/add.png");
+}
+.image-save {
+  background-image: url("assets/images/save.png");
+}
+.image-previous {
+  background-image: url("assets/images/next.png");
+  transform: rotate(180deg);
+
+  &.hover-up {
+    transition: all .15s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px) rotate(180deg);
+    }
+  }
+}
+.image-next {
+  background-image: url("assets/images/next.png");
+}
+.image-play {
+  background-image: url("assets/images/play.png");
+}
+.image-pause {
+  background-image: url("assets/images/pause.png");
+}
+.image-volume-up {
+  background-image: url("assets/images/volumeUp.png");
+}
+.image-volume-down {
+  background-image: url("assets/images/volumeDown.png");
 }
 
 .standard-padding {
@@ -43,12 +100,94 @@ label {
   color: rgb(113, 198, 218);
 }
 
-.background {
+.full-size {
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  position: fixed;
+}
+
+.gradient {
+  background: linear-gradient(0deg, rgba(208, 142, 228, .59) 0%, rgba(60, 130, 209, .29) 75%, rgba(70, 164, 187, 0)) 100%, transparent;
+  &.top {
+    background: linear-gradient(0deg, rgba(24, 50, 123, .44) 0%, rgba(70, 164, 187, 0)) 95%, transparent;
+  }
+
+  &.bottom {
+    background: linear-gradient(0deg, rgba(208, 142, 228, .59) 0%, rgba(60, 130, 209, .29) 85%, rgba(24, 50, 123, 0.44)) 100%, transparent;
+  }
+}
+
+.underlay {
   z-index: -10;
-  background: linear-gradient(0deg, rgba(208, 142, 228, .59), rgba(60, 130, 209, .29) 75%, rgba(70, 164, 187, 0));
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+label, p, .font {
+  &.small {
+    font-size: 1em;
+  }
+
+  &.tiny {
+    font-size: .85em;
+  }
+
+  &.light {
+    font-weight: 100;
+  }
+
+  &.normal {
+    font-size: 1.3em;
+  }
+
+  &.big {
+    font-size: 1.7em;
+  }
+
+  &.huge {
+
+  }
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.pass-events {
+  pointer-events: none;
+}
+
+h3 {
+  line-height: 3em;
+  padding-bottom: 2.5em;
+  padding-top: 1em;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grey, .gray {
+  color: rgba(255, 255, 255, .44);
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.hover-up {
+  transition: all .15s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }

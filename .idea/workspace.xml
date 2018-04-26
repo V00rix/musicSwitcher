@@ -1,103 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" line="6" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/3rdpartylicenses.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/add.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/album.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/next.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/note.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/pause.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/person.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/playlist.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/repeat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/save.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/shuffle.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeDown.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeUp.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/inline.318b50c57b4eba3d437b.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/main.c32e670784bcfbbe39ef.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/note.5e7322f92a960613ffb0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/polyfills.b6b2cd0d4c472ac3ac12.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/styles.9bb1efc6f67c228792cc.bundle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/audio-file.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/library.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/albums/albums.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/albums/albums.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/albums/albums.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/albums/albums.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/artists/artists.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/artists/artists.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/artists/artists.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/artists/artists.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/playlists/playlists.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/playlists/playlists.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/playlists/playlists.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/playlists/playlists.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/add.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/album.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/next.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/note.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/pause.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/person.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/play.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/playlist.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/repeat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/save.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/shuffle.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/volumeDown.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/assets/images/volumeUp.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/main.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/polyfills.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/test.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/tsconfig.app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/tsconfig.spec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/typings.d.ts" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="Added files to VCS">
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/theme.scss" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/scripts/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/scripts/services/dom.service.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/scripts/services/requests.service.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/.angular-cli.json" afterPath="$PROJECT_DIR$/frontend/.angular-cli.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" afterPath="$PROJECT_DIR$/frontend/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.scss" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" afterPath="$PROJECT_DIR$/frontend/src/index.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.ts" afterPath="$PROJECT_DIR$/frontend/src/main.ts" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -110,41 +49,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
+      <file leaf-file-name="track-control.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="955">
-              <caret line="55" column="49" lean-forward="false" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            <state relative-caret-position="279">
+              <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
+                <marker date="1524730358012" expanded="true" signature="194:372" ph="..." />
+                <marker date="1524730358012" expanded="true" signature="454:466" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1351">
+              <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icon-button.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="song.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="icon-button.component.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="899">
-              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+      <file leaf-file-name="player.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1165">
+              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -153,18 +108,8 @@
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="song.component.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="623">
+              <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -173,41 +118,41 @@
       <file leaf-file-name="player.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="1147">
+              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player-small.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts">
+      <file leaf-file-name="icon-button.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            <state relative-caret-position="248">
+              <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="play-control.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="12" selection-end-column="65" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#69#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,6 +162,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>out</find>
+      <find>.backg</find>
+      <find>gradient-t</find>
+      <find>imag</find>
+      <find>padding</find>
+      <find>image</find>
+      <find>bigg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -237,7 +188,6 @@
       <list>
         <option value="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" />
@@ -247,20 +197,39 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/domain/audio-file.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/domain/library.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" />
         <option value="$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
         <option value="$PROJECT_DIR$/frontend/.angular-cli.json" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/styles.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
         <option value="$PROJECT_DIR$/frontend/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/index.html" />
+        <option value="$PROJECT_DIR$/frontend/src/main.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/theme.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/styles.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.scss" />
       </list>
     </option>
   </component>
@@ -275,10 +244,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="975" />
-    <option name="y" value="-11" />
-    <option name="width" value="1136" />
-    <option name="height" value="1047" />
+    <option name="x" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="2110" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -432,6 +400,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="icon-button" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="list" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -450,7 +427,8 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="player-small" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="play-control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -459,7 +437,46 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="song" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="track-control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="volume-control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="songs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -476,7 +493,7 @@
     <property name="project.structure.proportion" value="0.17114754" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -486,7 +503,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
     <property name="add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
@@ -637,7 +654,7 @@
       <updated>1524413579459</updated>
       <workItem from="1524413598845" duration="1748000" />
       <workItem from="1524415538293" duration="1174000" />
-      <workItem from="1524416747573" duration="14727000" />
+      <workItem from="1524416747573" duration="40477000" />
     </task>
     <task id="LOCAL-00001" summary="Project structure">
       <created>1524416974441</created>
@@ -660,11 +677,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524464978464</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added files to VCS">
+      <created>1524578733573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524578733573</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17649000" />
+    <option name="totallyTimeSpent" value="43399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
@@ -687,14 +711,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17033248" sideWeight="0.61927086" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17236024" sideWeight="0.61927086" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49781114" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50218886" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -717,169 +741,14 @@
     <MESSAGE value="Project structure" />
     <MESSAGE value="Http get library BE -&gt; FE configured:&#10;Providers, config, CORS, mappings, json, services etc." />
     <MESSAGE value="Songs component work in progress, basic sorting by title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Songs component work in progress, basic sorting by title" />
+    <MESSAGE value="Added files to VCS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added files to VCS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1333">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/musicSwitcher.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/musicSwitcher.backend.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/main.iml" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="25" column="66" lean-forward="true" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-          <folding>
-            <element signature="e#1842#1853#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/musicSwitcher.backend.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/main.iml" />
-    <entry file="file://$PROJECT_DIR$/musicSwitcher.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/frontend.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/musicSwitcher.iml" />
-    <entry file="file://$PROJECT_DIR$/frontend/src/assets/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/assets/images/next.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/api/ITimeTrackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/exeptions/NullOrEmpty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -974,56 +843,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#58#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1060,26 +885,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/styles.scss">
+    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="46" column="2" lean-forward="false" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#296#311#0" expanded="false" />
+            <element signature="e#535#551#0" expanded="false" />
+            <element signature="e#600#630#0" expanded="false" />
+            <element signature="e#706#726#0" expanded="false" />
+            <element signature="n#!!doc;n#setPlaylist#0;n#DataService#0" expanded="false" />
+            <element signature="e#1027#1040#0" expanded="false" />
+            <element signature="e#1500#1516#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="186">
+          <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="558">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#65#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="1" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1092,25 +968,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state relative-caret-position="124">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player-small/player-small.component.ts">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/javafx/css/Style.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="10" column="69" lean-forward="false" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="88" lean-forward="false" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="824">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1118,10 +1044,153 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1524728996600" expanded="true" signature="250:271" ph="..." />
+            <marker date="1524728996600" expanded="true" signature="285:559" ph="..." />
+            <marker date="1524728996600" expanded="true" signature="564:585" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+            <marker date="1524730358012" expanded="true" signature="194:372" ph="..." />
+            <marker date="1524730358012" expanded="true" signature="454:466" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1351">
+          <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1165">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/list/list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="12" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/icon-button/icon-button.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="899">
-          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

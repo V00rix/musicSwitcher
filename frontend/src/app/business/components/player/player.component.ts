@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from "../../services/data.service";
+import {AudioFile} from "../../domain/audio-file";
+import enumerate = Reflect.enumerate;
 
 @Component({
   selector: 'app-player',
@@ -6,10 +9,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  public expanded = !false;
+  public playing = false;
 
-  constructor() { }
+  /**
+   * Milliseconds played
+   * @type {number}
+   */
+  public timePassed = 0;
+  /**
+   * Milliseconds left
+   * @type {number}
+   */
+  public timeLeft = 0;
 
-  ngOnInit() {
+  constructor(public data: DataService) {
   }
 
+  ngOnInit() {
+    this.data.playlistChanged.subscribe(() => {
+      // ??? redundant ???
+    });
+  }
+
+  public play() {
+    this.playing = true;
+  }
+
+  public pause() {
+    this.playing = false;
+  }
+
+  public next() {
+  }
+
+  public previous() {
+  }
+
+  public setVolume(volume) {
+    console.log(volume);
+  }
+
+  public setTrack(track) {
+    console.log(track);
+  }
 }

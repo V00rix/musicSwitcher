@@ -1,4 +1,4 @@
-<div class="background"></div>
+<div class="full-size gradient underlay fixed"></div>
 <app-list>
-  <app-song *ngFor="let song of data.library.files" [song]="song"></app-song>
+  <app-song *ngFor="let song of data.library.files; let id = index" [song]="song" (click)="setPlaylist(id)"></app-song>
 </app-list>

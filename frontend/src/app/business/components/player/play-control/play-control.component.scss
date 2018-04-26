@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+
+  > .image-next, .image-previous {
+    width: 64px;
+    max-width: 20vw;
+    max-height: 20vw;
+    height: 64px;
+  }
+
+  > .image-play, .image-pause {
+    width: 96px;
+    max-width: 30vw;
+    max-height: 30vw;
+    height: 96px;
+  }
+}

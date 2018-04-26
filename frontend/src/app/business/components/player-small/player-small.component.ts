@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import {PlayerComponent} from "../player/player.component";
+import {AudioFile} from "../../domain/audio-file";
 
 @Component({
   selector: 'app-player-small',
@@ -7,10 +8,15 @@ import {PlayerComponent} from "../player/player.component";
   styleUrls: ['./player-small.component.scss']
 })
 export class PlayerSmallComponent implements OnInit {
+  @Input() public song: AudioFile;
 
   constructor(@Inject(PlayerComponent) public player: PlayerComponent) { }
 
   ngOnInit() {
+  }
+
+  public expandPlayer() {
+    this.player.expanded = true;
   }
 
 }

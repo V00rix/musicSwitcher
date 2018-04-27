@@ -61,6 +61,15 @@ public class BaseException extends Exception {
     public BaseException(String message, Severities severity) {
         this(message, severity, codeDefault);
     }
+    /**
+     * Base application exception
+     *
+     * @param message  Error message
+     * @param code Error code
+     */
+    public BaseException(String message, ErrorCodes code) {
+        this(message, severityDefault, code);
+    }
 
     /**
      * Base application exception
@@ -78,6 +87,15 @@ public class BaseException extends Exception {
             this.printStackTrace();
             System.exit(code.getNumVal());
         }
+    }
+
+    /**
+     * Unhandled application exception
+     *
+     * @param e Unhandled exception
+     */
+    public BaseException(Exception e) {
+        this(e.getMessage(), ErrorCodes.UNKNOWN);
     }
 
     //endregion

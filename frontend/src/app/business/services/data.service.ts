@@ -39,12 +39,26 @@ export class DataService {
   //region Constructor
 
   constructor(private http: HttpClient) {
+    this.status();
     this.getLibrary();
   }
 
   //endregion
 
   //region Public API
+
+  /**
+   * Backend synchronization
+   */
+  status() {
+    console.log('checking status');
+    this.getStatus();
+
+    // make loop
+    setTimeout(() => {
+      this.status();
+    }, 500);
+  }
 
   /**
    * Set/update playlist
@@ -54,9 +68,19 @@ export class DataService {
     this.playlist = list;
     this.playing = 0;
     this.playlistChanged.next();
+    console.log(list);
   }
 
   //region Http
+
+  /**
+   * GET status
+   */
+  private getStatus() {
+    this.http.get("http://localhost:8080/status").subscribe((response) => {
+      console.log(response);
+    })
+  }
 
   /**
    * GET Library
@@ -70,7 +94,7 @@ export class DataService {
         return f;
       });
       this.onInit.next();
-    })
+    });
   }
 
   //endregion

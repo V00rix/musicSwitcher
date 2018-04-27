@@ -12,13 +12,12 @@ import {PlayerComponent} from "../player.component";
               [thumb-label]="true"
               [tick-interval]="10"
               (input)="player.setVolume($event.value)"
-              [(ngModel)]="volume"></mat-slider><!-- NoSpace
+              [(ngModel)]="player.volume"></mat-slider><!-- NoSpace
             --><div class="image tiny image-volume-up ib hover-up"></div>`,
   styleUrls: ['./volume-control.component.scss']
 })
 export class VolumeControlComponent implements OnInit {
   @HostBinding('class') classes = 'standard-padding app-volume-control';
-  public volume: number = 0;
 
   constructor(@Inject(PlayerComponent) public player: PlayerComponent) { }
 

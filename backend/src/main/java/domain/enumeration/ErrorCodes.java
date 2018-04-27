@@ -7,6 +7,10 @@ public enum ErrorCodes {
     /**
      * Base exception code
      */
+    UNKNOWN(1000),
+    /**
+     * Base exception code
+     */
     BASE(1001),
     /**
      * Unprovided exception code

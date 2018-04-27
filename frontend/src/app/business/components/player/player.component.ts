@@ -9,6 +9,8 @@ import enumerate = Reflect.enumerate;
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
+  public volume: number = 0;
+  public track: number = 0;
   public expanded = !false;
   public playing = false;
 

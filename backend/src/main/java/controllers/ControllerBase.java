@@ -1,8 +1,10 @@
 package controllers;
 
+import components.IRichConsole;
 import domain.HttpResponse;
 import domain.exeptions.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -14,7 +16,7 @@ import providers.timeTrack.api.ITimeTrackProvider;
  * Base REST controller class
  */
 @RestController
-public abstract class ControllerBase {
+public abstract class ControllerBase implements IRichConsole {
     /**
      * Status provider
      */
@@ -81,17 +83,19 @@ public abstract class ControllerBase {
      *
      * @return Error response
      */
-    HttpResponse err(Exception e) {
+    HttpResponse err(BaseException e) {
         return new HttpResponse<>(e);
     }
 
     /**
-     * Error response
-     *
-     * @return Error response
+     * Handler for non-base exceptions
+     * @param e Exception
+     * @return HttpResponse
      */
-    HttpResponse err(BaseException e) {
-        return new HttpResponse<>(e);
+    @ExceptionHandler(Exception.class)
+    public HttpResponse handleException(Exception e) {
+        e.printStackTrace();
+        return new HttpResponse<>(new BaseException(e));
     }
 
     //endregion

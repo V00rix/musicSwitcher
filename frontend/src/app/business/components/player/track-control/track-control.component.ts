@@ -8,7 +8,7 @@ import {PlayerComponent} from "../player.component";
               [max]="1000"
               [min]="0"
               (input)="player.setTrack($event.value)"
-              [(ngModel)]="volume"></mat-slider>
+              [(ngModel)]="player.track"></mat-slider>
               <label class="time-passed small">{{player.timePassed}}</label><!--
    NoSpace --><label class="time-left small">{{player.timeLeft}}</label>`,
   styleUrls: ['./track-control.component.scss']

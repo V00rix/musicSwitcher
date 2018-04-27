@@ -27,7 +27,7 @@
     </div>
     <div class="queue-container standard-padding">
       <app-list>
-        <app-song *ngFor="let song of data.playlist; let id = index" [song]="data.playlist[data.playing]"></app-song>
+        <app-song *ngFor="let song of data.playlist; let id = index" [song]="song"></app-song>
       </app-list>
 
       <app-icon-button>

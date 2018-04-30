@@ -1,5 +1,7 @@
 package providers.status.api;
 
+import domain.StatusPackage;
+import domain.enumeration.statuses.StatusBase;
 import org.springframework.stereotype.Service;
 
 import java.io.OutputStream;
@@ -15,14 +17,14 @@ public interface IStatusProvider {
      * @param status New status as String
      * @return Changed status
      */
-    String setStatus(String status);
+    StatusBase setStatus(StatusBase status);
 
     /**
      * Get current status, print to default output stream
      *
      * @return Current status
      */
-    default String getStatus() {
+    default StatusBase getStatus() {
         return this.getStatus(System.out);
     }
 
@@ -32,5 +34,7 @@ public interface IStatusProvider {
      * @param out Output stream
      * @return Current status
      */
-    String getStatus(OutputStream out);
+    StatusBase getStatus(OutputStream out);
+
+    StatusPackage statusPackage();
 }

@@ -1,4 +1,5 @@
 import domain.AudioFile;
+import domain.enumeration.Statuses;
 import org.apache.tika.exception.TikaException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

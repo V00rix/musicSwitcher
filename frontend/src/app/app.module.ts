@@ -13,7 +13,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {SongComponent} from './business/components/song/song.component';
 import {ListComponent} from './business/components/list/list.component';
 import {PlayerComponent} from './business/components/player/player.component';
-import {PlayerSmallComponent} from './business/components/player-small/player-small.component';
+import {PlayerSmallComponent} from './business/components/player/player-small/player-small.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { VolumeControlComponent } from './business/components/player/volume-control/volume-control.component';
 import { PlayControlComponent } from './business/components/player/play-control/play-control.component';

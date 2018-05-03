@@ -1,13 +1,15 @@
 package providers.playList.implementation;
 
-import components.IRichConsole;
+import components.util.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
 import domain.exeptions.BaseException;
 import domain.exeptions.checks.BoundariesCheck;
 import domain.exeptions.checks.NullCheck;
 import domain.exeptions.UnprovidedException;
+import domain.statuses.StatusPlayer;
 import providers.IProviderBase;
+import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
 import providers.player.api.IPlayerProvider;
 import providers.status.api.IStatusProvider;
@@ -24,10 +26,12 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
 
     private final IStatusProvider statusProvider;
     private final IPlayerProvider playerProvider;
+    private final ILibraryProvider libraryProvider;
 
     //endregion
 
     private ArrayList<AudioFile> files;
+    private ArrayList<Integer> ids;
     private AudioFile currentFile;
     private int currentFileIndex;
     private boolean playing = false;
@@ -45,12 +49,12 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
      * @param playerProvider Player provider
      * @throws UnprovidedException UnprovidedException
      */
-    public PlayListProvider(IStatusProvider statusProvider, IPlayerProvider playerProvider) throws UnprovidedException {
-        this.checkProviders(statusProvider, playerProvider);
+    public PlayListProvider(IStatusProvider statusProvider, IPlayerProvider playerProvider, ILibraryProvider libraryProvider) throws UnprovidedException {
+        this.checkProviders(statusProvider, playerProvider, libraryProvider);
         this.playerProvider = playerProvider;
+        this.libraryProvider = libraryProvider;
         this.statusProvider = statusProvider;
         this.audioPlayer = playerProvider.audioPlayer();
-        this.statusProvider.setStatus("PlayListProvider initialized");
     }
 
     //endregion
@@ -58,21 +62,31 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     //region Implementation
 
     @Override
-    public void setList(ArrayList<AudioFile> fileList) {
+    public void setFiles(ArrayList<AudioFile> fileList) {
+        this.audioPlayer.stop();
         try {
             NullCheck.check(fileList);
-
             this.files = fileList;
-
-            this.currentFileIndex = 0;
-            this.currentFile = this.files.get(this.currentFileIndex);
-
-            this.audioPlayer.setFile(this.currentFile.file);
-
-            this.statusProvider.setStatus("Basic playlist set");
+            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.PLAYLIST_SET));
         } catch (NullCheck.NullOrEmptyException e) {
+            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.NO_FILES));
+        }
+    }
 
-            this.statusProvider.setStatus("No audio files to play");
+    @Override
+    public void setPlaylist(ArrayList<Integer> ids) throws BaseException {
+        this.audioPlayer.stop();
+        try {
+            NullCheck.check(ids);
+            this.files = new ArrayList<>();
+            ArrayList<AudioFile> audioFiles = this.libraryProvider.getFiles();
+            for (Integer id : ids) {
+                this.files.add(audioFiles.get(id));
+            }
+            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.PLAYLIST_SET));
+            this.playFile(ids.get(0));
+        } catch (NullCheck.NullOrEmptyException e) {
+            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.NO_FILES));
         }
     }
 
@@ -101,7 +115,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
         this.audioPlayer.stop();
         this.currentFileIndex = BoundariesCheck.check(index, this.files);
         this.currentFile = this.files.get(this.currentFileIndex);
-        this.audioPlayer.setFile(this.currentFile.file);
+        this.audioPlayer.setFile(this.currentFile);
         this.onPlay();
     }
 

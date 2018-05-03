@@ -1,7 +1,7 @@
 package providers.status.api;
 
-import domain.StatusPackage;
-import domain.enumeration.statuses.StatusBase;
+import domain.statuses.StatusPackage;
+import domain.statuses.StatusBase;
 import org.springframework.stereotype.Service;
 
 import java.io.OutputStream;

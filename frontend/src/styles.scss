@@ -98,6 +98,13 @@ label {
 
 .accent {
   color: rgb(113, 198, 218);
+  &.action {
+    transition: all .15s ease-in-out;
+    &:hover {
+      color: #f0f0f0;
+      text-shadow: 0 3px 5px rgba(113, 198, 218, .5);
+    }
+  }
 }
 
 .full-size {

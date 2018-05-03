@@ -41,13 +41,9 @@ public class PlayerProvider implements IPlayerProvider, IProviderBase {
 
         this.statusProvider = statusProvider;
 
-        this.statusProvider.setStatus("Launching audio player");
         CountDownLatch latch = new CountDownLatch(1);
         this.audioPlayer = new AudioPlayer(this.statusProvider, latch);
         latch.await(); // wait till the player is initialized, running and responding
-
-        this.statusProvider.setStatus("Audio player launched");
-        this.statusProvider.setStatus("PlayerProvider initialized");
     }
 
     //endregion

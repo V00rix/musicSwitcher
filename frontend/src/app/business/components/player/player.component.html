@@ -1,44 +1,41 @@
 <app-player-small [song]="data.playlist[data.playing]" *ngIf="!expanded"></app-player-small>
 
-<div *ngIf="expanded" class="player-content ">
-  <div class="gradient bg-fixed">
-    <div class="image fz image-note"></div>
-    <div class="controls-container">
-      <div class="controls text-center">
-        <app-track-control></app-track-control>
-        <div class="song-info">
-          <div *ngIf="data.playlist[data.playing]; else notPlaying">
-            <label class="text-center big truncate">{{data.playlist[data.playing].title}}</label>
-            <label class="text-center big accent light truncate">{{data.playlist[data.playing].artist + ' - ' +
-              data.playlist[data.playing].album}}</label>
-          </div>
-          <ng-template #notPlaying>
-            <label class="text-center big">Not playing</label>
-          </ng-template>
-        </div>
-        <app-play-control></app-play-control>
-        <app-volume-control></app-volume-control>
-        <div class="text-center flow-buttons">
-          <div class="image medium image-shuffle ib no-shadow hover-up"></div>
-          <div class="image medium image-repeat ib no-shadow hover-up"></div>
-        </div>
+<div *ngIf="expanded" class="player-content gradient bg-fixed">
+  <div class="image fz image-note"></div>
+  <label class="text-center btn-back big accent action pointer" (click)="collapse()">Back</label>
+  <div class="controls-container text-center">
+    <app-track-control></app-track-control>
+    <div class="song-info">
+      <div *ngIf="data.playlist[data.playing]; else notPlaying">
+        <label class="text-center big truncate">{{data.playlist[data.playing].title}}</label>
+        <label class="text-center big accent light truncate">{{data.playlist[data.playing].artist + ' - ' +
+          data.playlist[data.playing].album}}</label>
       </div>
-      <h3 class="text-center gray no-margin">Next in queue</h3>
+      <ng-template #notPlaying>
+        <label class="text-center big">Not playing</label>
+      </ng-template>
     </div>
-    <div class="queue-container standard-padding">
-      <app-list>
-        <app-song *ngFor="let song of data.playlist; let id = index" [song]="song"></app-song>
-      </app-list>
-
-      <app-icon-button>
-        <div class="image medium image-add"></div>
-        <label>Add song</label>
-      </app-icon-button>
-
-      <app-icon-button>
-        <div class="image medium image-save"></div>
-        <label>Save as new playlist</label>
-      </app-icon-button>
+    <app-play-control></app-play-control>
+    <app-volume-control></app-volume-control>
+    <div class="text-center flow-buttons">
+      <div class="image medium image-shuffle ib no-shadow hover-up"></div>
+      <div class="image medium image-repeat ib no-shadow hover-up"></div>
     </div>
+    <h3 class="text-center gray no-margin">Next in queue</h3>
+  </div>
+  <div class="queue-container standard-padding">
+    <app-list>
+      <app-song *ngFor="let song of data.playlist; let id = index" [song]="song"></app-song>
+    </app-list>
+
+    <app-icon-button>
+      <div class="image medium image-add"></div>
+      <label>Add song</label>
+    </app-icon-button>
+
+    <app-icon-button>
+      <div class="image medium image-save"></div>
+      <label>Save as new playlist</label>
+    </app-icon-button>
   </div>
 </div>

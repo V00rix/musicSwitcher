@@ -1,12 +1,12 @@
-package domain.enumeration.statuses;
+package domain.statuses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import domain.enumeration.statuses.IStatusCodes.Global;
+import domain.enumeration.IStatusCodes.Global;
 
 /**
  * Global application status
  */
-public final class StatusGlobal extends StatusBase {
+public class StatusGlobal extends StatusBase {
 
     /**
      * Application initializing
@@ -25,4 +25,8 @@ public final class StatusGlobal extends StatusBase {
      */
     @JsonIgnore
     public static final Status CRASHED = new Status("Application crashed", Global.CRASHED);
+
+    public StatusGlobal(Status status) {
+        super(status);
+    }
 }

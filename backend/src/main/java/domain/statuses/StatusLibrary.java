@@ -1,12 +1,12 @@
-package domain.enumeration.statuses;
+package domain.statuses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import domain.enumeration.statuses.IStatusCodes.Library;
+import domain.enumeration.IStatusCodes.Library;
 
 /**
  *  Library status
  */
-public final class StatusLibrary extends StatusBase {
+public class StatusLibrary extends StatusBase {
     /**
      *  Library not yet initialized
      */
@@ -48,4 +48,8 @@ public final class StatusLibrary extends StatusBase {
      */
     @JsonIgnore
     public static final Status WATCHING = new Status("Merging", Library.WATCHING);
+
+    public StatusLibrary(Status status) {
+        super(status);
+    }
 }

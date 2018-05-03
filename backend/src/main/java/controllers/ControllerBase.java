@@ -1,10 +1,11 @@
 package controllers;
 
-import components.IRichConsole;
+import components.util.IRichConsole;
 import domain.HttpResponse;
 import domain.exeptions.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -15,7 +16,7 @@ import providers.timeTrack.api.ITimeTrackProvider;
 /**
  * Base REST controller class
  */
-@RestController
+@RequestMapping(value="/api")
 public abstract class ControllerBase implements IRichConsole {
     /**
      * Status provider
@@ -39,13 +40,14 @@ public abstract class ControllerBase implements IRichConsole {
      * Play list provider
      */
     @Autowired
-    protected IPlayListProvider playListProvider;
+    protected ILibraryProvider libraryProvider;
 
     /**
      * Play list provider
      */
     @Autowired
-    protected ILibraryProvider libraryProvider;
+    protected IPlayListProvider playListProvider;
+
 
     // todo: declare services here
 

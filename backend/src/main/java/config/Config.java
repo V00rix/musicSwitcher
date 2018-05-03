@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import providers.library.api.ILibraryProvider;
 import providers.library.implementation.LibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -17,6 +19,9 @@ import providers.timeTrack.api.ITimeTrackProvider;
 import providers.timeTrack.implementation.TimeTrackProvider;
 import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Spring beans configuration
@@ -37,12 +42,17 @@ public class Config extends WebMvcConfigurerAdapter {
     @Autowired
     private Environment environment;
 
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:8080", "http://localhost:4200");
-    }
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//                .allowedOrigins("*")
+//                .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
+//    }
 
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new CorsInterceptor());
+    }
 
     //region Beans
 
@@ -98,8 +108,9 @@ public class Config extends WebMvcConfigurerAdapter {
      */
     @Bean
     public IPlayListProvider playListProvider() throws UnprovidedException {
-        return this.playListProvider = this.playListProvider == null ? new PlayListProvider(this.statusProvider, this.playerProvider) : this.playListProvider;
+        return this.playListProvider = this.playListProvider == null ? new PlayListProvider(this.statusProvider, this.playerProvider, this.libraryProvider) : this.playListProvider;
     }
 
     //endregion
 }
+

@@ -3,11 +3,13 @@ package controllers;
 import domain.AudioFile;
 import domain.HttpResponse;
 import domain.exeptions.BaseException;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Music player controller
@@ -21,8 +23,7 @@ public class PlayerController extends ControllerBase {
      * Toggle play/pause
      */
     @RequestMapping(value = "/play")
-    public @ResponseBody
-    HttpResponse play() {
+    public HttpResponse play() {
         this.playListProvider.togglePlay();
         return this.ok();
     }
@@ -31,8 +32,7 @@ public class PlayerController extends ControllerBase {
      * Play next track
      */
     @RequestMapping(value = "/play/next")
-    public @ResponseBody
-    HttpResponse next() {
+    public HttpResponse next() {
         try {
             this.playListProvider.playNext();
             return this.ok();
@@ -45,8 +45,7 @@ public class PlayerController extends ControllerBase {
      * Play previous track
      */
     @RequestMapping(value = "/play/previous")
-    public @ResponseBody
-    HttpResponse previous() {
+    public HttpResponse previous() {
         try {
             this.playListProvider.playPrevious();
             return this.ok();
@@ -59,8 +58,7 @@ public class PlayerController extends ControllerBase {
      * Set volume
      */
     @RequestMapping(value = "/play/seek")
-    public @ResponseBody
-    HttpResponse seek(long millis) {
+    public HttpResponse seek(long millis) {
         this.playerProvider.audioPlayer().seek(millis);
         return this.ok();
     }
@@ -73,8 +71,7 @@ public class PlayerController extends ControllerBase {
      * Set volume
      */
     @RequestMapping(value = "/play/volume")
-    public @ResponseBody
-    HttpResponse setVolume(double volume) {
+    public HttpResponse setVolume(double volume) {
         this.playerProvider.audioPlayer().volume(volume);
         return this.ok();
     }
@@ -83,8 +80,7 @@ public class PlayerController extends ControllerBase {
      * Set volume
      */
     @RequestMapping(value = "/play/volume/increment")
-    public @ResponseBody
-    HttpResponse volumeIncrement() {
+    public HttpResponse volumeIncrement() {
         this.playerProvider.audioPlayer().volumeIncrement();
         return this.ok();
     }
@@ -93,8 +89,7 @@ public class PlayerController extends ControllerBase {
      * Set volume
      */
     @RequestMapping(value = "/play/volume/decrement")
-    public @ResponseBody
-    HttpResponse volumeDecrement() {
+    public HttpResponse volumeDecrement() {
         this.playerProvider.audioPlayer().volumeDecrement();
         return this.ok();
     }
@@ -107,18 +102,20 @@ public class PlayerController extends ControllerBase {
      * Set new playlist
      */
     @RequestMapping(value = "/playlist")
-    public @ResponseBody
-    HttpResponse playlist(ArrayList<AudioFile> playlist) {
-        this.playListProvider.setList(playlist);
-        return this.ok();
+    public HttpResponse playlist(@RequestBody ArrayList<Integer> ids) {
+        try {
+            this.playListProvider.setPlaylist(ids);
+            return this.ok("Ok");
+        } catch (BaseException e) {
+            return this.err(e);
+        }
     }
 
     /**
      * Change playing file at playlist
      */
     @RequestMapping(value = "/playlist/selected")
-    public @ResponseBody
-    HttpResponse playlistFile(int index) {
+    public HttpResponse playlistFile(int index) {
         try {
             this.playListProvider.playFile(index);
             return this.ok();

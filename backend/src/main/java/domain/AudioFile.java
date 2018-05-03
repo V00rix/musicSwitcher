@@ -4,25 +4,42 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.File;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 
 /**
  * Audio file with metadata
  */
 public class AudioFile implements Serializable {
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+    private static int fileId = 0;
+
     //region Fields
+
+    /**
+     * File id
+     */
+    public int id;
+
+    /**
+     * Flag if metadata is retrieved for this file
+     */
+    public boolean metadataRetrieved  = false;
 
     /**
      * Title
      */
     public String title;
+
     /**
      * Name
      */
     public String artist;
+
     /**
      * Album
      */
     public String album;
+
     /**
      * Track  number
      */
@@ -31,12 +48,23 @@ public class AudioFile implements Serializable {
     /**
      * File path
      */
+    @JsonIgnore
     public String filePath;
+
+    /**
+     * Formatted file path to display when no metadata is found
+     */
+    public String path;
 
     /**
      * Genre
      */
     public String genre;
+    /**
+     * Genre
+     */
+    public String dateChanged;
+
 
     //endregion
 
@@ -55,16 +83,23 @@ public class AudioFile implements Serializable {
     /**
      * New audio file instance
      */
-    public AudioFile() {}
+    public AudioFile() {
+        this.id = fileId++;
+    }
 
 
     /**
      * Convert from File
+     *
      * @param f File
      */
     public AudioFile(File f) {
+        this.id = fileId++;
         this.file = f;
-        this.filePath = f.getName();
+        this.filePath = f.getAbsolutePath();
+        this.path = f.getName();
+        this.dateChanged = dateFormat.format(file.lastModified());
+
     }
 
     //endregion

@@ -1,10 +1,16 @@
-package domain.enumeration.statuses;
+package domain.statuses;
+
+import domain.enumeration.IStatusCodes;
 
 public abstract class StatusBase {
     /**
      * Status
      */
     public Status status;
+
+    public StatusBase(Status status) {
+        this.status = status;
+    }
 
     public static final class Status implements IStatusCodes {
         private final String text;

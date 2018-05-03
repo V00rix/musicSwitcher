@@ -1,6 +1,6 @@
 package providers.timeTrack.implementation;
 
-import components.IRichConsole;
+import components.util.IRichConsole;
 import domain.exeptions.UnprovidedException;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
@@ -39,7 +39,6 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
     public TimeTrackProvider(IStatusProvider statusProvider) throws UnprovidedException {
         this.checkProviders(statusProvider);
         this.statusProvider = statusProvider;
-        this.statusProvider.setStatus("TimeTrackProvider initialized");
     }
 
     //endregion
@@ -49,12 +48,12 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
     @Override
     public <T> T track(Callable<T> f, String startMessage, String endMessage) throws Exception {
         long mStart = System.currentTimeMillis();
-        this.statusProvider.setStatus(String.format(startMessage, millisDate(mStart)));
+        System.out.println((String.format(startMessage, millisDate(mStart))));
 
         T res = f.call();
 
         long mEnd = System.currentTimeMillis();
-        this.statusProvider.setStatus(String.format(endMessage, millisDate(mEnd), ((mEnd - mStart)) + " ms"));
+        System.out.println((String.format(endMessage, millisDate(mEnd), ((mEnd - mStart)) + " ms")));
 
         return res;
     }
@@ -65,7 +64,7 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
         int progressStepsTotal = items.size();
         int progressStepsCompleted = 0;
 
-        this.statusProvider.setStatus(taskName + " has started. " + style("Progress: 0%", BoldColors.CYAN));
+        System.out.println((taskName + " has started. " + style("Progress: 0%", BoldColors.CYAN)));
 
         ArrayList<R> result = new ArrayList<R>();
 
@@ -75,12 +74,12 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
             progressStepsCompleted++;
 
 
-            this.statusProvider.setStatus(taskName + " is in progress. "
-                    + style("Progress: " + prettyProgress(progressStepsTotal, progressStepsCompleted), BoldColors.CYAN));
+            System.out.println((taskName + " is in progress. "
+                    + style("Progress: " + prettyProgress(progressStepsTotal, progressStepsCompleted), BoldColors.CYAN)));
         }
 
 
-        this.statusProvider.setStatus(taskName + " has finished: " + style("Progress: 100%", BoldColors.GREEN));
+        System.out.println((taskName + " has finished: " + style("Progress: 100%", BoldColors.GREEN)));
 
         return result;
     }

@@ -2,6 +2,8 @@ package components.audioPlayer.implementation;
 
 import components.audioPlayer.api.IAudioPlayer;
 import domain.exeptions.UnprovidedException;
+import domain.statuses.StatusBase;
+import domain.statuses.StatusPlayer;
 import javafx.application.Application;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -35,6 +37,7 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     private static CountDownLatch latch;
     private static Thread thread;
     private static String fileName;
+    private static int songId;
     private static Duration seekLocation = new Duration(0);
 
     //endregion
@@ -82,11 +85,13 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     }
 
     @Override
-    public void setFile(String fileUri) {
-        statusProvider.setStatus("File changed: " + fileUri);
+    public void setFile(String fileUri, int songId) {
+        System.out.println(fileUri);
         fileName = fileUri;
         Media audio = new Media(fileUri);
         player = new MediaPlayer(audio);
+
+        statusProvider.setStatus(new StatusPlayer(StatusPlayer.FILE_CHANGED, 0, (int) (player.getVolume() * 10), AudioPlayer.songId = songId));
     }
 
     //endregion
@@ -99,8 +104,9 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
             player.setOnEndOfMedia(onEnd);
 
             player.seek(seekLocation);
-            statusProvider.setStatus(("Playing: " + fileName));
             player.play();
+
+            statusProvider.setStatus(new StatusPlayer(StatusPlayer.PLAYING, (long) seekLocation.toMillis(), (int) (player.getVolume() * 10), songId));
         }
     }
 
@@ -109,9 +115,11 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         if (player != null) {
             player.setOnEndOfMedia(() -> {
             });
+
             seekLocation = new Duration(0);
-            statusProvider.setStatus("Ready to play music");
             player.stop();
+
+            statusProvider.setStatus(new StatusPlayer(StatusPlayer.STOPPED, (long) seekLocation.toMillis(), (int) (player.getVolume() * 10), -1));
         }
     }
 
@@ -120,17 +128,18 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         if (player != null) {
             player.setOnEndOfMedia(() -> {
             });
+
             seekLocation = player.getCurrentTime();
-            statusProvider.setStatus(("Paused: " + fileName));
             player.pause();
+
+            statusProvider.setStatus(new StatusPlayer(StatusPlayer.PAUSED, (long) seekLocation.toMillis(), (int) (player.getVolume() * 10), songId));
         }
     }
 
     @Override
     public void seek(long millis) {
-        // todo check (newDuration <= songDuration)
-        //        player.getMedia().getDuration();
-        seekLocation = new Duration(millis);
+        long songDuration = (long) player.getMedia().getDuration().toMillis();
+        seekLocation = new Duration(millis < 1 ? 0 : millis >= songDuration ? songDuration - 1 : millis);
     }
 
     //endregion

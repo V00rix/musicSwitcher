@@ -16,7 +16,13 @@ public interface IPlayListProvider {
      *
      * @param fileList Files for play queue
      */
-    void setList(ArrayList<AudioFile> fileList);
+    void setFiles(ArrayList<AudioFile> fileList);
+
+    /**
+     * Set playlist with file ids
+     * @param ids File ids
+     */
+    void setPlaylist(ArrayList<Integer> ids) throws BaseException;
 
     /**
      * Play or pause an audio file
@@ -39,4 +45,5 @@ public interface IPlayListProvider {
      * @param index Specified
      */
     void playFile(int index) throws BaseException;
+
 }

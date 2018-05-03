@@ -3,7 +3,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+.btn-back {
+  top: 0;
+  width: 100%;
+  padding: 30px 0 70px;
+  background: linear-gradient(rgba(0, 0, 0, 0.26), transparent);
+  position: fixed;
+  z-index: 100;
 }
 
 .gradient {
@@ -22,6 +38,9 @@
   margin-top: -50vh;
   padding-top: 25vh;
   background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 30%, black 40%, black 75%, transparent 100%);
+  > .song-info {
+    margin: 50px;
+  }
 }
 
 .flow-buttons {
@@ -36,14 +55,11 @@
   position: relative;
 }
 
-.song-info {
-  margin: 50px;
-}
 
 h3 {
 
 }
 
 .app-icon-button {
-  display: block;
+  display: block !important;
 }

@@ -1,4 +1,6 @@
-package domain;
+package domain.statuses;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Small status for synchronization
@@ -6,25 +8,28 @@ package domain;
  * If value is different, update request is sent to corresponding status
  */
 public class StatusPackage {
+    @JsonIgnore
     public static final int GLOBAL = 1;
+    @JsonIgnore
     public static final int PLAYER = 2;
+    @JsonIgnore
     public static final int LIBRARY = 4;
 
 
     /**
      * Global status
      */
-    private final long statusGlobal;
+    public final long statusGlobal;
 
     /**
      * Player status
      */
-    private final long statusPlayer;
+    public final long statusPlayer;
 
     /**
      * Library status
      */
-    private final long statusLibrary;
+    public final long statusLibrary;
 
     /**
      * New status package
@@ -56,6 +61,6 @@ public class StatusPackage {
         if (type > 2) {
             newLibrary = this.statusLibrary + 1;
         }
-        return new StatusPackage(this.statusGlobal + 1, this.statusPlayer + 1, this.statusLibrary + 1);
+        return new StatusPackage(newGlobal, newPlayer, newLibrary);
     }
 }

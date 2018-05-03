@@ -1,4 +1,4 @@
-import { Component, OnInit,  Input } from '@angular/core';
+import { Component, OnInit,  Input, HostBinding } from '@angular/core';
 import {AudioFile} from "../../domain/audio-file";
 
 @Component({
@@ -8,6 +8,7 @@ import {AudioFile} from "../../domain/audio-file";
 })
 export class SongComponent implements OnInit {
   @Input() song: AudioFile;
+  @HostBinding('class') classes = 'song pointer app-song';
 
   constructor() { }
 
@@ -16,5 +17,4 @@ export class SongComponent implements OnInit {
       throw new Error("No audio file specified as input for SongComponent");
     }
   }
-
 }

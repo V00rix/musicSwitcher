@@ -1,7 +1,6 @@
 package domain;
 
 import domain.enumeration.ErrorCodes;
-import domain.enumeration.Statuses;
 import domain.exeptions.BaseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +16,6 @@ public class HttpResponse<T> {
      * Response data
      */
     public T data;
-
-    /**
-     * Application status
-     */
-    public Statuses status;
-
 
     /**
      * Application status
@@ -50,12 +43,18 @@ public class HttpResponse<T> {
     private class ErrorResponse {
 
         /**
-         * Application status
+         * Error code
          */
         public ErrorCodes code;
 
+        /**
+         * Error message
+         */
         public String message;
 
+        /**
+         * Stack trace
+         */
         public String stack;
 
         private ErrorResponse(BaseException e) {

@@ -1,11 +1,16 @@
-<div class="song pointer">
-  <div class="image small image-note"></div>
+<div class="image small image-note"></div>
+<div class="text" *ngIf="song.metadataRetrieved; else noMetadata">
+  <label class="title truncate pointer">
+    {{song.title}}
+  </label>
+  <label class="artist truncate accent pointer">
+    {{song.artist}} - {{song.album}}
+  </label>
+</div>
+<ng-template #noMetadata>
   <div class="text">
-    <label class="title truncate pointer">
-      {{song.title}}
-    </label>
-    <label class="artist truncate accent pointer">
-      {{song.artist}} - {{song.album}}
+    <label class="truncate pointer">
+      {{song.path}}
     </label>
   </div>
-</div>
+</ng-template>

@@ -1,14 +1,14 @@
 package controllers;
 
 import domain.HttpResponse;
-import domain.StatusPackage;
+import domain.statuses.StatusPackage;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * Status controller
  */
 @RestController
-@RequestMapping(value = "/status")
+@RequestMapping(value = "/api/status")
 public class StatusController extends ControllerBase {
     /*
      * 0. Get synchronization state (app availability etc.) FE ? (Http had response...)
@@ -22,7 +22,7 @@ public class StatusController extends ControllerBase {
      */
     @RequestMapping(value = "", method = RequestMethod.GET)
     public StatusPackage status() {
-        return this.statusProvider.statusSmall();
+        return this.statusProvider.statusPackage();
     }
 
     /**

@@ -1,7 +1,8 @@
-.song {
+:host(.song) {
   margin: 15px 0;
   width: 100%;
   transition: all .15s ease-in;
+  display: block;
 
   &:hover {
     transform: translateX(15px);

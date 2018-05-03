@@ -1,4 +1,4 @@
-package components;
+package components.util;
 
 public interface IRichConsole {
     //region Options

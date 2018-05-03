@@ -15,6 +15,6 @@ export class SongsComponent implements OnInit {
   }
 
   public setPlaylist(id: number) {
-    this.data.setPlaylist(this.data.library.files.slice(id))
+    this.data.setPlaylist(id);
   }
 }

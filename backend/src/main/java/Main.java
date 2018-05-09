@@ -1,7 +1,7 @@
 import domain.AudioFile;
+import domain.enumeration.IStatusCodes;
+import domain.statuses.ApplicationStatus;
 import domain.statuses.StatusBase;
-import domain.statuses.StatusGlobal;
-import domain.statuses.StatusLibrary;
 import org.apache.tika.exception.TikaException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,17 +37,16 @@ public class Main {
 
         // Get beans reference
         IStatusProvider statusProvider = applicationContext.getBean(IStatusProvider.class);
-        statusProvider.setStatus(new StatusGlobal(StatusGlobal.INITIALIZING));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.INITIALIZING));
 
         IPlayerProvider playerProvider = applicationContext.getBean(IPlayerProvider.class);
         ILibraryProvider libraryProvider = applicationContext.getBean(ILibraryProvider.class);
         ITimeTrackProvider timeTrackProvider = applicationContext.getBean(ITimeTrackProvider.class);
         IPlayListProvider playListProvider = applicationContext.getBean(IPlayListProvider.class);
-        statusProvider.setStatus(new StatusGlobal(StatusGlobal.OK));
         //endregion
 
         //region Get cached data
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.READING_CACHE));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.READING_CACHE));
         ArrayList<AudioFile> audioFiles = new ArrayList<>();
         try {
             audioFiles = timeTrackProvider.track(() -> {
@@ -63,7 +62,7 @@ public class Main {
         //endregion
 
         //region Read full actual library
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.UPDATING_FILES));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.UPDATING_FILES));
         ArrayList<AudioFile> files = new ArrayList<>(timeTrackProvider.track(() -> {
             return libraryProvider.getLibraryFull(rootPath, "mp3");
         }, "Getting files"));
@@ -74,7 +73,7 @@ public class Main {
         //endregion
 
         //region Get metadata
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.UPDATING_METADATA));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.UPDATING_METADATA));
         audioFiles = timeTrackProvider.trackProgress(files, (file) -> {
             try {
                 return libraryProvider.getMetadata(file);
@@ -90,7 +89,7 @@ public class Main {
         //region Merging
         // todo: save current playing file
         // todo: merge
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.MERGING));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.MERGING));
         //endregion
 
         //region Set playlist
@@ -98,7 +97,7 @@ public class Main {
         //endregion
 
         //region Save/update cache
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.SAVING_CACHE));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.SAVING_CACHE));
         ArrayList<AudioFile> finalAudioFiles = audioFiles;
         timeTrackProvider.track(() -> {
             libraryProvider.saveCache(finalAudioFiles, cachePath);
@@ -108,7 +107,7 @@ public class Main {
 
         //region Watch files for changes
         // todo: watch files
-        statusProvider.setStatus(new StatusLibrary(StatusLibrary.WATCHING));
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.WATCHING));
         //endregion
     }
 }

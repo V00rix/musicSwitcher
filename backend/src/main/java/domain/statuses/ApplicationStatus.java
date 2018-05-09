@@ -1,17 +1,18 @@
 package domain.statuses;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import domain.enumeration.IStatusCodes.Global;
 import domain.enumeration.IStatusCodes.Library;
 
 /**
  *  Library status
  */
-public class StatusLibrary extends StatusBase {
+public class ApplicationStatus extends StatusBase {
     /**
      *  Library not yet initialized
      */
     @JsonIgnore
-    public static final Status INITIALIZING = new Status("Application initializing", Library.INITIALIZING);
+    public static final Status INITIALIZING = new Status("Application initializing", Global.INITIALIZING);
 
     /**
      * Reading cache
@@ -41,15 +42,15 @@ public class StatusLibrary extends StatusBase {
      * Saving cache
      */
     @JsonIgnore
-    public static final Status SAVING_CACHE = new Status("Merging", Library.SAVING_CACHE);
+    public static final Status SAVING_CACHE = new Status("Saving cache", Library.SAVING_CACHE);
 
     /**
      * Watching directories for changes
      */
     @JsonIgnore
-    public static final Status WATCHING = new Status("Merging", Library.WATCHING);
+    public static final Status WATCHING = new Status("Watching files for changes", Library.WATCHING);
 
-    public StatusLibrary(Status status) {
+    public ApplicationStatus(Status status) {
         super(status);
     }
 }

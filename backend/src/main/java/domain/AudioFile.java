@@ -10,11 +10,12 @@ import java.text.SimpleDateFormat;
  * Audio file with metadata
  */
 public class AudioFile implements Serializable {
+    //region Defaults
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     private static int fileId = 0;
+    //endregion
 
     //region Fields
-
     /**
      * File id
      */
@@ -64,29 +65,23 @@ public class AudioFile implements Serializable {
      * Genre
      */
     public String dateChanged;
-
-
     //endregion
 
     //region JsonIgnore
-
     /**
      * Actual file
      */
     @JsonIgnore
     public File file;
-
     //endregion
 
     //region Constructors
-
     /**
      * New audio file instance
      */
     public AudioFile() {
         this.id = fileId++;
     }
-
 
     /**
      * Convert from File
@@ -99,8 +94,6 @@ public class AudioFile implements Serializable {
         this.filePath = f.getAbsolutePath();
         this.path = f.getName();
         this.dateChanged = dateFormat.format(file.lastModified());
-
     }
-
     //endregion
 }

@@ -3,11 +3,14 @@ package providers.playList.implementation;
 import components.util.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
+import domain.enumeration.IStatusCodes;
 import domain.exeptions.BaseException;
 import domain.exeptions.checks.BoundariesCheck;
 import domain.exeptions.checks.NullCheck;
 import domain.exeptions.UnprovidedException;
-import domain.statuses.StatusPlayer;
+import domain.statuses.ApplicationStatus;
+import domain.statuses.PlayerStatusFull;
+import domain.statuses.PlayerStatusSmall;
 import providers.IProviderBase;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -21,13 +24,15 @@ import java.util.ArrayList;
  */
 public class PlayListProvider implements IPlayListProvider, IProviderBase, IRichConsole {
     //region Fields
-
     //region Providers
-
     private final IStatusProvider statusProvider;
     private final IPlayerProvider playerProvider;
     private final ILibraryProvider libraryProvider;
+    //endregion
 
+    //region Status
+    private long statusSmall = 0;
+    private PlayerStatusFull playerStatusFull = new PlayerStatusFull();
     //endregion
 
     private ArrayList<AudioFile> files;
@@ -37,11 +42,9 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     private boolean playing = false;
 
     private final IAudioPlayer audioPlayer;
-
     //endregion
 
     //region Constructor
-
     /**
      * New instance of play list provider
      *
@@ -56,20 +59,16 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
         this.statusProvider = statusProvider;
         this.audioPlayer = playerProvider.audioPlayer();
     }
-
     //endregion
 
     //region Implementation
-
     @Override
     public void setFiles(ArrayList<AudioFile> fileList) {
         this.audioPlayer.stop();
         try {
             NullCheck.check(fileList);
             this.files = fileList;
-            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.PLAYLIST_SET));
-        } catch (NullCheck.NullOrEmptyException e) {
-            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.NO_FILES));
+        } catch (NullCheck.NullOrEmptyException ignored) {
         }
     }
 
@@ -83,10 +82,8 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
             for (Integer id : ids) {
                 this.files.add(audioFiles.get(id));
             }
-            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.PLAYLIST_SET));
             this.playFile(ids.get(0));
-        } catch (NullCheck.NullOrEmptyException e) {
-            this.statusProvider.setStatus(new StatusPlayer(StatusPlayer.NO_FILES));
+        } catch (NullCheck.NullOrEmptyException ignored) {
         }
     }
 
@@ -119,11 +116,19 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
         this.onPlay();
     }
 
+    @Override
+    public PlayerStatusSmall playerStatusSmall() {
+        return new PlayerStatusSmall(this.audioPlayer.getSeek(), this.statusSmall++);
+    }
+
+    @Override
+    public PlayerStatusFull playerStatusFull() {
+        return this.playerStatusFull;
+    }
     //endregion
 
 
     //region Helpers
-
     /**
      * On play helper method
      */

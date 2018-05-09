@@ -1,8 +1,6 @@
 package providers.library.implementation;
 
-import components.util.IMapper;
 import components.util.IRichConsole;
-import controllers.LibraryController;
 import domain.AudioFile;
 import domain.exeptions.UnprovidedException;
 import org.apache.tika.exception.TikaException;
@@ -21,10 +19,6 @@ import providers.timeTrack.api.ITimeTrackProvider;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

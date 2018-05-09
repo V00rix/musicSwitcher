@@ -16,19 +16,14 @@ import java.util.concurrent.CountDownLatch;
 @Service
 public class PlayerProvider implements IPlayerProvider, IProviderBase {
     //region Fields
-
     //region Providers
-
     private final IStatusProvider statusProvider;
 
     //endregion
-
     public final IAudioPlayer audioPlayer;
-
     //endregion
 
     //region Constructors
-
     /**
      * New instance on player provider
      *
@@ -45,15 +40,12 @@ public class PlayerProvider implements IPlayerProvider, IProviderBase {
         this.audioPlayer = new AudioPlayer(this.statusProvider, latch);
         latch.await(); // wait till the player is initialized, running and responding
     }
-
     //endregion
 
     //region Implementation
-
     @Override
     public IAudioPlayer audioPlayer() {
         return this.audioPlayer;
     }
-
     //endregion
 }

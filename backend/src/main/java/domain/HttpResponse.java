@@ -18,7 +18,7 @@ public class HttpResponse<T> {
     public T data;
 
     /**
-     * Application status
+     * Error data
      */
     public ErrorResponse error;
 

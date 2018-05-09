@@ -14,13 +14,12 @@ public interface IStatusCodes {
 
     //region Library
     public static final class Library {
-        public static final int INITIALIZING = 1200;
-        public static final int READING_CACHE = 1201;
-        public static final int UPDATING_FILES = 1202;
-        public static final int UPDATING_METADATA = 1203;
-        public static final int MERGING = 1204;
-        public static final int WATCHING = 1205;
-        public static final int SAVING_CACHE = 1206;
+        public static final int READING_CACHE = 1200;
+        public static final int UPDATING_FILES = 1201;
+        public static final int UPDATING_METADATA = 1202;
+        public static final int MERGING = 1203;
+        public static final int WATCHING = 1204;
+        public static final int SAVING_CACHE = 1205;
     }
     //endregion
 

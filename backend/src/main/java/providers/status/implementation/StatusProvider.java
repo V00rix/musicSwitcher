@@ -1,15 +1,14 @@
 package providers.status.implementation;
 
-import domain.statuses.StatusPackage;
+import domain.statuses.PlayerStatusFull;
+import domain.statuses.PlayerStatusSmall;
 import domain.statuses.StatusBase;
-import domain.statuses.StatusGlobal;
-import domain.statuses.StatusLibrary;
-import domain.statuses.StatusPlayer;
 import org.springframework.stereotype.Service;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
 
 import java.io.OutputStream;
+import java.io.PrintStream;
 
 /**
  * Default status provider
@@ -18,10 +17,6 @@ import java.io.OutputStream;
 public class StatusProvider implements IStatusProvider, IProviderBase {
 
     //region Fields
-    private StatusPackage statusPackage;
-    private StatusGlobal statusGlobal;
-    private StatusLibrary statusLibrary;
-    private StatusPlayer statusPlayer;
     private StatusBase status;
     //endregion
 
@@ -30,7 +25,6 @@ public class StatusProvider implements IStatusProvider, IProviderBase {
      * New instance of default status provider
      */
     public StatusProvider() {
-        this.statusPackage = new StatusPackage(0,0,0);
         System.out.println("StatusProvider initialized");
     }
     //endregion
@@ -38,25 +32,13 @@ public class StatusProvider implements IStatusProvider, IProviderBase {
     //region Implementation
     @Override
     public StatusBase setStatus(StatusBase status) {
-        if (status instanceof StatusGlobal) {
-            this.statusPackage.update(StatusPackage.GLOBAL);
-        } else if (status instanceof StatusLibrary) {
-            this.statusPackage.update(StatusPackage.LIBRARY);
-        } else if (status instanceof StatusPlayer) {
-            this.statusPackage.update(StatusPackage.PLAYER);
-        }
         this.status = status;
         return this.getStatus();
     }
 
     @Override
-    public StatusBase getStatus(OutputStream out) {
+    public StatusBase getStatus(PrintStream out) {
         return this.printStatus(out);
-    }
-
-    @Override
-    public StatusPackage statusPackage() {
-        return this.statusPackage;
     }
     //endregion
 
@@ -65,8 +47,8 @@ public class StatusProvider implements IStatusProvider, IProviderBase {
     /**
      * Prints current status to output stream
      */
-    private StatusBase printStatus(OutputStream out) {
-        System.out.println(this.status.status.text());
+    private StatusBase printStatus(PrintStream out) {
+        out.println(this.status.status.text());
         return this.status;
     }
     //endregion

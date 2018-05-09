@@ -57,6 +57,13 @@ public interface IAudioPlayer {
      * @param millis Milliseconds from start
      */
     void seek(long millis);
+
+    /**
+     * Get seek location
+     *
+     * @return Millis from start of playing
+     */
+    long getSeek();
     //endregion
 
     //region Volume control
@@ -66,7 +73,6 @@ public interface IAudioPlayer {
      * @param volume New volume value
      */
     void volume(double volume);
-
     /**
      * Increase volume by step
      */

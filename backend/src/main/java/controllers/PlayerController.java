@@ -16,9 +16,7 @@ import java.util.Collections;
  */
 @RestController
 public class PlayerController extends ControllerBase {
-
     //region Play controls
-
     /**
      * Toggle play/pause
      */
@@ -55,18 +53,16 @@ public class PlayerController extends ControllerBase {
     }
 
     /**
-     * Set volume
+     * Set seek
      */
     @RequestMapping(value = "/play/seek")
     public HttpResponse seek(long millis) {
         this.playerProvider.audioPlayer().seek(millis);
         return this.ok();
     }
-
     //endregion
 
     //region Volume controls
-
     /**
      * Set volume
      */
@@ -93,11 +89,9 @@ public class PlayerController extends ControllerBase {
         this.playerProvider.audioPlayer().volumeDecrement();
         return this.ok();
     }
-
     //endregion
 
     //region Playlist controls
-
     /**
      * Set new playlist
      */
@@ -123,6 +117,5 @@ public class PlayerController extends ControllerBase {
             return this.err(e);
         }
     }
-
     //endregion
 }

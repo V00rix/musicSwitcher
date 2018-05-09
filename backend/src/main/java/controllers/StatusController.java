@@ -1,7 +1,7 @@
 package controllers;
 
 import domain.HttpResponse;
-import domain.statuses.StatusPackage;
+import domain.statuses.PlayerStatusSmall;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -20,9 +20,18 @@ public class StatusController extends ControllerBase {
      * Get current status
      * @return Status as string
      */
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public StatusPackage status() {
-        return this.statusProvider.statusPackage();
+    @RequestMapping(value = "/player", method = RequestMethod.GET)
+    public PlayerStatusSmall status() {
+        return this.playListProvider.playerStatusSmall();
+    }
+
+    /**
+     * Get current status
+     * @return Status as string
+     */
+    @RequestMapping(value = "/player/full", method = RequestMethod.GET)
+    public HttpResponse player() {
+        return this.ok(this.playListProvider.playerStatusFull());
     }
 
     /**
@@ -33,14 +42,7 @@ public class StatusController extends ControllerBase {
     public HttpResponse global() {
         return this.ok(this.statusProvider.getStatus());
     }
-    /**
-     * Get current status
-     * @return Status as string
-     */
-    @RequestMapping(value = "/player", method = RequestMethod.GET)
-    public HttpResponse player() {
-        return this.ok(this.statusProvider.getStatus());
-    }
+
     /**
      * Get current status
      * @return Status as string

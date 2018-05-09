@@ -1,10 +1,12 @@
 package providers.status.api;
 
-import domain.statuses.StatusPackage;
+import domain.statuses.PlayerStatusFull;
+import domain.statuses.PlayerStatusSmall;
 import domain.statuses.StatusBase;
 import org.springframework.stereotype.Service;
 
 import java.io.OutputStream;
+import java.io.PrintStream;
 
 /**
  * Status provider API
@@ -34,7 +36,5 @@ public interface IStatusProvider {
      * @param out Output stream
      * @return Current status
      */
-    StatusBase getStatus(OutputStream out);
-
-    StatusPackage statusPackage();
+    StatusBase getStatus(PrintStream out);
 }

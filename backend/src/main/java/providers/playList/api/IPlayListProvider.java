@@ -2,9 +2,8 @@ package providers.playList.api;
 
 import domain.AudioFile;
 import domain.exeptions.BaseException;
-import domain.exeptions.checks.BoundariesCheck;
-import domain.statuses.PlayerStatusFull;
-import domain.statuses.PlayerStatusSmall;
+import domain.statuses.PlayerStatus;
+import javafx.util.Pair;
 
 import java.util.ArrayList;
 
@@ -53,12 +52,12 @@ public interface IPlayListProvider {
      *
      * @return Small status package
      */
-    PlayerStatusSmall playerStatusSmall();
+    Pair<Long, Long> playerStatusSmall();
 
     /**
      * Get full info package
      *
      * @return Full status package
      */
-    PlayerStatusFull playerStatusFull();
+    PlayerStatus playerStatusFull();
 }

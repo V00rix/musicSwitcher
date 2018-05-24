@@ -3,14 +3,12 @@ package providers.playList.implementation;
 import components.util.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
-import domain.enumeration.IStatusCodes;
 import domain.exeptions.BaseException;
 import domain.exeptions.checks.BoundariesCheck;
 import domain.exeptions.checks.NullCheck;
 import domain.exeptions.UnprovidedException;
-import domain.statuses.ApplicationStatus;
-import domain.statuses.PlayerStatusFull;
-import domain.statuses.PlayerStatusSmall;
+import domain.statuses.PlayerStatus;
+import javafx.util.Pair;
 import providers.IProviderBase;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
@@ -32,7 +30,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
 
     //region Status
     private long statusSmall = 0;
-    private PlayerStatusFull playerStatusFull = new PlayerStatusFull();
+    private PlayerStatus playerStatus = new PlayerStatus();
     //endregion
 
     private ArrayList<AudioFile> files;
@@ -117,13 +115,13 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     }
 
     @Override
-    public PlayerStatusSmall playerStatusSmall() {
-        return new PlayerStatusSmall(this.audioPlayer.getSeek(), this.statusSmall++);
+    public Pair<Long, Long> playerStatusSmall() {
+        return new Pair<>(this.audioPlayer.getSeek(), this.statusSmall++);
     }
 
     @Override
-    public PlayerStatusFull playerStatusFull() {
-        return this.playerStatusFull;
+    public PlayerStatus playerStatusFull() {
+        return this.playerStatus;
     }
     //endregion
 

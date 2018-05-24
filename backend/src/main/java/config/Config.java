@@ -29,33 +29,23 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 public class Config extends WebMvcConfigurerAdapter {
     //region Fields
-
     private IStatusProvider statusProvider;
     private IPlayerProvider playerProvider;
     private IPlayListProvider playListProvider;
     private ILibraryProvider libraryProvider;
     private ITimeTrackProvider timeTrackProvider;
-
     //endregion
-
 
     @Autowired
     private Environment environment;
 
-//    @Override
-//    public void addCorsMappings(CorsRegistry registry) {
-//        registry.addMapping("/**")
-//                .allowedOrigins("*")
-//                .allowedMethods("HEAD", "GET", "PUT", "POST", "DELETE", "PATCH");
-//    }
-
     @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new CorsInterceptor());
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*");
     }
 
     //region Beans
-
     /**
      * Register status provider
      *
@@ -65,7 +55,6 @@ public class Config extends WebMvcConfigurerAdapter {
     public IStatusProvider statusProvider() {
         return this.statusProvider = this.statusProvider == null ? new StatusProvider() : this.statusProvider;
     }
-
 
     /**
      * Register time track provider
@@ -110,7 +99,6 @@ public class Config extends WebMvcConfigurerAdapter {
     public IPlayListProvider playListProvider() throws UnprovidedException {
         return this.playListProvider = this.playListProvider == null ? new PlayListProvider(this.statusProvider, this.playerProvider, this.libraryProvider) : this.playListProvider;
     }
-
     //endregion
 }
 

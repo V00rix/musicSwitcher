@@ -1,7 +1,7 @@
 package controllers;
 
 import domain.HttpResponse;
-import domain.statuses.PlayerStatusSmall;
+import javafx.util.Pair;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -21,7 +21,7 @@ public class StatusController extends ControllerBase {
      * @return Status as string
      */
     @RequestMapping(value = "/player", method = RequestMethod.GET)
-    public PlayerStatusSmall status() {
+    public Pair<Long, Long> status() {
         return this.playListProvider.playerStatusSmall();
     }
 

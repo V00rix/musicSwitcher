@@ -1,13 +1,10 @@
 package providers.status.implementation;
 
-import domain.statuses.PlayerStatusFull;
-import domain.statuses.PlayerStatusSmall;
 import domain.statuses.StatusBase;
 import org.springframework.stereotype.Service;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
 
-import java.io.OutputStream;
 import java.io.PrintStream;
 
 /**

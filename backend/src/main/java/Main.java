@@ -23,7 +23,7 @@ public class Main {
 
     //region Defaults
 
-    private static final String rootPath = "C:/Users/vlado/Music";
+    private static final String rootPath = "/Users/elumixor/Music/iTunes/iTunes Media/Music";
     private static final String cachePath = "backend/app_data/metadata";
 
     //endregion

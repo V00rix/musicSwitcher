@@ -8,7 +8,8 @@ import {HttpResponse} from "../domain/http-response";
 
 @Injectable()
 export class DataService {
-  private readonly baseUrl = 'http://192.168.0.192:8080/api';
+  // private readonly baseUrl = 'http://192.168.0.192:8080/api';
+  private readonly baseUrl;
 
   //region Events
 
@@ -42,16 +43,15 @@ export class DataService {
   //endregion
 
   //region Constructor
-
   constructor(private http: HttpClient) {
-    this.status();
+    // this.status();
+    this.baseUrl  = `http://${window.location.host}/api`;
     this.getLibrary();
   }
 
   //endregion
 
   //region Public API
-
   /**
    * Backend synchronization
    */

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Player status response
  */
-public class PlayerStatusFull {
+public class PlayerStatus {
     //region Fields
     /**
      * Volume

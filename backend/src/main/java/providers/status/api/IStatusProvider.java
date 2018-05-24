@@ -1,11 +1,8 @@
 package providers.status.api;
 
-import domain.statuses.PlayerStatusFull;
-import domain.statuses.PlayerStatusSmall;
 import domain.statuses.StatusBase;
 import org.springframework.stereotype.Service;
 
-import java.io.OutputStream;
 import java.io.PrintStream;
 
 /**

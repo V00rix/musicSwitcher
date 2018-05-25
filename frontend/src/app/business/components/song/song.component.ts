@@ -1,5 +1,5 @@
 import { Component, OnInit,  Input, HostBinding } from '@angular/core';
-import {AudioFile} from "../../domain/audio-file";
+import {AudioFile} from "../../domain/audioFile";
 
 @Component({
   selector: 'app-song',

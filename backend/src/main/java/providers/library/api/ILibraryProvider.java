@@ -1,6 +1,7 @@
 package providers.library.api;
 
 import domain.AudioFile;
+import javafx.util.Pair;
 import org.apache.tika.exception.TikaException;
 import org.xml.sax.SAXException;
 
@@ -16,14 +17,14 @@ public interface ILibraryProvider {
     /**
      * Get cached library
      *
-     * @return List of files
+     * @return List of playlist
      */
     ArrayList<AudioFile> getLibraryCache(String filepath) throws Exception;
 
     /**
      * Scan filesystem and full library
      *
-     * @return List of files
+     * @return List of playlist
      */
     ArrayList<AudioFile> getLibraryFull(String rootPath, final String... fileTypes);
 
@@ -33,7 +34,7 @@ public interface ILibraryProvider {
      * @param file File
      * @return File with metadata
      */
-    AudioFile getMetadata(AudioFile file) throws IOException, TikaException, SAXException;
+    void getMetadata(AudioFile file) throws IOException, TikaException, SAXException;
 
     /**
      * Get metadata for file
@@ -41,43 +42,64 @@ public interface ILibraryProvider {
      * @param file File
      * @return File with metadata
      */
-    default AudioFile getMetadata(File file) throws IOException, TikaException, SAXException {
-        return this.getMetadata(new AudioFile(file));
-    };
+    default void getMetadata(File file) throws IOException, TikaException, SAXException {
+        this.getMetadata(new AudioFile(file));
+    }
+
+    ;
 
     /**
      * Save Cache
      */
-    void saveCache(ArrayList<AudioFile> audioFiles, String filePath) throws IOException;
+    void saveCache(final ArrayList<AudioFile> audioFiles, String filePath) throws IOException;
 
     /**
-     * Get audio files
+     * Get file by file id
+     *
+     * @param id AudioFile unique id
      */
-    default ArrayList<AudioFile> getFiles() {
+    AudioFile file(int id);
+
+    /**
+     * Get audio playlist
+     */
+    default Pair<ArrayList<AudioFile>, Boolean> getFiles() {
         return this.getFiles(SortBy.TITLE);
     }
 
     /**
-     * Get audio files
+     * Get audio playlist
+     *
      * @param sortBy Sorting
-     * @return Audio files
+     * @return Audio playlist
      */
-    ArrayList<AudioFile> getFiles(SortBy sortBy);
+    Pair<ArrayList<AudioFile>, Boolean> getFiles(SortBy sortBy);
 
     /**
-     * DELETE LATER, library should be set in update loop
+     * Set library playlist
+     * @param files New Files
+     * @param isComplete Flag if the library is expected to get updated
+     */
+    void setLibrary(ArrayList<AudioFile> files, boolean isComplete);
+
+    /**
+     * Set library playlist
      * @param files New Files
      */
-    void setLibrary(ArrayList<AudioFile> files);
+    default void setLibrary(ArrayList<AudioFile> files) {
+        this.setLibrary(files, false);
+    }
 
     /**
-     * Get limited amount of audio files
-     * @param count Files count
+     * Get limited amount of audio playlist
+     *
+     * @param count  Files count
      * @param sortBy Sorting
-     * @return Audio files
+     * @return Audio playlist
      */
-    default ArrayList<AudioFile> getFiles(int count, SortBy sortBy) {
-        return new ArrayList<AudioFile>(this.getFiles().subList(0, count));
+    default Pair<ArrayList<AudioFile>, Boolean> getFiles(int count, SortBy sortBy) {
+        var files = this.getFiles();
+        return new Pair<>(new ArrayList<AudioFile>(files.getKey().subList(0, count)), files.getValue());
     }
 
     enum SortBy {

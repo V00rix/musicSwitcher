@@ -23,7 +23,9 @@ public class Main {
 
     //region Defaults
 
-    private static final String rootPath = "/Users/elumixor/Music/iTunes/iTunes Media/Music";
+    //    private static final String rootPath = "/Users/elumixor/Music/iTunes/iTunes Media/Music"; // mac
+    private static final String rootPath = "C:/Users/vlado/Music"; // windows
+
     private static final String cachePath = "backend/app_data/metadata";
 
     //endregion
@@ -47,7 +49,7 @@ public class Main {
 
         //region Get cached data
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.READING_CACHE));
-        ArrayList<AudioFile> audioFiles = new ArrayList<>();
+        var audioFiles = new ArrayList<AudioFile>();
         try {
             audioFiles = timeTrackProvider.track(() -> {
                 return libraryProvider.getLibraryCache(cachePath);
@@ -55,35 +57,31 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //endregion
 
-        //region Set playlist
-        playListProvider.setFiles(audioFiles);
+        libraryProvider.setLibrary(audioFiles);
         //endregion
 
         //region Read full actual library
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.UPDATING_FILES));
-        ArrayList<AudioFile> files = new ArrayList<>(timeTrackProvider.track(() -> {
+        audioFiles = new ArrayList<>(timeTrackProvider.track(() -> {
             return libraryProvider.getLibraryFull(rootPath, "mp3");
-        }, "Getting files"));
-        //endregion
+        }, "Getting playlist"));
 
-        //region Set playlist
-        playListProvider.setFiles(files);
+        libraryProvider.setLibrary(audioFiles);
         //endregion
 
         //region Get metadata
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.UPDATING_METADATA));
-        audioFiles = timeTrackProvider.trackProgress(files, (file) -> {
+        timeTrackProvider.trackProgress(audioFiles, (file) -> {
             try {
-                return libraryProvider.getMetadata(file);
+                libraryProvider.getMetadata(file);
             } catch (IOException | TikaException | SAXException e) {
                 e.printStackTrace();
             }
             return new AudioFile();
         }, "Getting metadata");
 
-        libraryProvider.setLibrary(audioFiles);
+        libraryProvider.setLibrary(audioFiles, true);
         //endregion
 
         //region Merging
@@ -92,21 +90,17 @@ public class Main {
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.MERGING));
         //endregion
 
-        //region Set playlist
-        playListProvider.setFiles(audioFiles);
-        //endregion
-
         //region Save/update cache
-        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.SAVING_CACHE));
-        ArrayList<AudioFile> finalAudioFiles = audioFiles;
-        timeTrackProvider.track(() -> {
-            libraryProvider.saveCache(finalAudioFiles, cachePath);
-            return null;
-        }, "Saving Cache");
+//        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.SAVING_CACHE));
+//        ArrayList<AudioFile> finalAudioFiles = audioFiles;
+//        timeTrackProvider.track(() -> {
+//            libraryProvider.saveCache(finalAudioFiles, cachePath);
+//            return null;
+//        }, "Saving Cache");
         //endregion
 
-        //region Watch files for changes
-        // todo: watch files
+        //region Watch playlist for changes
+        // todo: watch playlist
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.WATCHING));
         //endregion
     }

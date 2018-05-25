@@ -59,8 +59,7 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
     }
 
     @Override
-    public <T, R> ArrayList<R> trackProgress(ArrayList<T> items, Function<T, R> function, String taskName) {
-
+    public synchronized <T, R> ArrayList<R> trackProgress(ArrayList<T> items, Function<T, R> function, String taskName) {
         int progressStepsTotal = items.size();
         int progressStepsCompleted = 0;
 
@@ -73,14 +72,11 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
             result.add(function.apply(item));
             progressStepsCompleted++;
 
-
             System.out.println((taskName + " is in progress. "
                     + style("Progress: " + prettyProgress(progressStepsTotal, progressStepsCompleted), BoldColors.CYAN)));
         }
 
-
         System.out.println((taskName + " has finished: " + style("Progress: 100%", BoldColors.GREEN)));
-
         return result;
     }
 
@@ -96,11 +92,12 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
      * @return Progress as a string (e.g. 55%)
      */
     private String prettyProgress(int progressStepsTotal, int progressStepsCompleted) {
-        return " " + (int) ((float)progressStepsCompleted / (float)progressStepsTotal * 100.0) + "%";
+        return " " + (int) ((float) progressStepsCompleted / (float) progressStepsTotal * 100.0) + "%";
     }
 
     /**
      * Cast milliseconds to date string
+     *
      * @param millis Date in milliseconds
      * @return Date as string
      */

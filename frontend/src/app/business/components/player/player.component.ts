@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy, ViewEncapsulation} from '@angular/core';
 import {DataService} from "../../services/data.service";
-import {AudioFile} from "../../domain/audio-file";
+import {AudioFile} from "../../domain/audioFile";
 import enumerate = Reflect.enumerate;
 import {Subscription} from 'rxjs/Subscription';
 
@@ -33,11 +33,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscriptions.push(this.data.playlistChanged.subscribe(() => {
-      // ??? redundant ???
-    }));
-
-    this.subscriptions.push(this.data.playStatusUpdated.subscribe((status) => {
+    this.subscriptions.push(this.data.playerStatusUpdated.subscribe((status) => {
       this.playing = status.playing;
     }));
   }

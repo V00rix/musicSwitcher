@@ -1,6 +1,6 @@
 import {Component, Inject, Input, HostBinding, HostListener} from '@angular/core';
 import {PlayerComponent} from "../player.component";
-import {AudioFile} from "../../../domain/audio-file";
+import {AudioFile} from "../../../domain/audioFile";
 
 @Component({
   selector: 'app-player-small',

@@ -11,14 +11,6 @@ import java.util.ArrayList;
  * Play list provider API
  */
 public interface IPlayListProvider {
-
-    /**
-     * Set up new list for playing
-     *
-     * @param fileList Files for play queue
-     */
-    void setFiles(ArrayList<AudioFile> fileList);
-
     /**
      * Set playlist with file ids
      * @param ids File ids
@@ -48,16 +40,9 @@ public interface IPlayListProvider {
     void playFile(int index) throws BaseException;
 
     /**
-     * Get small player status package
-     *
-     * @return Small status package
-     */
-    Pair<Long, Long> playerStatusSmall();
-
-    /**
      * Get full info package
      *
      * @return Full status package
      */
-    PlayerStatus playerStatusFull();
+    PlayerStatus playerStatus();
 }

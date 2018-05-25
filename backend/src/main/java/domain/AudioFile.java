@@ -96,4 +96,11 @@ public class AudioFile implements Serializable {
         this.dateChanged = dateFormat.format(file.lastModified());
     }
     //endregion
+
+    //region Override
+    @Override
+    public String toString() {
+        return this.title + " - " + this.album + " - " + this.artist + " (" + this.filePath + ")";
+    }
+    //endregion
 }

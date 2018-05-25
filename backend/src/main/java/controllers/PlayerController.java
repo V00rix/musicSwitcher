@@ -1,22 +1,25 @@
 package controllers;
 
-import domain.AudioFile;
 import domain.HttpResponse;
 import domain.exeptions.BaseException;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Music player controller
  */
 @RestController
 public class PlayerController extends ControllerBase {
+    @RequestMapping(value = "/playerStatus")
+    public HttpResponse status() {
+        return this.ok(this.playListProvider.playerStatus());
+    }
+
     //region Play controls
+
     /**
      * Toggle play/pause
      */
@@ -53,16 +56,17 @@ public class PlayerController extends ControllerBase {
     }
 
     /**
-     * Set seek
+     * Set seconds
      */
     @RequestMapping(value = "/play/seek")
-    public HttpResponse seek(long millis) {
+    public HttpResponse seek(int millis) {
         this.playerProvider.audioPlayer().seek(millis);
         return this.ok();
     }
     //endregion
 
     //region Volume controls
+
     /**
      * Set volume
      */
@@ -92,6 +96,7 @@ public class PlayerController extends ControllerBase {
     //endregion
 
     //region Playlist controls
+
     /**
      * Set new playlist
      */
@@ -109,13 +114,13 @@ public class PlayerController extends ControllerBase {
      * Change playing file at playlist
      */
     @RequestMapping(value = "/playlist/selected")
-    public HttpResponse playlistFile(int index) {
+    public HttpResponse playlistFile(@RequestBody Integer index) {
         try {
             this.playListProvider.playFile(index);
-            return this.ok();
         } catch (BaseException e) {
             return this.err(e);
         }
+        return this.ok();
     }
     //endregion
 }

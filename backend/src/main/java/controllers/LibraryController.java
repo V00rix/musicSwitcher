@@ -15,10 +15,10 @@ public class LibraryController extends ControllerBase {
     /**
      * Return library data
      *
-     * @return Array of audio files
+     * @return Array of audio playlist
      */
     @RequestMapping(value = "/library", method = RequestMethod.GET)
     public HttpResponse library() {
-        return this.ok(this.libraryProvider.getFiles(ILibraryProvider.SortBy.TITLE));
+        return this.ok(this.libraryProvider.getFiles());
     }
 }

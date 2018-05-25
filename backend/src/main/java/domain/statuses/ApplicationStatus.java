@@ -21,7 +21,7 @@ public class ApplicationStatus extends StatusBase {
     public static final Status READING_CACHE = new Status("Reading cache", Library.READING_CACHE);
 
     /**
-     * Scanning directories, updating files
+     * Scanning directories, updating playlist
      */
     @JsonIgnore
     public static final Status UPDATING_FILES = new Status("Updating library", Library.UPDATING_FILES);
@@ -48,7 +48,7 @@ public class ApplicationStatus extends StatusBase {
      * Watching directories for changes
      */
     @JsonIgnore
-    public static final Status WATCHING = new Status("Watching files for changes", Library.WATCHING);
+    public static final Status WATCHING = new Status("Watching playlist for changes", Library.WATCHING);
 
     public ApplicationStatus(Status status) {
         super(status);

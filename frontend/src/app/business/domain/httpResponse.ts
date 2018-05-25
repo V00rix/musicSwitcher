@@ -6,12 +6,12 @@ export class HttpResponse<T> {
   public data: T;
 
   /**
-   * Application status
+   * Application startSynchronization
    */
   public status: string;
 
   /**
-   * Application status
+   * Application startSynchronization
    */
   public error: ErrorResponse;
 }

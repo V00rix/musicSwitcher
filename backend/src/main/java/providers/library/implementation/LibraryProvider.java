@@ -3,6 +3,7 @@ package providers.library.implementation;
 import components.util.IRichConsole;
 import domain.AudioFile;
 import domain.exeptions.UnprovidedException;
+import javafx.util.Pair;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
@@ -39,10 +40,10 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
     private final ParseContext parseContext;
 
     private ArrayList<AudioFile> files;
+    private boolean isComplete = false;
     //endregion
 
     //region Constructor
-
     /**
      * New instance of library provider
      *
@@ -62,7 +63,6 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
     //endregion
 
     //region Implementation
-
     @Override
     public ArrayList<AudioFile> getLibraryCache(String filepath) throws Exception {
         return this.timeTrackProvider.track(() -> {
@@ -104,13 +104,13 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
             allFiles.addAll(dirFiles);
         }
 
-        // todo: overwrite only files with different change
+        // todo: overwrite only playlist with different change
 
         return allFiles;
     }
 
     @Override
-    public AudioFile getMetadata(AudioFile file) throws IOException, TikaException, SAXException {
+    public void getMetadata(AudioFile file) throws IOException, TikaException, SAXException {
         System.out.println("Getting metadata for " + file.filePath);
 
         InputStream stream = new FileInputStream(file.file);
@@ -123,8 +123,6 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
         file.track = Integer.parseInt(metadata.get("xmpDM:trackNumber").split("/")[0]);
         file.genre = metadata.get("xmpDM:genre");
         file.metadataRetrieved = true;
-
-        return file;
     }
 
     @Override
@@ -143,26 +141,35 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
     }
 
     @Override
-    public ArrayList<AudioFile> getFiles(SortBy sortBy) {
-        // todo: other sorting
-        switch (sortBy) {
-            case ALBUM:
-                this.files.sort((a1, a2) -> {
-                    return (a1.album == null) ? ((a2.album == null) ? 1 : -1) : ((a2.album == null) ? 1 : a1.album.compareTo(a2.album));
-                });
-                break;
-            case TITLE:
-            default:
-                this.files.sort((a1, a2) -> {
-                    return (a1.title == null) ? ((a2.title == null) ? 1 : -1) : ((a2.title == null) ? 1 : a1.title.compareTo(a2.title));
-                });
-        }
-        return this.files;
+    public AudioFile file(int id) {
+        return this.files.stream().filter(a -> a.id == id).findFirst().get();
     }
 
     @Override
-    public void setLibrary(ArrayList<AudioFile> files) {
+    public Pair<ArrayList<AudioFile>, Boolean> getFiles(SortBy sortBy) {
+        // todo: sorting and synchronization problem
+        /*
+            Either create new list while sorting, or have a mutation error while iterating over list in a different thread
+         */
+//        switch (sortBy) {
+//            case ALBUM:
+//                this.playlist.sort((a1, a2) -> {
+//                    return (a1.album == null) ? ((a2.album == null) ? 1 : -1) : ((a2.album == null) ? 1 : a1.album.compareTo(a2.album));
+//                });
+//                break;
+//            case TITLE:
+//            default:
+//                this.playlist.sort((a1, a2) -> {
+//                    return (a1.title == null) ? ((a2.title == null) ? 1 : -1) : ((a2.title == null) ? 1 : a1.title.compareTo(a2.title));
+//                });
+//        }
+        return new Pair<>(this.files, this.isComplete);
+    }
+
+    @Override
+    public void setLibrary(ArrayList<AudioFile> files, boolean isComplete) {
         this.files = files;
+        this.isComplete = isComplete;
     }
 
     //endregion
@@ -170,11 +177,11 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
     //region Helpers
 
     /**
-     * List only files in directory
+     * List only playlist in directory
      *
      * @param root      Directory address
      * @param fileTypes File types
-     * @return List of files
+     * @return List of playlist
      */
     private File[] ListFiles(String root, final String... fileTypes) {
         return new File(root).listFiles(new FileFilter() {

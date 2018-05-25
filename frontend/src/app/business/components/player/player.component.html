@@ -1,4 +1,4 @@
-<app-player-small [song]="data.playlist[data.playing]" *ngIf="!expanded"></app-player-small>
+<app-player-small [song]="data.playerStatus.playlist[data.playerStatus.song]" *ngIf="!expanded"></app-player-small>
 
 <div *ngIf="expanded" class="player-content gradient bg-fixed">
   <div class="image fz image-note"></div>
@@ -6,10 +6,10 @@
   <div class="controls-container text-center">
     <app-track-control></app-track-control>
     <div class="song-info">
-      <div *ngIf="data.playlist[data.playing]; else notPlaying">
-        <label class="text-center big truncate">{{data.playlist[data.playing].title}}</label>
-        <label class="text-center big accent light truncate">{{data.playlist[data.playing].artist + ' - ' +
-          data.playlist[data.playing].album}}</label>
+      <div *ngIf="data.playerStatus.playlist[data.playerStatus.song]; else notPlaying">
+        <label class="text-center big truncate">{{data.playerStatus.playlist[data.playerStatus.song].title}}</label>
+        <label class="text-center big accent light truncate">{{data.playerStatus.playlist[data.playerStatus.song].artist + ' - ' +
+          data.playerStatus.playlist[data.playerStatus.song].album}}</label>
       </div>
       <ng-template #notPlaying>
         <label class="text-center big">Not playing</label>
@@ -25,7 +25,7 @@
   </div>
   <div class="queue-container standard-padding">
     <app-list>
-      <app-song *ngFor="let song of data.playlist; let id = index" [song]="song"></app-song>
+      <app-song *ngFor="let song of data.playerStatus.playlist; let id = index" [song]="song"></app-song>
     </app-list>
 
     <app-icon-button>

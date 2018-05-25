@@ -52,18 +52,18 @@ public interface IAudioPlayer {
     void pause();
 
     /**
-     * Set seek
+     * Set seconds
      *
-     * @param millis Milliseconds from start
+     * @param seconds Milliseconds from start
      */
-    void seek(long millis);
+    void seek(int seconds);
 
     /**
-     * Get seek location
+     * Get seconds location
      *
      * @return Millis from start of playing
      */
-    long getSeek();
+    int getSeek();
     //endregion
 
     //region Volume control
@@ -82,5 +82,11 @@ public interface IAudioPlayer {
      * Decrease volume by step
      */
     void volumeDecrement();
+
+    /**
+     * Get current volume
+     * @return Volume
+     */
+    double getVolume();
     //endregion
 }

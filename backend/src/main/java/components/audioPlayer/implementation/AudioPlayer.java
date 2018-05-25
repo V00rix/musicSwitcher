@@ -16,19 +16,13 @@ import java.util.concurrent.CountDownLatch;
  * Audio player implementation
  */
 public class AudioPlayer extends Application implements IAudioPlayer, IProviderBase {
-
     //region Fields
-
     //region Configuration
-
     private static final double volumeStep = 0.1;
-
     //endregion
 
     //region Providers
-
     private static IStatusProvider statusProvider;
-
     //endregion
 
     private static MediaPlayer player;
@@ -37,7 +31,6 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     private static String fileName;
     private static int songId;
     private static Duration seekLocation = new Duration(0);
-
     //endregion
 
     //region Constructors
@@ -70,13 +63,10 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         latch = _latch;
         (thread = new Thread(Application::launch)).start();
     }
-
     //endregion
 
     //region Implementation
-
     //region File control
-
     @Override
     public void start(Stage primaryStage) {
         latch.countDown();
@@ -87,13 +77,12 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         System.out.println(fileUri);
         fileName = fileUri;
         Media audio = new Media(fileUri);
+
         player = new MediaPlayer(audio);
     }
-
     //endregion
 
     //region Play control
-
     @Override
     public void play(Runnable onEnd) {
         if (player != null) {
@@ -127,20 +116,21 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     }
 
     @Override
-    public void seek(long millis) {
-        long songDuration = (long) player.getMedia().getDuration().toMillis();
-        seekLocation = new Duration(millis < 1 ? 0 : millis >= songDuration ? songDuration - 1 : millis);
+    public void seek(int seconds) {
+        int songDuration = (int) player.getMedia().getDuration().toMillis();
+        seekLocation = new Duration(seconds < 1 ? 0 : seconds >= songDuration ? songDuration - 1 : seconds);
     }
 
     @Override
-    public long getSeek() {
-        return (long) seekLocation.toMillis();
+    public int getSeek() {
+        if (player != null) {
+            return (int) player.currentTimeProperty().get().toSeconds();
+        }
+        return 0;
     }
-
     //endregion
 
     //region Volume control
-
     @Override
     public void volume(double volume) {
         volume = (volume < 0) ? 0 : ((volume > 1) ? 1 : volume);
@@ -157,7 +147,10 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
         volume(player.getVolume() - volumeStep);
     }
 
+    @Override
+    public double getVolume() {
+        return player != null ? player.getVolume() : 0;
+    }
     //endregion
-
     //endregion
 }

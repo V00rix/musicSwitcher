@@ -8,7 +8,7 @@ export class Library {
    * Update audio files library
    * @param {AudioFile[]} audioFiles
    */
-  setOrUpdate(audioFiles: AudioFile[]) {
+  setOrUpdate(audioFiles: AudioFile[]): void {
     if (this.files.length) {
       this.files.forEach((f, index) => {
         if (!f.metadataRetrieved) {
@@ -24,5 +24,14 @@ export class Library {
     } else {
       this.files = audioFiles;
     }
+  }
+
+  /**
+   * Get audio file by song
+   * @param {number} id
+   * @returns {AudioFile}
+   */
+  getFileById(id: number): AudioFile {
+    return this.files.find(af => af.id === id);
   }
 }

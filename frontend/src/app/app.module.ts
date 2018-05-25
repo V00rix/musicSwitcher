@@ -20,6 +20,7 @@ import { PlayControlComponent } from './business/components/player/play-control/
 import { TrackControlComponent } from './business/components/player/track-control/track-control.component';
 import { IconButtonComponent } from './business/components/icon-button/icon-button.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MinutesPipe } from './business/pipes/minutes.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     VolumeControlComponent,
     PlayControlComponent,
     TrackControlComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    MinutesPipe,
   ],
   imports: [
     BrowserModule,

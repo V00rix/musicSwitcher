@@ -3,6 +3,7 @@ import {DataService} from "../../services/data.service";
 import {AudioFile} from "../../domain/audioFile";
 import enumerate = Reflect.enumerate;
 import {Subscription} from 'rxjs/Subscription';
+import {PlayerStatus} from "../../domain/playerStatus";
 
 @Component({
   selector: 'app-player',
@@ -11,30 +12,51 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit, OnDestroy {
-  public volume: number = 0;
-  public track: number = 0;
-  public expanded = false;
-  public playing = false;
   /**
-   * Milliseconds played
-   * @type {number}
+   * True for full screen control, else small bar in the bottom of the screen
+   * @type {boolean}
    */
-  public timePassed = 0;
+  public expanded = false;
 
   /**
-   * Milliseconds left
-   * @type {number}
+   * Current song playing/selected
    */
-  public timeLeft = 0;
+  public song: AudioFile = null;
 
   private subscriptions: Subscription[] = [];
+
+  /**
+   * Volume level (from 0 to 100)
+   */
+  public volume: number = 100;
+
+  /**
+   * Seconds the song has played and total duration
+   */
+  public seek = {key: 0, value: 0};
+
+  public seekDisabled = true;
 
   constructor(public data: DataService) {
   }
 
   ngOnInit() {
-    this.subscriptions.push(this.data.playerStatusUpdated.subscribe((status) => {
-      this.playing = status.playing;
+    this.subscriptions.push(this.data.playerStatusUpdated.subscribe(() => {
+      if (this.data.playerStatus) {
+        let newStatus = this.data.playerStatus;
+        if (newStatus.playlist) {
+
+          this.song = this.data.library.getFileById(newStatus.playlist[newStatus.song]);
+        }
+        this.volume = Math.floor(newStatus.volume * 100);
+        if (newStatus.seek) {
+          this.seekDisabled = false;
+          this.seek = newStatus.seek;
+        } else {
+          this.seekDisabled = true;
+          this.seek = {key: 0, value: 0};
+        }
+      }
     }));
   }
 
@@ -54,13 +76,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
     this.expanded = false;
   }
 
-  public play() {
-    this.playing = true;
-    this.data.togglePlay();
-  }
-
-  public pause() {
-    this.playing = false;
+  public togglePlay() {
     this.data.togglePlay();
   }
 
@@ -73,10 +89,22 @@ export class PlayerComponent implements OnInit, OnDestroy {
   }
 
   public setVolume(volume) {
-    console.log(volume);
+    this.data.setVolume(volume / 100);
   }
 
-  public setTrack(track) {
-    console.log(track);
+  public setVolumeInc(decrement = false) {
+    this.data.setVolumeInc(decrement);
+  }
+
+  public setSeek(seek) {
+    this.data.setSeek(seek);
+  }
+
+  /**
+   * Move to selected song in playlist
+   * @param id
+   */
+  public setCurrentSong(id) {
+    this.data.setPlaylist(this.data.playerStatus.song + id + 1);
   }
 }

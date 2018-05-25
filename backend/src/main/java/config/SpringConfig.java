@@ -5,14 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import providers.library.api.ILibraryProvider;
 import providers.library.implementation.LibraryProvider;
 import providers.playList.api.IPlayListProvider;
 import providers.playList.implementation.PlayListProvider;
-import providers.player.api.IPlayerProvider;
-import providers.player.implementation.PlayerProvider;
+import providers.control.api.IControlProvider;
+import providers.control.implementation.ControlProvider;
 import providers.status.api.IStatusProvider;
 import providers.status.implementation.StatusProvider;
 import providers.timeTrack.api.ITimeTrackProvider;
@@ -20,24 +18,18 @@ import providers.timeTrack.implementation.TimeTrackProvider;
 import org.springframework.core.env.Environment;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * Spring beans configuration
  */
 @Configuration
-public class Config extends WebMvcConfigurerAdapter {
+public class SpringConfig extends WebMvcConfigurerAdapter {
     //region Fields
     private IStatusProvider statusProvider;
-    private IPlayerProvider playerProvider;
+    private IControlProvider playerProvider;
     private IPlayListProvider playListProvider;
     private ILibraryProvider libraryProvider;
     private ITimeTrackProvider timeTrackProvider;
     //endregion
-
-    @Autowired
-    private Environment environment;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
@@ -68,14 +60,14 @@ public class Config extends WebMvcConfigurerAdapter {
     }
 
     /**
-     * Register player provider
+     * Register control provider
      *
      * @return Player provider instance
      * @throws Exception Exception
      */
     @Bean
-    public IPlayerProvider playerProvider() throws Exception {
-        return this.playerProvider = this.playerProvider == null ? new PlayerProvider(this.statusProvider) : this.playerProvider;
+    public IControlProvider playerProvider() throws Exception {
+        return this.playerProvider = this.playerProvider == null ? new ControlProvider(this.statusProvider) : this.playerProvider;
     }
 
     /**

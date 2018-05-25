@@ -1,72 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="Merge, status request">
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/java/components/util/IMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/java/config/CorsInterceptor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/main/resources/config.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/http-response.ts" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backend/app_data/metadata" afterPath="$PROJECT_DIR$/backend/app_data/metadata" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/Main.java" afterPath="$PROJECT_DIR$/backend/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/IRichConsole.java" afterPath="$PROJECT_DIR$/backend/src/main/java/components/util/IRichConsole.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/config/Config.java" afterPath="$PROJECT_DIR$/backend/src/main/java/config/Config.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/StatusController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/StatusController.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/HttpResponse.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/HttpResponse.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/StatusPackage.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPackage.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/statuses/IStatusCodes.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/IStatusCodes.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/statuses/StatusBase.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusBase.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/statuses/StatusGlobal.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusGlobal.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/statuses/StatusLibrary.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusLibrary.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/statuses/StatusPlayer.java" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/status/api/IStatusProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/status/api/IStatusProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/3rdpartylicenses.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/add.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/album.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/next.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/note.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/pause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/person.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/play.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/playlist.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/repeat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/save.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/search.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/shuffle.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeDown.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeUp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/inline.318b50c57b4eba3d437b.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/note.5e7322f92a960613ffb0.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/polyfills.b6b2cd0d4c472ac3ac12.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/domain/audio-file.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/audio-file.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.scss" afterPath="$PROJECT_DIR$/frontend/src/styles.scss" />
+    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/components/ISequentialLaunch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/api/IControlWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/domain/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/providers/control/api/IControlProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/gui/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/PlayerStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/domain/statuses/PlayerStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/player/api/IPlayerProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/main.77317e64efb680799526.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/domain/library.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/library.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/domain/playerStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/domain/playerStatus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -79,32 +47,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
+      <file leaf-file-name="ControlProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="41" column="91" lean-forward="true" selection-start-line="41" selection-start-column="91" selection-end-line="41" selection-end-column="91" />
+            <state relative-caret-position="653">
+              <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IControlWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/api/IControlWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
               <folding>
-                <element signature="e#837#854#0" expanded="false" />
-                <element signature="e#2395#2416#0" expanded="false" />
-                <element signature="e#2493#2526#0" expanded="false" />
-                <element signature="e#2822#2843#0" expanded="false" />
-                <element signature="e#2915#2936#0" expanded="false" />
-                <element signature="e#3437#3453#0" expanded="false" />
-                <element signature="e#3625#3646#0" expanded="false" />
-                <element signature="e#3723#3749#0" expanded="false" />
-                <element signature="e#4079#4111#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java">
+      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="84">
+              <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="548">
+              <caret line="149" selection-start-line="149" selection-end-line="154" selection-end-column="27" />
+              <folding>
+                <element signature="e#1538#1569#0" />
+                <element signature="e#2654#2682#0" />
+                <element signature="e#3696#3712#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AudioFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -112,82 +103,60 @@
       <file leaf-file-name="ILibraryProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1488">
-              <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+            <state relative-caret-position="945">
+              <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
               <folding>
-                <element signature="e#1330#1331#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
+                <element signature="e#4816#4817#0" expanded="true" />
+                <element signature="e#4900#4901#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.ts">
+      <file leaf-file-name="ControlWindow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="269">
+              <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4587#4588#0" expanded="true" />
+                <element signature="e#4621#4622#0" expanded="true" />
+                <element signature="e#4696#4697#0" expanded="true" />
+                <element signature="e#4742#4743#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
+      <file leaf-file-name="IAudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3069">
-              <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="926">
+              <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IPlayListProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java">
+      <file leaf-file-name="AudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayListProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IStatusProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/status/api/IStatusProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatusProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1705">
-              <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatusController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/StatusController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="737">
+              <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
+              <folding>
+                <element signature="method#volume#0;class#AudioPlayer#0" />
+                <element signature="e#3388#3389#0" expanded="true" />
+                <element signature="e#3411#3412#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -198,8 +167,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="TypeScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -220,18 +190,28 @@
       <find>HashMap</find>
       <find>Get</find>
       <find>.png</find>
+      <find>long</find>
+      <find>data.playing</find>
+      <find>data.playerStatus.playing</find>
+      <find>millis</find>
+      <find>setHttp</find>
+      <find>data.playerStatus.playlist[data.playerStatus.song]</find>
+      <find>olume</find>
+      <find>latch</find>
+      <find>Platfor</find>
     </findStrings>
     <replaceStrings>
       <replace>Map</replace>
+      <replace>int</replace>
+      <replace>data.playerStatus.song</replace>
+      <replace>seconds</replace>
+      <replace>song</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
     <option name="projectSyncType">
       <map>
         <entry key="$USER_HOME$/PhpstormProjects/gs-rest-service/complete" value="PREVIEW" />
@@ -241,57 +221,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/exeptions/BaseException.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.scss" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/SortBy.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/HttpResponse.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/http-response.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/api/ITimeTrackProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/util/IRichConsole.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/util/IMapper.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/audio-file.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/styles.scss" />
-        <option value="$PROJECT_DIR$/backend/target/classes/static/styles.1cbb6545c95bd3d5ef64.bundle.css" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/status/api/IStatusProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusGlobal.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusLibrary.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/HttpResponse.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusBase.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/enumeration/IStatusCodes.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPlayer.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/controllers/StatusController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPackage.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/config/CorsInterceptor.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/audioFile.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/library.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/domain/statuses/PlayerStatus.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/seek.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/domain/playerStatus.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/pipes/minutesPipe.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/pipes/minutes.pipe.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/Gui.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/implementation/Gui.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/infoWindow/implementation/Gui.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/infoWindow/implementation/InfoWindow.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/infoWindow/implementation/GuiControls.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/infoWindow/implementation/ControlWindow.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/player/api/IPlayerProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/player/api/IControlProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/Instantiazible.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/Instantiable.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/test123.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/controlWindow/api/IControlWindow.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ISequentialLaunch.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/ControlProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/ui/controlWindow/implementation/ControlWindow.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/resources/gui/styles/styles.css" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/config/Config.java" />
         <option value="$PROJECT_DIR$/backend/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/backend/src/main/resources/static/assets/index.html" />
-        <option value="$PROJECT_DIR$/backend/src/main/resources/static/index.html" />
+        <option value="$PROJECT_DIR$/backend/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java" />
+        <option value="$PROJECT_DIR$/backend/app_data/config" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/api/IControlWindow.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/domain/AppConfig.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
       </list>
     </option>
   </component>
@@ -301,31 +281,33 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/frontend/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/frontend/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="2110" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="3863" />
+    <option name="height" value="2123" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -340,6 +322,12 @@
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
               <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="app_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -361,6 +349,92 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="audioPlayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="audioPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="audioPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -404,6 +478,27 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+              <item name="implementation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -412,43 +507,78 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;data.ser&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CVUT172/bd6b36pjv" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17631918" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/main/resources/config.properties" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
-    <property name="add_unversioned_files" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\frontend\src\app\business\components\player" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\backend\src\main\resources\static" />
       <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\frontend\src\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\frontend\src\app\business\components\player" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -471,42 +601,43 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+    </configuration>
+    <configuration name="ControlWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="components.gui.controlWindow.implementation.ControlWindow" />
+      <module name="musicSwitcher.backend" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="components.gui.controlWindow.implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="components.ui.infoWindow.implementation.Gui" />
+      <module name="musicSwitcher.backend" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="components.ui.infoWindow.implementation.Gui" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="musicSwitcher.backend" />
-      <envs />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <module name="musicSwitcher.backend" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -516,16 +647,14 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="frontend" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -533,25 +662,12 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" />
       <option name="WORKING_DIRECTORY" />
-      <module name="frontend" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="Main" />
       <module name="backend" />
-      <envs />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Main" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -564,23 +680,14 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -594,14 +701,20 @@
       <module name="frontend" />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Gui" />
+      <item itemvalue="Application.ControlWindow" />
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Spring Boot.Main" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main" />
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ControlWindow" />
+        <item itemvalue="Application.Unnamed" />
+        <item itemvalue="Application.Gui" />
+        <item itemvalue="Spring Boot.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -609,9 +722,6 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -630,7 +740,13 @@
       <workItem from="1525022265632" duration="1679000" />
       <workItem from="1525105432914" duration="15355000" />
       <workItem from="1525191484549" duration="6934000" />
-      <workItem from="1525276065347" duration="1221000" />
+      <workItem from="1525276065347" duration="1856000" />
+      <workItem from="1525708834265" duration="691000" />
+      <workItem from="1527160154016" duration="572000" />
+      <workItem from="1527178031331" duration="13206000" />
+      <workItem from="1527205297825" duration="30168000" />
+      <workItem from="1527276568591" duration="2508000" />
+      <workItem from="1527280006997" duration="4387000" />
     </task>
     <task id="LOCAL-00001" summary="Project structure">
       <created>1524416974441</created>
@@ -674,53 +790,78 @@
       <option name="project" value="LOCAL" />
       <updated>1524812647857</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working on statuses">
+      <created>1525375432342</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525375432342</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Library synchronizations;&#10;Playing by indices;&#10;Player synchronization started">
+      <created>1527217438580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527217438580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104348000" />
+    <option name="totallyTimeSpent" value="156515000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293692" sideWeight="0.38072917" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.570911" sideWeight="0.61927086" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35140666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.49781114" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50218886" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50019526" side_tool="true" weight="0.3504601" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5673565" weight="0.32738557" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.61927086" weight="0.11636928" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32893717" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.19860357" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32971016" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32893717" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" sideWeight="0.5027153" side_tool="true" weight="0.24990238" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49980476" weight="0.32971296" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -734,350 +875,369 @@
     <MESSAGE value="Added files to VCS" />
     <MESSAGE value="More or less player gui" />
     <MESSAGE value="Merge, status request" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge, status request" />
+    <MESSAGE value="Working on statuses" />
+    <MESSAGE value="Library synchronizations;&#10;Playing by indices;&#10;Player synchronization started" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library synchronizations;&#10;Playing by indices;&#10;Player synchronization started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.27/tomcat-embed-core-8.5.27.jar!/javax/servlet/http/HttpServlet.class">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/domain/audioFile.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.spec.ts">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/exeptions/checks/BoundariesCheck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/static/assets/images/pause.png" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/static/assets/images/play.png" />
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/exeptions/checks/NullCheck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="32" column="3" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/assets/images/person.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/assets/images/playlist.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/assets/images/repeat.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/assets/images/save.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/assets/images/play.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/add.70c1f25f88664931d999.png" />
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/play.dc196d0b438074d040cf.png" />
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/note.5e7322f92a960613ffb0.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/pause.b66cda73139f51a8c9c8.png" />
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/polyfills.b6b2cd0d4c472ac3ac12.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/main.88adf8dab7eec15fb891.bundle.js" />
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/inline.318b50c57b4eba3d437b.bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="127" lean-forward="false" selection-start-line="0" selection-start-column="127" selection-end-line="0" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/target/classes/static/styles.1cbb6545c95bd3d5ef64.bundle.css" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-844">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusGlobal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#724#725#0" expanded="false" />
-            <element signature="e#753#754#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding>
-            <element signature="e#1351#1352#0" expanded="false" />
-            <element signature="e#1380#1381#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="68" column="49" lean-forward="false" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/enumeration/IStatusCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="14" />
-          <folding>
-            <element signature="e#1282#1283#0" expanded="false" />
-            <element signature="e#1311#1312#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/player/implementation/PlayerProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="45" column="85" lean-forward="false" selection-start-line="45" selection-start-column="85" selection-end-line="45" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="119" column="26" lean-forward="false" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/StatusPackage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="46" column="7" lean-forward="false" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/musicSwitcher.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/config/CorsInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/config/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#1963#1964#0" expanded="false" />
-            <element signature="e#2025#2026#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/static/assets/index.html" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/StatusController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/status/api/IStatusProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3069">
-          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="294">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/api/IPlayListProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="716">
+          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/domain/httpResponse.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/play-control/play-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="123" selection-start-line="8" selection-start-column="123" selection-end-line="8" selection-end-column="123" />
           <folding>
-            <element signature="e#1330#1331#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#0#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player-small/player-small.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/domain/library.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/song/song.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/volume-control/volume-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/statuses/PlayerStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/domain/seek.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/domain/playerStatus.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="843" selection-start-line="843" selection-end-line="843" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="926">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/pipes/minutesPipe.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/pipes/minutes-pipe.pipe.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/pipes/minutes-pipe.pipe.ts" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/components/player/track-control/track-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/pipes/minutes.pipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/ui/implementation.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/control/api/IControlProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3990">
+          <caret line="225" column="67" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/Instantiable.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/test123.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/ISequentialLaunch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="73" column="5" lean-forward="false" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="777">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/gui/styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/IProviderBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/LibraryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/ControllerBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#PlayerController#0" />
+            <element signature="docComment;method#play#0;class#PlayerController#0" />
+            <element signature="method#play#0;class#PlayerController#0" />
+            <element signature="docComment;method#next#0;class#PlayerController#0" />
+            <element signature="method#next#0;class#PlayerController#0" />
+            <element signature="docComment;method#previous#0;class#PlayerController#0" />
+            <element signature="method#previous#0;class#PlayerController#0" />
+            <element signature="docComment;method#seek#0;class#PlayerController#0" />
+            <element signature="docComment;method#setVolume#0;class#PlayerController#0" />
+            <element signature="docComment;method#volumeIncrement#0;class#PlayerController#0" />
+            <element signature="docComment;method#volumeDecrement#0;class#PlayerController#0" />
+            <element signature="method#volumeDecrement#0;class#PlayerController#0" />
+            <element signature="docComment;method#playlist#0;class#PlayerController#0" />
+            <element signature="method#playlist#0;class#PlayerController#0" />
+            <element signature="docComment;method#playlistFile#0;class#PlayerController#0" />
+            <element signature="method#playlistFile#0;class#PlayerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="758">
+          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/app_data/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/config/SpringConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="926">
+          <caret line="92" column="16" lean-forward="true" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/api/IControlWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
+          <folding>
+            <element signature="method#volume#0;class#AudioPlayer#0" />
+            <element signature="e#3388#3389#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+          <folding>
+            <element signature="e#4816#4817#0" expanded="true" />
+            <element signature="e#4900#4901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="134" column="55" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4587#4588#0" expanded="true" />
+            <element signature="e#4621#4622#0" expanded="true" />
+            <element signature="e#4696#4697#0" expanded="true" />
+            <element signature="e#4742#4743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="41" column="91" lean-forward="true" selection-start-line="41" selection-start-column="91" selection-end-line="41" selection-end-column="91" />
+        <state relative-caret-position="548">
+          <caret line="149" selection-start-line="149" selection-end-line="154" selection-end-column="27" />
           <folding>
-            <element signature="e#837#854#0" expanded="false" />
-            <element signature="e#2395#2416#0" expanded="false" />
-            <element signature="e#2493#2526#0" expanded="false" />
-            <element signature="e#2822#2843#0" expanded="false" />
-            <element signature="e#2915#2936#0" expanded="false" />
-            <element signature="e#3437#3453#0" expanded="false" />
-            <element signature="e#3625#3646#0" expanded="false" />
-            <element signature="e#3723#3749#0" expanded="false" />
-            <element signature="e#4079#4111#0" expanded="false" />
+            <element signature="e#1538#1569#0" />
+            <element signature="e#2654#2682#0" />
+            <element signature="e#3696#3712#0" />
           </folding>
         </state>
       </provider>
@@ -1159,7 +1319,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>assets</last-edited>
+          <last-edited>Maven: c3p0:c3p0:0.9.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

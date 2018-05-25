@@ -1,7 +1,9 @@
+import components.audioPlayer.implementation.AudioPlayer;
+import components.gui.controlWindow.implementation.ControlWindow;
+import domain.AppConfig;
 import domain.AudioFile;
-import domain.enumeration.IStatusCodes;
 import domain.statuses.ApplicationStatus;
-import domain.statuses.StatusBase;
+import javafx.application.Application;
 import org.apache.tika.exception.TikaException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,38 +12,86 @@ import org.springframework.context.annotation.ComponentScan;
 import org.xml.sax.SAXException;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
-import providers.player.api.IPlayerProvider;
+import providers.control.api.IControlProvider;
 import providers.status.api.IStatusProvider;
 import providers.timeTrack.api.ITimeTrackProvider;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.concurrent.CountDownLatch;
 
 @SpringBootApplication
 @ComponentScan({"controllers", "config"})
 public class Main {
-
     //region Defaults
-
-    //    private static final String rootPath = "/Users/elumixor/Music/iTunes/iTunes Media/Music"; // mac
-    private static final String rootPath = "C:/Users/vlado/Music"; // windows
-
+    private static final String configPath = "backend/app_data/config";
     private static final String cachePath = "backend/app_data/metadata";
-
     //endregion
 
     public static void main(String[] args) throws Exception {
 
         //region Basic initialization
+        new Thread(() -> Application.launch(ControlWindow.class)).start();
+        AudioPlayer.latch.await();
+        var controlWindow = ControlWindow.instance;
+        controlWindow.setOnExit(() -> {
+            // todo: save data, etc.
+            System.exit(0);
+        });
+
+        AppConfig config = new AppConfig();
+
+        var latch = new CountDownLatch(1);
+
+        AppConfig finalConfig = config;
+        controlWindow.setOnDirectoryChanged(newDir -> {
+            finalConfig.rootPath = newDir;
+
+            File f = new File(configPath);
+            if (f.exists()) {
+                f.delete();
+            }
+            try {
+                f.createNewFile();
+                FileOutputStream fos = null;
+                fos = new FileOutputStream(configPath);
+                ObjectOutputStream oos = null;
+                oos = new ObjectOutputStream(fos);
+                oos.writeObject(finalConfig);
+                oos.flush();
+                oos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            latch.countDown();
+        });
+
+
+        if (new File(configPath).exists()) {
+            latch.countDown();
+            FileInputStream fis = new FileInputStream(configPath);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            config = (AppConfig) ois.readObject();
+        } else {
+            controlWindow.changeDirectory();
+            config = finalConfig;
+            System.out.println(config);
+        }
+
+        latch.await();
+        //endregion
+
         //region Launch spring services
         ApplicationContext applicationContext = SpringApplication.run(Main.class, args);
         //endregion
 
-        // Get beans reference
+        //region Get beans reference
         IStatusProvider statusProvider = applicationContext.getBean(IStatusProvider.class);
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.INITIALIZING));
 
-        IPlayerProvider playerProvider = applicationContext.getBean(IPlayerProvider.class);
+        IControlProvider playerProvider = applicationContext.getBean(IControlProvider.class);
         ILibraryProvider libraryProvider = applicationContext.getBean(ILibraryProvider.class);
         ITimeTrackProvider timeTrackProvider = applicationContext.getBean(ITimeTrackProvider.class);
         IPlayListProvider playListProvider = applicationContext.getBean(IPlayListProvider.class);
@@ -52,7 +102,12 @@ public class Main {
         var audioFiles = new ArrayList<AudioFile>();
         try {
             audioFiles = timeTrackProvider.track(() -> {
-                return libraryProvider.getLibraryCache(cachePath);
+                try {
+                    var x = libraryProvider.getLibraryCache(cachePath);
+                    return x;
+                } catch (Exception ignored) {
+                    return new ArrayList<>();
+                }
             }, "Getting cache");
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,8 +118,9 @@ public class Main {
 
         //region Read full actual library
         statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.UPDATING_FILES));
+        AppConfig finalConfig1 = config;
         audioFiles = new ArrayList<>(timeTrackProvider.track(() -> {
-            return libraryProvider.getLibraryFull(rootPath, "mp3");
+            return libraryProvider.getLibraryFull(finalConfig1.rootPath, "mp3");
         }, "Getting playlist"));
 
         libraryProvider.setLibrary(audioFiles);
@@ -91,12 +147,12 @@ public class Main {
         //endregion
 
         //region Save/update cache
-//        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.SAVING_CACHE));
-//        ArrayList<AudioFile> finalAudioFiles = audioFiles;
-//        timeTrackProvider.track(() -> {
-//            libraryProvider.saveCache(finalAudioFiles, cachePath);
-//            return null;
-//        }, "Saving Cache");
+        statusProvider.setStatus(new ApplicationStatus(ApplicationStatus.SAVING_CACHE));
+        ArrayList<AudioFile> finalAudioFiles = audioFiles;
+        timeTrackProvider.track(() -> {
+            libraryProvider.saveCache(finalAudioFiles, cachePath);
+            return null;
+        }, "Saving Cache");
         //endregion
 
         //region Watch playlist for changes

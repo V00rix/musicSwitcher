@@ -11,7 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
       <module name="musicSwitcher" target="1.6" />
-      <module name="musicSwitcher.backend" target="9" />
+      <module name="musicSwitcher.backend" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>

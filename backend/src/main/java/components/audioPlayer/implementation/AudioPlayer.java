@@ -3,82 +3,57 @@ package components.audioPlayer.implementation;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.exeptions.UnprovidedException;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.util.Pair;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Audio player implementation
+ * Audio control implementation
  */
-public class AudioPlayer extends Application implements IAudioPlayer, IProviderBase {
+public class AudioPlayer extends Application implements IAudioPlayer {
     //region Fields
     //region Configuration
     private static final double volumeStep = 0.1;
     //endregion
 
-    //region Providers
-    private static IStatusProvider statusProvider;
     //endregion
+    public static CountDownLatch latch = new CountDownLatch(1);
+    public static IAudioPlayer instance;
 
     private static MediaPlayer player;
-    private static CountDownLatch latch;
     private static Thread thread;
-    private static String fileName;
+    private static double volume = 0.8;
     private static int songId;
     private static Duration seekLocation = new Duration(0);
     //endregion
 
-    //region Constructors
-
-    /**
-     * Empty constructor for JavaFx application to run
-     * THIS SHOULD NOT BE USED FROM OUTSIDE
-     */
-    @Deprecated
     public AudioPlayer() {
+        System.out.println("audio");
     }
-
-    /**
-     * (Re-) Initialize new audio player. Note: only one instance should run at a time
-     *
-     * @param _statusProvider IStatusProvider
-     * @param _latch          CountDownLatch
-     * @throws UnprovidedException UnprovidedException
-     */
-    public AudioPlayer(IStatusProvider _statusProvider, CountDownLatch _latch) throws Exception {
-        // Close previous thread if is running
-        stop(); // stops javaFx
-        if (thread != null) {
-            thread.interrupt(); // interrupt thread
-        }
-
-        // Check providers
-        checkProviders(_statusProvider);
-        statusProvider = _statusProvider;
-        latch = _latch;
-        (thread = new Thread(Application::launch)).start();
-    }
-    //endregion
 
     //region Implementation
     //region File control
     @Override
     public void start(Stage primaryStage) {
+        System.out.println("Audio Player Starting");
+        instance = this;
         latch.countDown();
     }
 
     @Override
     public void setFile(String fileUri, int songId) {
         System.out.println(fileUri);
-        fileName = fileUri;
         Media audio = new Media(fileUri);
 
         player = new MediaPlayer(audio);
+        volume(volume);
     }
     //endregion
 
@@ -117,23 +92,24 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
 
     @Override
     public void seek(int seconds) {
-        int songDuration = (int) player.getMedia().getDuration().toMillis();
-        seekLocation = new Duration(seconds < 1 ? 0 : seconds >= songDuration ? songDuration - 1 : seconds);
+        var songDuration = (int) player.getMedia().getDuration().toSeconds();
+        seekLocation = new Duration((seconds < 1 ? 0 : seconds >= songDuration ? songDuration - 1 : seconds) * 1000);
+        player.seek(seekLocation);
     }
 
     @Override
-    public int getSeek() {
+    public Pair<Integer, Integer> getSeek() {
         if (player != null) {
-            return (int) player.currentTimeProperty().get().toSeconds();
+            return new Pair<Integer, Integer>((int) player.currentTimeProperty().get().toSeconds(), (int) player.getTotalDuration().toSeconds());
         }
-        return 0;
+        return null;
     }
     //endregion
 
     //region Volume control
     @Override
-    public void volume(double volume) {
-        volume = (volume < 0) ? 0 : ((volume > 1) ? 1 : volume);
+    public void volume(double vol) {
+        volume = (vol < 0) ? 0 : ((vol > 1) ? 1 : vol);
         player.setVolume(volume);
     }
 
@@ -150,6 +126,11 @@ public class AudioPlayer extends Application implements IAudioPlayer, IProviderB
     @Override
     public double getVolume() {
         return player != null ? player.getVolume() : 0;
+    }
+
+    @Override
+    public void terminate() {
+        Platform.exit();
     }
     //endregion
     //endregion

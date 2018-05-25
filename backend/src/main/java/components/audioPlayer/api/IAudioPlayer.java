@@ -1,12 +1,10 @@
 package components.audioPlayer.api;
 
 import domain.AudioFile;
-
-import java.io.File;
-import java.net.URI;
+import javafx.util.Pair;
 
 /**
- * Audio player JavaFx application
+ * Audio control JavaFx application
  */
 public interface IAudioPlayer {
     //region File control
@@ -63,12 +61,12 @@ public interface IAudioPlayer {
      *
      * @return Millis from start of playing
      */
-    int getSeek();
+    Pair<Integer, Integer> getSeek();
     //endregion
 
     //region Volume control
     /**
-     * Set player volume to direct value (e.g. via slider)
+     * Set control volume to direct value (e.g. via slider)
      *
      * @param volume New volume value
      */
@@ -88,5 +86,10 @@ public interface IAudioPlayer {
      * @return Volume
      */
     double getVolume();
+
+    /**
+     * Terminate player instance
+     */
+    void terminate();
     //endregion
 }

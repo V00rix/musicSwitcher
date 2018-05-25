@@ -1,15 +1,15 @@
-<app-player-small [song]="data.playerStatus.playlist[data.playerStatus.song]" *ngIf="!expanded"></app-player-small>
+<app-player-small [song]="song" *ngIf="!expanded"></app-player-small>
 
 <div *ngIf="expanded" class="player-content gradient bg-fixed">
   <div class="image fz image-note"></div>
   <label class="text-center btn-back big accent action pointer" (click)="collapse()">Back</label>
   <div class="controls-container text-center">
-    <app-track-control></app-track-control>
+    <app-track-control [disabled]="seekDisabled"></app-track-control>
     <div class="song-info">
-      <div *ngIf="data.playerStatus.playlist[data.playerStatus.song]; else notPlaying">
-        <label class="text-center big truncate">{{data.playerStatus.playlist[data.playerStatus.song].title}}</label>
-        <label class="text-center big accent light truncate">{{data.playerStatus.playlist[data.playerStatus.song].artist + ' - ' +
-          data.playerStatus.playlist[data.playerStatus.song].album}}</label>
+      <div *ngIf="song; else notPlaying">
+        <label class="text-center big truncate">{{song.title}}</label>
+        <label class="text-center big accent light truncate">{{song.artist + ' - ' +
+          song.album}}</label>
       </div>
       <ng-template #notPlaying>
         <label class="text-center big">Not playing</label>
@@ -24,8 +24,8 @@
     <h3 class="text-center gray no-margin">Next in queue</h3>
   </div>
   <div class="queue-container standard-padding">
-    <app-list>
-      <app-song *ngFor="let song of data.playerStatus.playlist; let id = index" [song]="song"></app-song>
+    <app-list *ngIf="data.playerStatus.playlist">
+      <app-song *ngFor="let songId of data.playerStatus.playlist.slice(data.playerStatus.song + 1); let id = index" [song]="data.library.getFileById(songId)" (click)="setCurrentSong(id)"></app-song>
     </app-list>
 
     <app-icon-button>

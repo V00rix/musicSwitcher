@@ -23,7 +23,7 @@ export class DataService {
    * Playlist changed event
    * @type {Subject<any>}
    */
-  playerStatusUpdated: Subject<any> = new Subject();
+  playerStatusUpdated: Subject<void> = new Subject();
   //endregion
 
   //region Library
@@ -63,13 +63,14 @@ export class DataService {
   }
 
   //region Http
+  //region Synchronization
   /**
    * GET startSynchronization
    */
   private updatePlayer() {
     this.http.get(`${this.baseUrl}/playerStatus`).subscribe((response: HttpResponse<PlayerStatus>) => {
       this.playerStatus = response.data;
-      this.playerStatusUpdated.next(this.playerStatus);
+      this.playerStatusUpdated.next();
     });
 
     setTimeout(() => {
@@ -112,10 +113,12 @@ export class DataService {
 
   }
 
+  //endregion
+
   /**
    * POST set playlist
    */
-  public setHttpPlaylist(list: number[], id: number) {
+  private setHttpPlaylist(list: number[], id: number) {
     this.http.post(`${this.baseUrl}/playlist`, list).subscribe((response) => {
       this.setHttpSelected(id);
     });
@@ -129,10 +132,12 @@ export class DataService {
     })
   }
 
+  //region Player Controls
   /**
    * POST toggle play
    */
   public togglePlay() {
+    this.playerStatus.isPlaying = !this.playerStatus.isPlaying;
     this.http.post(`${this.baseUrl}/play`, null).subscribe((response) => {
       console.log(response);
     })
@@ -143,8 +148,6 @@ export class DataService {
    */
   public playNext() {
     this.http.post(`${this.baseUrl}/play/next`, null).subscribe((response) => {
-      console.log(response);
-      // this.playerStatusUpdated.next(response);
     })
   }
 
@@ -153,11 +156,46 @@ export class DataService {
    */
   public playPrevious() {
     this.http.post(`${this.baseUrl}/play/previous`, null).subscribe((response) => {
-      console.log(response);
-      // this.playerStatusUpdated.next(response);
     })
   }
 
+  /**
+   * POST change volume
+   * @param {number} volume from 0 to 1
+   */
+  public setVolume(volume: number) {
+    console.log(volume);
+    this.http.post(`${this.baseUrl}/play/volume`, volume).subscribe((response) => {
+      console.log(response);
+    })
+  }
+
+  /**
+   * POST Slightly increase or decrease the volume
+   * @param decrement If the volume should be incremented of decremented
+   */
+  public setVolumeInc(decrement = false) {
+    if (decrement) {
+      this.http.post(`${this.baseUrl}/play/volume/decrement`, null).subscribe((response) => {
+        console.log(response);
+      })
+    } else {
+      this.http.post(`${this.baseUrl}/play/volume/increment`, null).subscribe((response) => {
+        console.log(response);
+      })
+    }
+  }
+
+  /**
+   * POST Set seek position
+   * @param passed seconds from beginning
+   */
+  public setSeek(passed: number) {
+    this.http.post(`${this.baseUrl}/play/seek`, passed).subscribe((response) => {
+      console.log(response);
+    });
+  }
+  //endregion
   //endregion
   //endregion
 

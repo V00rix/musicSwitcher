@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 /**
- * Music player controller
+ * Music control controller
  */
 @RestController
 public class PlayerController extends ControllerBase {
@@ -59,19 +59,18 @@ public class PlayerController extends ControllerBase {
      * Set seconds
      */
     @RequestMapping(value = "/play/seek")
-    public HttpResponse seek(int millis) {
-        this.playerProvider.audioPlayer().seek(millis);
+    public HttpResponse seek(@RequestBody Integer seconds) {
+        this.playerProvider.audioPlayer().seek(seconds);
         return this.ok();
     }
     //endregion
 
     //region Volume controls
-
     /**
      * Set volume
      */
     @RequestMapping(value = "/play/volume")
-    public HttpResponse setVolume(double volume) {
+    public HttpResponse setVolume(@RequestBody Double volume) {
         this.playerProvider.audioPlayer().volume(volume);
         return this.ok();
     }

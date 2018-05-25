@@ -1,5 +1,7 @@
 package domain.statuses;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 
 /**
@@ -24,7 +26,7 @@ public class PlayerStatus {
     /**
      * Playing position
      */
-    public int seconds;
+    public Pair<Integer, Integer> seek;
 
     /**
      * Playing or paused
@@ -38,14 +40,14 @@ public class PlayerStatus {
      * @param volume    Player's volume
      * @param song      Current song order id
      * @param playlist  Current playlist's songs' ids
-     * @param seconds      Milliseconds from playing start
-     * @param isPlaying Flag if the player is playing
+     * @param seek      Pair of seconds from playing start and full duration
+     * @param isPlaying Flag if the control is playing
      */
-    public void set(double volume, int song, ArrayList<Integer> playlist, int seconds, boolean isPlaying) {
+    public void set(double volume, int song, ArrayList<Integer> playlist, Pair<Integer, Integer> seek, boolean isPlaying) {
         this.volume = volume;
         this.song = song;
         this.playlist = playlist;
-        this.seconds = seconds;
+        this.seek = seek;
         this.isPlaying = isPlaying;
     }
 }

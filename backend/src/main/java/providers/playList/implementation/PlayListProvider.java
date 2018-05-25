@@ -8,18 +8,15 @@ import domain.exeptions.checks.BoundariesCheck;
 import domain.exeptions.checks.NullCheck;
 import domain.exeptions.UnprovidedException;
 import domain.statuses.PlayerStatus;
-import javafx.util.Pair;
 import providers.IProviderBase;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
-import providers.player.api.IPlayerProvider;
+import providers.control.api.IControlProvider;
 import providers.status.api.IStatusProvider;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.Callable;
-import java.util.function.Function;
 
 /**
  * Play list provider implementation
@@ -28,7 +25,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     //region Fields
     //region Providers
     private final IStatusProvider statusProvider;
-    private final IPlayerProvider playerProvider;
+    private final IControlProvider playerProvider;
     private final ILibraryProvider libraryProvider;
     private final IAudioPlayer audioPlayer;
     //endregion
@@ -49,14 +46,14 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
      * @param playerProvider Player provider
      * @throws UnprovidedException UnprovidedException
      */
-    public PlayListProvider(IStatusProvider statusProvider, IPlayerProvider playerProvider, ILibraryProvider libraryProvider) throws UnprovidedException {
+    public PlayListProvider(IStatusProvider statusProvider, IControlProvider playerProvider, ILibraryProvider libraryProvider) throws UnprovidedException {
         this.checkProviders(statusProvider, playerProvider, libraryProvider);
         this.playerProvider = playerProvider;
         this.libraryProvider = libraryProvider;
         this.statusProvider = statusProvider;
         this.audioPlayer = playerProvider.audioPlayer();
         Runnable f = () -> {
-            System.out.println(style("updating player data...", BoldColors.YELLOW));
+            System.out.println(style("updating control data...", BoldColors.YELLOW));
             this.playerStatus.set(this.audioPlayer.getVolume(), this.currentFileIndex, this.ids, this.audioPlayer.getSeek(), this.playing);
         };
         new Timer().scheduleAtFixedRate(new TimerTask() {

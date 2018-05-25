@@ -74,7 +74,7 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
             }
 
             File f = new File(filepath);
-            if (!f.exists()) {
+            if (f.exists()) {
                 throw new FileNotFoundException();
             }
 

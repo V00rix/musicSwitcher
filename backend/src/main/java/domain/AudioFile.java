@@ -1,17 +1,16 @@
 package domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import components.DateHelper;
 
 import java.io.File;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 
 /**
  * Audio file with metadata
  */
-public class AudioFile implements Serializable {
+public class AudioFile implements Serializable, Comparable<AudioFile> {
     //region Defaults
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
     private static int fileId = 0;
     //endregion
 
@@ -24,7 +23,7 @@ public class AudioFile implements Serializable {
     /**
      * Flag if metadata is retrieved for this file
      */
-    public boolean metadataRetrieved  = false;
+    public boolean metadataRetrieved = false;
 
     /**
      * Title
@@ -47,7 +46,7 @@ public class AudioFile implements Serializable {
     public int track;
 
     /**
-     * File path
+     * Actual file path
      */
     @JsonIgnore
     public String filePath;
@@ -76,6 +75,7 @@ public class AudioFile implements Serializable {
     //endregion
 
     //region Constructors
+
     /**
      * New audio file instance
      */
@@ -89,18 +89,35 @@ public class AudioFile implements Serializable {
      * @param f File
      */
     public AudioFile(File f) {
-        this.id = fileId++;
+        this();
         this.file = f;
         this.filePath = f.getAbsolutePath();
         this.path = f.getName();
-        this.dateChanged = dateFormat.format(file.lastModified());
+        this.dateChanged = DateHelper.dateFormat.format(f.lastModified());
     }
     //endregion
 
     //region Override
     @Override
     public String toString() {
-        return this.title + " - " + this.album + " - " + this.artist + " (" + this.filePath + ")";
+        return this.title + " - " + this.album + " - " + this.artist + " (" + this.filePath + ") " + this.dateChanged;
     }
     //endregion
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj.getClass() != AudioFile.class) {
+            return false;
+        } else {
+            var another = (AudioFile) obj;
+            return this.compareTo(another) == 0;
+        }
+    }
+
+    @Override
+    public int compareTo(AudioFile o) {
+        var filePathDifference = this.filePath.compareTo(o.filePath);
+        return filePathDifference == 0 ? DateHelper.compare(this.dateChanged, o.dateChanged) : filePathDifference;
+    }
 }

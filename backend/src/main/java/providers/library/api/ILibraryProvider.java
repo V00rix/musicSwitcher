@@ -8,7 +8,6 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 /**
  * Library provider API
@@ -32,7 +31,6 @@ public interface ILibraryProvider {
      * Get metadata for file
      *
      * @param file File
-     * @return File with metadata
      */
     void getMetadata(AudioFile file) throws IOException, TikaException, SAXException;
 
@@ -40,13 +38,10 @@ public interface ILibraryProvider {
      * Get metadata for file
      *
      * @param file File
-     * @return File with metadata
      */
     default void getMetadata(File file) throws IOException, TikaException, SAXException {
         this.getMetadata(new AudioFile(file));
     }
-
-    ;
 
     /**
      * Save Cache
@@ -77,18 +72,17 @@ public interface ILibraryProvider {
 
     /**
      * Set library playlist
+     *
      * @param files New Files
-     * @param isComplete Flag if the library is expected to get updated
      */
-    void setLibrary(ArrayList<AudioFile> files, boolean isComplete);
+    void setLibrary(ArrayList<AudioFile> files);
 
     /**
-     * Set library playlist
-     * @param files New Files
+     * Set updating completion flag
+     *
+     * @param isComplete Flag if the library is expected to get updated
      */
-    default void setLibrary(ArrayList<AudioFile> files) {
-        this.setLibrary(files, false);
-    }
+    void setLibraryCompletion(boolean isComplete);
 
     /**
      * Get limited amount of audio playlist

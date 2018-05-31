@@ -1,6 +1,6 @@
 package providers.timeTrack.implementation;
 
-import components.util.IRichConsole;
+import components.util.RichConsole;
 import domain.exeptions.UnprovidedException;
 import providers.IProviderBase;
 import providers.status.api.IStatusProvider;
@@ -12,10 +12,12 @@ import java.util.Date;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 
+import static components.util.RichConsole.style;
+
 /**
  * Time track implementation
  */
-public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRichConsole {
+public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase {
     //region Fields
 
     //region Providers
@@ -63,20 +65,24 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase, IRi
         int progressStepsTotal = items.size();
         int progressStepsCompleted = 0;
 
-        System.out.println((taskName + " has started. " + style("Progress: 0%", BoldColors.CYAN)));
+        System.out.println((taskName + " has started. " + style("Progress: 0%", RichConsole.BoldColors.CYAN)));
 
         ArrayList<R> result = new ArrayList<R>();
 
+        var thread = Thread.currentThread();
+
         for (T item : items) {
+            if (thread.isInterrupted())
+                break;
 
             result.add(function.apply(item));
             progressStepsCompleted++;
 
             System.out.println((taskName + " is in progress. "
-                    + style("Progress: " + prettyProgress(progressStepsTotal, progressStepsCompleted), BoldColors.CYAN)));
+                    + style("Progress: " + prettyProgress(progressStepsTotal, progressStepsCompleted), RichConsole.BoldColors.CYAN)));
         }
 
-        System.out.println((taskName + " has finished: " + style("Progress: 100%", BoldColors.GREEN)));
+        System.out.println((taskName + " has finished: " + style("Progress: 100%", RichConsole.BoldColors.GREEN)));
         return result;
     }
 

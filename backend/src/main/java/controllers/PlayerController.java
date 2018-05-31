@@ -21,6 +21,19 @@ public class PlayerController extends ControllerBase {
     //region Play controls
 
     /**
+     * Change playing file at playlist
+     */
+    @RequestMapping(value = "/playlist/selected")
+    public HttpResponse playlistFile(@RequestBody Integer index) {
+        try {
+            this.playListProvider.playFile(index);
+        } catch (BaseException e) {
+            return this.err(e);
+        }
+        return this.ok();
+    }
+
+    /**
      * Toggle play/pause
      */
     @RequestMapping(value = "/play")
@@ -54,7 +67,6 @@ public class PlayerController extends ControllerBase {
             return this.err(e);
         }
     }
-
     /**
      * Set seconds
      */
@@ -63,9 +75,10 @@ public class PlayerController extends ControllerBase {
         this.playerProvider.audioPlayer().seek(seconds);
         return this.ok();
     }
-    //endregion
 
+    //endregion
     //region Volume controls
+
     /**
      * Set volume
      */
@@ -83,7 +96,6 @@ public class PlayerController extends ControllerBase {
         this.playerProvider.audioPlayer().volumeIncrement();
         return this.ok();
     }
-
     /**
      * Set volume
      */
@@ -92,6 +104,7 @@ public class PlayerController extends ControllerBase {
         this.playerProvider.audioPlayer().volumeDecrement();
         return this.ok();
     }
+
     //endregion
 
     //region Playlist controls
@@ -107,19 +120,6 @@ public class PlayerController extends ControllerBase {
         } catch (BaseException e) {
             return this.err(e);
         }
-    }
-
-    /**
-     * Change playing file at playlist
-     */
-    @RequestMapping(value = "/playlist/selected")
-    public HttpResponse playlistFile(@RequestBody Integer index) {
-        try {
-            this.playListProvider.playFile(index);
-        } catch (BaseException e) {
-            return this.err(e);
-        }
-        return this.ok();
     }
     //endregion
 }

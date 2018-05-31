@@ -1,7 +1,6 @@
 package components.audioPlayer.implementation;
 
 import components.audioPlayer.api.IAudioPlayer;
-import domain.exeptions.UnprovidedException;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.media.Media;
@@ -9,8 +8,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.util.Pair;
-import providers.IProviderBase;
-import providers.status.api.IStatusProvider;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -35,14 +32,12 @@ public class AudioPlayer extends Application implements IAudioPlayer {
     //endregion
 
     public AudioPlayer() {
-        System.out.println("audio");
     }
 
     //region Implementation
     //region File control
     @Override
     public void start(Stage primaryStage) {
-        System.out.println("Audio Player Starting");
         instance = this;
         latch.countDown();
     }

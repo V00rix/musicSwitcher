@@ -1,6 +1,5 @@
 package providers.library.implementation;
 
-import components.util.IRichConsole;
 import domain.AudioFile;
 import domain.exeptions.UnprovidedException;
 import javafx.util.Pair;
@@ -26,7 +25,7 @@ import java.util.regex.Pattern;
 /**
  * Library provider implementation
  */
-public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichConsole {
+public class LibraryProvider implements ILibraryProvider, IProviderBase {
     //region Fields
 
     //region Providers
@@ -44,6 +43,7 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
     //endregion
 
     //region Constructor
+
     /**
      * New instance of library provider
      *
@@ -74,7 +74,7 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
             }
 
             File f = new File(filepath);
-            if (f.exists()) {
+            if (!f.exists()) {
                 throw new FileNotFoundException();
             }
 
@@ -88,6 +88,10 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
 
     @Override
     public ArrayList<AudioFile> getLibraryFull(String root, final String... fileTypes) {
+        // TODO: 31-May-18 not sure if this is the right place to check for interruption
+        if (Thread.currentThread().isInterrupted())
+            return new ArrayList<>();
+
         ArrayList<AudioFile> files = new ArrayList<>();
 
         File[] fls = this.ListFiles(root, fileTypes);
@@ -97,7 +101,7 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
         }
         File[] dirs = this.ListSubdirectories(root);
 
-        ArrayList<AudioFile> allFiles = new ArrayList<AudioFile>(files);
+        ArrayList<AudioFile> allFiles = new ArrayList<>(files);
 
         for (File dir : dirs) {
             ArrayList<AudioFile> dirFiles = this.getLibraryFull(dir.getAbsolutePath(), fileTypes);
@@ -142,34 +146,44 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase, IRichCo
 
     @Override
     public AudioFile file(int id) {
+        this.files.forEach(value -> {
+            System.out.println(id + " = " + value.id + ": " + (id == value.id));
+        });
         return this.files.stream().filter(a -> a.id == id).findFirst().get();
     }
 
     @Override
     public Pair<ArrayList<AudioFile>, Boolean> getFiles(SortBy sortBy) {
-        // todo: sorting and synchronization problem
+        // todo: sorting
         /*
             Either create new list while sorting, or have a mutation error while iterating over list in a different thread
          */
-//        switch (sortBy) {
-//            case ALBUM:
-//                this.playlist.sort((a1, a2) -> {
-//                    return (a1.album == null) ? ((a2.album == null) ? 1 : -1) : ((a2.album == null) ? 1 : a1.album.compareTo(a2.album));
-//                });
-//                break;
-//            case TITLE:
-//            default:
-//                this.playlist.sort((a1, a2) -> {
-//                    return (a1.title == null) ? ((a2.title == null) ? 1 : -1) : ((a2.title == null) ? 1 : a1.title.compareTo(a2.title));
-//                });
-//        }
+        //        switch (sortBy) {
+        //            case ALBUM:
+        //                this.playlist.sort((a1, a2) -> {
+        //                    return (a1.album == null) ? ((a2.album == null) ? 1 : -1) : ((a2.album == null) ? 1 : a1.album.compareTo(a2.album));
+        //                });
+        //                break;
+        //            case TITLE:
+        //            default:
+        //                this.playlist.sort((a1, a2) -> {
+        //                    return (a1.title == null) ? ((a2.title == null) ? 1 : -1) : ((a2.title == null) ? 1 : a1.title.compareTo(a2.title));
+        //                });
+        //        }
         return new Pair<>(this.files, this.isComplete);
     }
 
     @Override
-    public void setLibrary(ArrayList<AudioFile> files, boolean isComplete) {
-        this.files = files;
+    public void setLibraryCompletion(boolean isComplete) {
         this.isComplete = isComplete;
+    }
+
+    @Override
+    public void setLibrary(ArrayList<AudioFile> files) {
+        files.forEach(value -> {
+            System.out.println(value.id);
+        });
+        this.files = files;
     }
 
     //endregion

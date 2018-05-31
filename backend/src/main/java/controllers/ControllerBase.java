@@ -1,14 +1,13 @@
 package controllers;
 
-import components.util.IRichConsole;
 import domain.HttpResponse;
 import domain.exeptions.BaseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
+import providers.control.api.IControlProvider;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
-import providers.control.api.IControlProvider;
 import providers.status.api.IStatusProvider;
 import providers.timeTrack.api.ITimeTrackProvider;
 
@@ -16,7 +15,7 @@ import providers.timeTrack.api.ITimeTrackProvider;
  * Base REST controller class
  */
 @RequestMapping(value="/api")
-public abstract class ControllerBase implements IRichConsole {
+public abstract class ControllerBase {
     /**
      * Status provider
      */

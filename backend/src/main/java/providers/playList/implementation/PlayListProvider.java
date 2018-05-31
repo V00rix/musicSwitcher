@@ -1,17 +1,16 @@
 package providers.playList.implementation;
 
-import components.util.IRichConsole;
 import components.audioPlayer.api.IAudioPlayer;
 import domain.AudioFile;
 import domain.exeptions.BaseException;
+import domain.exeptions.UnprovidedException;
 import domain.exeptions.checks.BoundariesCheck;
 import domain.exeptions.checks.NullCheck;
-import domain.exeptions.UnprovidedException;
 import domain.statuses.PlayerStatus;
 import providers.IProviderBase;
+import providers.control.api.IControlProvider;
 import providers.library.api.ILibraryProvider;
 import providers.playList.api.IPlayListProvider;
-import providers.control.api.IControlProvider;
 import providers.status.api.IStatusProvider;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ import java.util.TimerTask;
 /**
  * Play list provider implementation
  */
-public class PlayListProvider implements IPlayListProvider, IProviderBase, IRichConsole {
+public class PlayListProvider implements IPlayListProvider, IProviderBase {
     //region Fields
     //region Providers
     private final IStatusProvider statusProvider;
@@ -53,7 +52,6 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
         this.statusProvider = statusProvider;
         this.audioPlayer = playerProvider.audioPlayer();
         Runnable f = () -> {
-            System.out.println(style("updating control data...", BoldColors.YELLOW));
             this.playerStatus.set(this.audioPlayer.getVolume(), this.currentFileIndex, this.ids, this.audioPlayer.getSeek(), this.playing);
         };
         new Timer().scheduleAtFixedRate(new TimerTask() {
@@ -67,7 +65,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
 
     //region Implementation
     @Override
-    public void setPlaylist(ArrayList<Integer> ids) throws BaseException {
+    public void setPlaylist(ArrayList<Integer> ids) {
         this.audioPlayer.stop();
         try {
             NullCheck.check(ids);
@@ -99,7 +97,7 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase, IRich
     @Override
     public void playFile(int index) throws BaseException {
         this.audioPlayer.stop();
-        this.currentFileIndex = BoundariesCheck.check(index, this.ids);
+        this.currentFileIndex = this.ids.get(BoundariesCheck.check(index, this.ids));
         this.currentFile = this.libraryProvider.file(this.currentFileIndex);
         this.audioPlayer.setFile(this.currentFile);
         this.onPlay();

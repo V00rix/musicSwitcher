@@ -3,20 +3,21 @@ package components.gui.controlWindow.implementation;
 import components.audioPlayer.api.IAudioPlayer;
 import components.audioPlayer.implementation.AudioPlayer;
 import components.gui.controlWindow.api.IControlWindow;
-import components.util.IRichConsole;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.*;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.RowConstraints;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
-public class ControlWindow extends Application implements IControlWindow, IRichConsole {
+public class ControlWindow extends Application implements IControlWindow {
     public static CountDownLatch latch = new CountDownLatch(1);
     public static IAudioPlayer audioPlayer;
     public static IControlWindow instance;
@@ -34,20 +35,21 @@ public class ControlWindow extends Application implements IControlWindow, IRichC
     private Runnable afterInit;
 
     public ControlWindow() {
-        System.out.println("Constructor");
     }
 
     @Override
     public void start(Stage primaryStage) throws InterruptedException {
-        this.stage = primaryStage;
-        latch = new CountDownLatch(1);
-        new AudioPlayer().start(this.stage);
-        instance = this;
-        audioPlayer = AudioPlayer.instance;
+        // Launch audio player
+        new AudioPlayer().start(this.stage = primaryStage);
         AudioPlayer.latch.await();
-        ControlWindow.latch.countDown();
+        audioPlayer = AudioPlayer.instance;
 
+        // Configure self
+        instance = this;
         this.createStage();
+
+        // Mark self as available
+        ControlWindow.latch.countDown();
     }
 
     public void setHost(String host) {
@@ -100,7 +102,7 @@ public class ControlWindow extends Application implements IControlWindow, IRichC
 
         this.closeButton = new Button("Exit");
         this.closeButton.setOnMouseClicked(mouseEvent -> {
-            onExit(this.stage);
+            onExit();
         });
         buttonsPane.add(this.closeButton, 1, 0);
 
@@ -117,17 +119,14 @@ public class ControlWindow extends Application implements IControlWindow, IRichC
         root.add(buttonsPane, 0, 2);
 
         this.scene = new Scene(root);
-
-        this.stage.setScene(this.scene);
-
         this.scene.getStylesheets().add("gui/styles/styles.css");
-
+        this.stage.setOnCloseRequest((s) -> onExit());
+        this.stage.setScene(this.scene);
         this.stage.show();
     }
 
     @Override
     public void changeDirectory() {
-
         Platform.runLater(() -> {
             var directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Set music root path");
@@ -139,7 +138,7 @@ public class ControlWindow extends Application implements IControlWindow, IRichC
         });
     }
 
-    private void onExit(Stage primaryStage) {
+    private void onExit() {
         try {
             audioPlayer.terminate();
             Platform.exit();

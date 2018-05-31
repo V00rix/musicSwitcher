@@ -51,11 +51,6 @@ public class Main {
 
             updateFiles(audioFiles, getLibraryFull(config));
 
-            System.out.println("y boi");
-            audioFiles.forEach(value -> {
-                System.out.println(value.id);
-            });
-
             updateMetadata(audioFiles);
 
             saveCache();
@@ -160,8 +155,9 @@ public class Main {
             FileInputStream fis = new FileInputStream(configPath);
             ObjectInputStream ois = new ObjectInputStream(fis);
             config = (AppConfig) ois.readObject();
+            controlWindow.setDirectoryPath(config.rootPath);
         } else {
-            controlWindow.changeDirectory();
+            controlWindow.changeDirectoryDialog();
         }
     }
 
@@ -238,23 +234,27 @@ public class Main {
         var newFiles = audioFiles.stream().filter(f -> !f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
         var oldFiles = audioFiles.stream().filter(f -> f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
 
-        timeTrackProvider.trackProgress(newFiles, (file) -> {
+        timeTrackProvider.trackProgress(newFiles, (file, progress, text) -> {
             try {
                 libraryProvider.getMetadata(file);
+                controlWindow.setProgress(progress, "Getting metadata: " + text);
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return new AudioFile();
         }, "Getting metadata");
 
-        timeTrackProvider.trackProgress(oldFiles, (file) -> {
+        timeTrackProvider.trackProgress(oldFiles, (file, progress, text) -> {
             try {
                 libraryProvider.getMetadata(file);
+                controlWindow.setProgress(progress, "Updating metadata: " + text);
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return new AudioFile();
         }, "Updating metadata");
+
+        controlWindow.setProgress(1, "Scanning has finished");
     }
 
     /**

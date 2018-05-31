@@ -1,6 +1,7 @@
 package providers.timeTrack.api;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 
@@ -52,10 +53,42 @@ public interface ITimeTrackProvider {
      * @param items    Items
      * @param function Function
      * @param taskName Task name
+     * @param <T>      Input array type
+     * @param <R>      Return array type
+     * @return New array
+     * @throws Exception Exception
+     */
+    default <T, R> ArrayList<R> trackProgress(ArrayList<T> items, Function<T, R> function, String taskName) throws Exception {
+        return this.trackProgress(items, new TriFunction<T, Double, String, R>() {
+            @Override
+            public R apply(T t, Double aDouble, String s) {
+                return function.apply(t);
+            }
+        }, taskName);
+    }
+
+    /**
+     * Tracks operations progress performed on a list
+     *
+     * @param items    Items
+     * @param function Function
+     * @param taskName Task name
      * @param <T> Input array type
      * @param <R> Return array type
      * @return New array
      * @throws Exception Exception
      */
-    <T, R> ArrayList<R> trackProgress(ArrayList<T> items, Function<T, R> function, String taskName) throws Exception;
+    <T, R> ArrayList<R> trackProgress(ArrayList<T> items, TriFunction<T, Double, String, R> function, String taskName) throws Exception;
+
+    @FunctionalInterface
+    interface TriFunction<A, B, C, R> {
+
+        R apply(A a, B b, C c);
+
+        default <V> TriFunction<A, B, C, V> andThen(
+                Function<? super R, ? extends V> after) {
+            Objects.requireNonNull(after);
+            return (A a, B b, C c) -> after.apply(apply(a, b, c));
+        }
+    }
 }

@@ -5,40 +5,56 @@ import components.audioPlayer.implementation.AudioPlayer;
 import components.gui.controlWindow.api.IControlWindow;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.RowConstraints;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
 import java.util.function.Consumer;
 
 public class ControlWindow extends Application implements IControlWindow {
+    //region Public references for sequential launch
     public static CountDownLatch latch = new CountDownLatch(1);
     public static IAudioPlayer audioPlayer;
     public static IControlWindow instance;
+    //endregion
 
-    private Scene scene;
+    //region Fields
+
+    //region Scene controls
+    @FXML
+    private ProgressBar progressBar;
+    @FXML
     private Label hostLabel;
+    @FXML
     private Label pathLabel;
-    private Button filePathButton;
-    private Button closeButton;
+    @FXML
+    private Label progressLabel;
+
+    //endregion
     private String host = null;
     private Stage stage;
     private String path = null;
     private Consumer<String> afterDirectoryChanged;
     private Runnable afterExit;
-    private Runnable afterInit;
+    //endregion
 
+    //region Basic initialization
     public ControlWindow() {
     }
 
     @Override
-    public void start(Stage primaryStage) throws InterruptedException {
+    public void start(Stage primaryStage) throws InterruptedException, IOException {
+
+
         // Launch audio player
         new AudioPlayer().start(this.stage = primaryStage);
         AudioPlayer.latch.await();
@@ -46,107 +62,73 @@ public class ControlWindow extends Application implements IControlWindow {
 
         // Configure self
         instance = this;
-        this.createStage();
+
+        // Build scene
+        this.stage = new Stage();
+
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(Thread.currentThread().getContextClassLoader()
+                .getResource("gui/sample.fxml")));
+        loader.setController(this);
+        Parent root = loader.load();
+        Scene scene;
+        this.stage.setScene(scene = new Scene(root, 450, 300));
+        this.stage.initOwner(primaryStage);
+        this.stage.setTitle("Music Switcher Controls");
+        this.stage.setResizable(false);
+        this.stage.setOnCloseRequest((s) -> onExit());
+        this.stage.show();
 
         // Mark self as available
         ControlWindow.latch.countDown();
     }
+    //endregion
 
-    public void setHost(String host) {
-        Platform.runLater(() -> {
-            this.hostLabel.setText(this.host = host);
-        });
+    //region Event handlers
+
+    /**
+     * Directory label click handler
+     *
+     * @param mouseEvent Mouse event
+     */
+    public void onDirectoryLabelClicked(MouseEvent mouseEvent) {
+        this.changeDirectoryDialog();
     }
 
     /**
-     * Create gui layout
+     * Host label click handler
+     *
+     * @param mouseEvent Mouse event
      */
-    private void createStage() {
-        latch.countDown();
+    public void onHostLabelClicked(MouseEvent mouseEvent) {
+        if (this.host != null)
+            getHostServices().showDocument("http://" + this.host);
+    }
+    //endregion
 
-        this.stage.setTitle("Music Switcher");
-
-        GridPane root = new GridPane();
-
-        RowConstraints row = new RowConstraints();
-        row.setPercentHeight(50);
-        root.getRowConstraints().add(row);
-
-        row = new RowConstraints();
-        row.setPercentHeight(20);
-        root.getRowConstraints().add(row);
-
-        row = new RowConstraints();
-        row.setPercentHeight(30);
-        root.getRowConstraints().add(row);
-
-        GridPane buttonsPane = new GridPane();
-
-        row = new RowConstraints();
-        row.setPercentHeight(60);
-        buttonsPane.getRowConstraints().add(row);
-
-        row = new RowConstraints();
-        row.setPercentHeight(30);
-        buttonsPane.getRowConstraints().add(row);
-
-        ColumnConstraints col = new ColumnConstraints();
-        col.setPercentWidth(50);
-        buttonsPane.getColumnConstraints().add(col);
-
-        this.filePathButton = new Button("Select Directory");
-        this.filePathButton.setOnMouseClicked(mouseEvent -> {
-            this.changeDirectory();
-        });
-        buttonsPane.add(this.filePathButton, 0, 0);
-
-        this.closeButton = new Button("Exit");
-        this.closeButton.setOnMouseClicked(mouseEvent -> {
-            onExit();
-        });
-        buttonsPane.add(this.closeButton, 1, 0);
-
-        this.hostLabel = new Label("[HOST ADDRESS]");
-        this.hostLabel.setOnMouseClicked(mouseEvent -> {
-            if (this.host != null)
-                getHostServices().showDocument("http://" + this.host);
-        });
-        root.add(this.hostLabel, 0, 0);
-
-        this.pathLabel = new Label("FilePath");
-        root.add(this.pathLabel, 0, 1);
-
-        root.add(buttonsPane, 0, 2);
-
-        this.scene = new Scene(root);
-        this.scene.getStylesheets().add("gui/styles/styles.css");
-        this.stage.setOnCloseRequest((s) -> onExit());
-        this.stage.setScene(this.scene);
-        this.stage.show();
+    //region Implementation
+    @Override
+    public void setHost(String host) {
+        Platform.runLater(() -> this.hostLabel.setText(this.host = host));
     }
 
     @Override
-    public void changeDirectory() {
+    public void changeDirectoryDialog() {
         Platform.runLater(() -> {
             var directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Set music root path");
             var f = directoryChooser.showDialog(this.stage);
-            this.pathLabel.setText(f.getAbsolutePath());
-
-            if (this.afterDirectoryChanged != null)
+            if (f != null) {
                 this.afterDirectoryChanged.accept(f.getAbsolutePath());
+                if (this.afterDirectoryChanged != null) {
+                    this.pathLabel.setText(f.getAbsolutePath());
+                }
+            }
         });
     }
 
-    private void onExit() {
-        try {
-            audioPlayer.terminate();
-            Platform.exit();
-            if (this.afterExit != null)
-                this.afterExit.run();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void setDirectoryPath(String path) {
+        Platform.runLater(() -> this.pathLabel.setText("Root: " + path));
     }
 
     @Override
@@ -158,4 +140,30 @@ public class ControlWindow extends Application implements IControlWindow {
     public void setOnDirectoryChanged(Consumer<String> c) {
         this.afterDirectoryChanged = c;
     }
+
+    @Override
+    public void setProgress(double progress, String text) {
+        Platform.runLater(() -> {
+            this.progressBar.setProgress(progress);
+            this.progressLabel.setText(text);
+        });
+    }
+    //endregion
+
+    //region Helpers
+
+    /**
+     * On exit logic
+     */
+    private void onExit() {
+        try {
+            audioPlayer.terminate();
+            Platform.exit();
+            if (this.afterExit != null)
+                this.afterExit.run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    //endregion
 }

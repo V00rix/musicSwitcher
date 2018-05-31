@@ -27,7 +27,6 @@ import java.util.regex.Pattern;
  */
 public class LibraryProvider implements ILibraryProvider, IProviderBase {
     //region Fields
-
     //region Providers
     private final IStatusProvider statusProvider;
     private final ITimeTrackProvider timeTrackProvider;
@@ -43,7 +42,6 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
     //endregion
 
     //region Constructor
-
     /**
      * New instance of library provider
      *
@@ -146,9 +144,6 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
 
     @Override
     public AudioFile file(int id) {
-        this.files.forEach(value -> {
-            System.out.println(id + " = " + value.id + ": " + (id == value.id));
-        });
         return this.files.stream().filter(a -> a.id == id).findFirst().get();
     }
 
@@ -180,16 +175,11 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
 
     @Override
     public void setLibrary(ArrayList<AudioFile> files) {
-        files.forEach(value -> {
-            System.out.println(value.id);
-        });
         this.files = files;
     }
-
     //endregion
 
     //region Helpers
-
     /**
      * List only playlist in directory
      *

@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.Callable;
-import java.util.function.Function;
 
 import static components.util.RichConsole.style;
 
@@ -61,7 +60,7 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase {
     }
 
     @Override
-    public synchronized <T, R> ArrayList<R> trackProgress(ArrayList<T> items, Function<T, R> function, String taskName) {
+    public <T, R> ArrayList<R> trackProgress(ArrayList<T> items, TriFunction<T, Double, String, R> function, String taskName) {
         int progressStepsTotal = items.size();
         int progressStepsCompleted = 0;
 
@@ -75,7 +74,7 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase {
             if (thread.isInterrupted())
                 break;
 
-            result.add(function.apply(item));
+            result.add(function.apply(item, (double) progressStepsCompleted / (double) progressStepsTotal, prettyProgress(progressStepsTotal, progressStepsCompleted)));
             progressStepsCompleted++;
 
             System.out.println((taskName + " is in progress. "

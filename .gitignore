@@ -54,4 +54,4 @@ frontend/node_modules
 !/frontend/.editorconfig
 !/frontend/e2e/
 /backend/app_data/
-/musicSwitcher/nbproject/private/
+!/backend/src/main/resources/static/

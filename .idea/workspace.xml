@@ -12,8 +12,7 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="FXML control window GUI, some minor bug fixing">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="911">
-              <caret line="255" column="59" selection-start-line="255" selection-start-column="59" selection-end-line="255" selection-end-column="59" />
+            <state relative-caret-position="512">
+              <caret line="245" column="87" lean-forward="true" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="87" />
               <folding>
                 <element signature="n#!!doc;n#configPath#0;n#Main#0" />
                 <element signature="docComment;method#main#0;class#Main#0" />
@@ -275,9 +274,9 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/api/ITimeTrackProvider.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java" />
         <option value="$PROJECT_DIR$/backend/src/main/resources/gui/sample.fxml" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -868,7 +867,7 @@
       <workItem from="1527674514172" duration="18288000" />
       <workItem from="1527763510493" duration="574000" />
       <workItem from="1527775751989" duration="9299000" />
-      <workItem from="1527798745241" duration="13221000" />
+      <workItem from="1527798745241" duration="14214000" />
     </task>
     <task id="LOCAL-00001" summary="Project structure">
       <created>1524416974441</created>
@@ -947,11 +946,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527807009847</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Minor fixes">
+      <created>1527816865260</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527816865260</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Minor fixes">
+      <created>1527820001562</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527820001562</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225481000" />
+    <option name="totallyTimeSpent" value="226474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -977,10 +990,10 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.61927086" weight="0.11636928" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4994143" weight="0.23584174" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.27540728" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.27540728" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32971016" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32893717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" sideWeight="0.5027153" side_tool="true" weight="0.24990238" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -1027,7 +1040,8 @@
     <MESSAGE value="Rushed finish" />
     <MESSAGE value="Refactored main method logic. Fixed playing by indices, thread interruption" />
     <MESSAGE value="FXML control window GUI, some minor bug fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="FXML control window GUI, some minor bug fixing" />
+    <MESSAGE value="Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1386,8 +1400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="911">
-          <caret line="255" column="59" selection-start-line="255" selection-start-column="59" selection-end-line="255" selection-end-column="59" />
+        <state relative-caret-position="512">
+          <caret line="245" column="87" lean-forward="true" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="87" />
           <folding>
             <element signature="n#!!doc;n#configPath#0;n#Main#0" />
             <element signature="docComment;method#main#0;class#Main#0" />

@@ -280,6 +280,7 @@ public class Main {
             f.delete();
         }
         try {
+            f.getParentFile().mkdirs();
             f.createNewFile();
             FileOutputStream fos = null;
             fos = new FileOutputStream(configPath);

@@ -242,16 +242,16 @@ public class Main {
             }
             return new AudioFile();
         }, "Getting metadata");
-
-        timeTrackProvider.trackProgress(oldFiles, (file, progress, text) -> {
-            try {
-                libraryProvider.getMetadata(file);
-                controlWindow.setProgress(progress, "Updating metadata: " + text);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return new AudioFile();
-        }, "Updating metadata");
+        //
+        //        timeTrackProvider.trackProgress(oldFiles, (file, progress, text) -> {
+        //            try {
+        //                libraryProvider.getMetadata(file);
+        //                controlWindow.setProgress(progress, "Updating metadata: " + text);
+        //            } catch (Exception e) {
+        //                e.printStackTrace();
+        //            }
+        //            return new AudioFile();
+        //        }, "Updating metadata");
 
         controlWindow.setProgress(1, "Scanning has finished");
     }

@@ -110,14 +110,14 @@ public class AudioFile implements Serializable, Comparable<AudioFile> {
         if (obj.getClass() != AudioFile.class) {
             return false;
         } else {
-            var another = (AudioFile) obj;
+            AudioFile another = (AudioFile) obj;
             return this.compareTo(another) == 0;
         }
     }
 
     @Override
     public int compareTo(AudioFile o) {
-        var filePathDifference = this.filePath.compareTo(o.filePath);
+        int filePathDifference = this.filePath.compareTo(o.filePath);
         return filePathDifference == 0 ? DateHelper.compare(this.dateChanged, o.dateChanged) : filePathDifference;
     }
 }

@@ -5,7 +5,6 @@ import 'rxjs/add/operator/map';
 import {AudioFile} from "../domain/audioFile";
 import {Library} from "../domain/library";
 import {HttpResponse} from "../domain/httpResponse";
-import {forEach} from "@angular/router/src/utils/collection";
 import {PlayerStatus} from "../domain/playerStatus";
 
 @Injectable()
@@ -36,8 +35,8 @@ export class DataService {
 
   //region Constructor
   constructor(private http: HttpClient) {
-    // this.baseUrl = `http://localhost:8080/api`;
-    this.baseUrl  = `http://${window.location.host}/api`;
+    this.baseUrl = `http://192.168.0.248:8190//api`;
+    // this.baseUrl  = `http://${window.location.host}/api`;
     this.startSynchronization();
   }
 

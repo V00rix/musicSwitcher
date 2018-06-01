@@ -68,7 +68,7 @@ public class TimeTrackProvider implements ITimeTrackProvider, IProviderBase {
 
         ArrayList<R> result = new ArrayList<R>();
 
-        var thread = Thread.currentThread();
+        Thread thread = Thread.currentThread();
 
         for (T item : items) {
             if (thread.isInterrupted())

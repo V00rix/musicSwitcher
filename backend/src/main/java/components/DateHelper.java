@@ -18,8 +18,8 @@ public final class DateHelper {
     }
 
     public static int compare(String d1, String d2) {
-        var date1 = toDate(d1);
-        var date2 = toDate(d2);
+        Date date1 = toDate(d1);
+        Date date2 = toDate(d2);
         return date1 != null && date2 != null ? date1.compareTo(date2) : 0;
     }
 }

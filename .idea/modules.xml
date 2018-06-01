@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/out/artifacts/artifacts.iml" filepath="$PROJECT_DIR$/out/artifacts/artifacts.iml" group="musicSwitcher" />
       <module fileurl="file://$PROJECT_DIR$/backend/musicSwitcher.backend.iml" filepath="$PROJECT_DIR$/backend/musicSwitcher.backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/frontend/musicSwitcher.frontend.iml" filepath="$PROJECT_DIR$/frontend/musicSwitcher.frontend.iml" />
     </modules>

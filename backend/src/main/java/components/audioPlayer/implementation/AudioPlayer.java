@@ -87,7 +87,7 @@ public class AudioPlayer extends Application implements IAudioPlayer {
 
     @Override
     public void seek(int seconds) {
-        var songDuration = (int) player.getMedia().getDuration().toSeconds();
+        int songDuration = (int) player.getMedia().getDuration().toSeconds();
         seekLocation = new Duration((seconds < 1 ? 0 : seconds >= songDuration ? songDuration - 1 : seconds) * 1000);
         player.seek(seekLocation);
     }

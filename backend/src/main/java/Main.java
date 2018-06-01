@@ -95,8 +95,7 @@ public class Main {
         new Thread(() -> Application.launch(ControlWindow.class)).start();
         ControlWindow.latch.await();
 
-        var controlWindow = ControlWindow.instance;
-
+        IControlWindow controlWindow = ControlWindow.instance;
 
         //region Configure events
         controlWindow.setOnDirectoryChanged(newDir -> {
@@ -192,7 +191,7 @@ public class Main {
      */
     private static ArrayList<AudioFile> getLibraryFull(AppConfig config) throws Exception {
         return new ArrayList<>(timeTrackProvider.track(() -> {
-            var x = libraryProvider.getLibraryFull(config.rootPath, "mp3");
+            ArrayList<AudioFile> x = libraryProvider.getLibraryFull(config.rootPath, "mp3");
             out("Got " + x.size() + " audio files.", RichConsole.Colors.GREEN);
             return x;
         }, "Getting playlist"));
@@ -205,7 +204,7 @@ public class Main {
      * @param libraryNew New (actual) library
      */
     private static void updateFiles(ArrayList<AudioFile> library, ArrayList<AudioFile> libraryNew) {
-        var toRemove = new ArrayList<AudioFile>();
+        ArrayList<AudioFile> toRemove = new ArrayList<AudioFile>();
 
         library.forEach(f -> {
             if (libraryNew.contains(f)) {
@@ -231,8 +230,8 @@ public class Main {
      * @throws Exception Exception
      */
     private static void updateMetadata(ArrayList<AudioFile> audioFiles) throws Exception {
-        var newFiles = audioFiles.stream().filter(f -> !f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
-        var oldFiles = audioFiles.stream().filter(f -> f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<AudioFile> newFiles = audioFiles.stream().filter(f -> !f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<AudioFile> oldFiles = audioFiles.stream().filter(f -> f.metadataRetrieved).collect(Collectors.toCollection(ArrayList::new));
 
         timeTrackProvider.trackProgress(newFiles, (file, progress, text) -> {
             try {

@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.concurrent.CountDownLatch;
@@ -114,9 +115,9 @@ public class ControlWindow extends Application implements IControlWindow {
     @Override
     public void changeDirectoryDialog() {
         Platform.runLater(() -> {
-            var directoryChooser = new DirectoryChooser();
+            DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Set music root path");
-            var f = directoryChooser.showDialog(this.stage);
+            File f = directoryChooser.showDialog(this.stage);
             if (f != null) {
                 this.afterDirectoryChanged.accept(f.getAbsolutePath());
                 if (this.afterDirectoryChanged != null) {

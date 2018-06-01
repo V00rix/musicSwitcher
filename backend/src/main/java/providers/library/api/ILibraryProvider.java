@@ -92,7 +92,7 @@ public interface ILibraryProvider {
      * @return Audio playlist
      */
     default Pair<ArrayList<AudioFile>, Boolean> getFiles(int count, SortBy sortBy) {
-        var files = this.getFiles();
+        Pair<ArrayList<AudioFile>, Boolean> files = this.getFiles();
         return new Pair<>(new ArrayList<AudioFile>(files.getKey().subList(0, count)), files.getValue());
     }
 

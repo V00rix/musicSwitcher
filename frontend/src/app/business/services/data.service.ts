@@ -35,8 +35,8 @@ export class DataService {
 
   //region Constructor
   constructor(private http: HttpClient) {
-    this.baseUrl = `http://192.168.0.248:8190//api`;
-    // this.baseUrl  = `http://${window.location.host}/api`;
+    // this.baseUrl = `http://192.168.0.248:8190/api`;
+    this.baseUrl = `http://${window.location.host}/api`;
     this.startSynchronization();
   }
 

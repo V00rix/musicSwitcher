@@ -14,6 +14,9 @@
   <component name="ChangeListManager">
     <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/main.4df5c47ad832a6ad2b41.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -26,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="245" column="87" lean-forward="true" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="87" />
+            <state relative-caret-position="470">
+              <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc;n#configPath#0;n#Main#0" />
                 <element signature="docComment;method#main#0;class#Main#0" />
@@ -42,11 +45,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="data.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="592">
-              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -126,7 +138,7 @@
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="721">
-              <caret line="120" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+              <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
               <folding>
                 <element signature="e#3810#3811#0" expanded="true" />
                 <element signature="e#3890#3891#0" expanded="true" />
@@ -148,15 +160,6 @@
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/resources/gui/styles/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -243,7 +246,6 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/config/Config.java" />
         <option value="$PROJECT_DIR$/backend/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/backend/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
         <option value="$PROJECT_DIR$/backend/app_data/config" />
         <option value="$PROJECT_DIR$/backend/src/main/java/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java" />
@@ -277,6 +279,7 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
       </list>
     </option>
   </component>
@@ -511,7 +514,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="Auf&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;dataSer&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LPr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;AF&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;Contr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;ContrW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;PlaProv&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Audi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;ControlW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;Main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;data.ser&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Auf&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;dataSer&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LPr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;AF&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;Contr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;ContrW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;PlaProv&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Audi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;ControlW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;Main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;data.ser&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -867,7 +870,7 @@
       <workItem from="1527674514172" duration="18288000" />
       <workItem from="1527763510493" duration="574000" />
       <workItem from="1527775751989" duration="9299000" />
-      <workItem from="1527798745241" duration="14214000" />
+      <workItem from="1527798745241" duration="15263000" />
     </task>
     <task id="LOCAL-00001" summary="Project structure">
       <created>1524416974441</created>
@@ -960,11 +963,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527820001562</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Frontend fix">
+      <created>1527820295028</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527820295028</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Frontend fix">
+      <created>1527820455041</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527820455041</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226474000" />
+    <option name="totallyTimeSpent" value="227523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
@@ -990,10 +1007,10 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.61927086" weight="0.11636928" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4994143" weight="0.23584174" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.27540728" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.27540728" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32971016" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32893717" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" sideWeight="0.5027153" side_tool="true" weight="0.24990238" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -1041,7 +1058,8 @@
     <MESSAGE value="Refactored main method logic. Fixed playing by indices, thread interruption" />
     <MESSAGE value="FXML control window GUI, some minor bug fixing" />
     <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="Frontend fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frontend fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1178,13 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="70" column="44" lean-forward="true" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1378,7 +1389,7 @@
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="721">
-          <caret line="120" column="28" lean-forward="true" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
           <folding>
             <element signature="e#3810#3811#0" expanded="true" />
             <element signature="e#3890#3891#0" expanded="true" />
@@ -1394,14 +1405,14 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
-          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="245" column="87" lean-forward="true" selection-start-line="245" selection-start-column="87" selection-end-line="245" selection-end-column="87" />
+        <state relative-caret-position="470">
+          <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc;n#configPath#0;n#Main#0" />
             <element signature="docComment;method#main#0;class#Main#0" />
@@ -1409,6 +1420,13 @@
             <element signature="docComment;method#saveConfig#0;class#Main#0" />
             <element signature="method#saveConfig#0;class#Main#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
         </state>
       </provider>
     </entry>

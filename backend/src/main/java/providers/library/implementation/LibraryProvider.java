@@ -133,6 +133,7 @@ public class LibraryProvider implements ILibraryProvider, IProviderBase {
         if (f.exists()) {
             f.delete();
         }
+        f.getParentFile().mkdirs();
         f.createNewFile();
 
         FileOutputStream fos = new FileOutputStream(filePath);

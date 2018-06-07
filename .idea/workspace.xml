@@ -12,7 +12,12 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="" />
+    <list default="true" id="170dad28-bbff-435a-a815-4c5c8f898c85" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,12 +32,44 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4494">
-              <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
+            <state relative-caret-position="189">
+              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding>
+                <element signature="e#903#925#0" />
                 <element signature="n#!!doc;n#configPath#0;n#Main#0" />
+                <element signature="n#!!doc;n#statusProvider#0;n#Main#0" />
+                <element signature="e#1206#1224#0" />
+                <element signature="e#1797#2238#0" />
                 <element signature="docComment;method#main#0;class#Main#0" />
+                <element signature="method#main#0;class#Main#0" />
+                <element signature="e#2728#2750#0" />
+                <element signature="docComment;method#launchControlWindow#0;class#Main#0" />
+                <element signature="method#launchControlWindow#0;class#Main#0" />
+                <element signature="e#3175#3200#0" />
+                <element signature="e#3245#3378#0" />
+                <element signature="e#3414#3681#0" />
+                <element signature="docComment;method#refreshLibrary#0;class#Main#0" />
+                <element signature="method#refreshLibrary#0;class#Main#0" />
+                <element signature="docComment;method#getProviders#0;class#Main#0" />
+                <element signature="method#getProviders#0;class#Main#0" />
+                <element signature="docComment;method#getRootPath#0;class#Main#0" />
+                <element signature="method#getRootPath#0;class#Main#0" />
+                <element signature="docComment;method#getLibraryCache#0;class#Main#0" />
+                <element signature="method#getLibraryCache#0;class#Main#0" />
+                <element signature="e#5338#5679#0" />
+                <element signature="docComment;method#getLibraryFull#0;class#Main#0" />
+                <element signature="method#getLibraryFull#0;class#Main#0" />
+                <element signature="e#6203#6415#0" />
+                <element signature="docComment;method#updateFiles#0;class#Main#0" />
+                <element signature="method#updateFiles#0;class#Main#0" />
+                <element signature="e#6779#6943#0" />
+                <element signature="docComment;method#updateMetadata#0;class#Main#0" />
+                <element signature="method#updateMetadata#0;class#Main#0" />
+                <element signature="e#7717#8028#0" />
+                <element signature="e#8059#8061#0" />
                 <element signature="docComment;method#saveCache#0;class#Main#0" />
+                <element signature="method#saveCache#0;class#Main#0" />
+                <element signature="e#8792#8896#0" />
                 <element signature="docComment;method#saveConfig#0;class#Main#0" />
                 <element signature="method#saveConfig#0;class#Main#0" />
               </folding>
@@ -40,65 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts">
+      <file leaf-file-name="AudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITimeTrackProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/api/ITimeTrackProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
-              <folding>
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2148#2149#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeTrackProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-              <folding>
-                <element signature="docComment;class#TimeTrackProvider#0" />
-                <element signature="e#585#600#0" />
-                <element signature="e#606#624#0" />
-                <element signature="e#805#826#0" />
-                <element signature="docComment;method#TimeTrackProvider#0;class#TimeTrackProvider#0" />
-                <element signature="method#TimeTrackProvider#0;class#TimeTrackProvider#0" />
-                <element signature="method#track#0;class#TimeTrackProvider#0" />
-                <element signature="docComment;method#prettyProgress#0;class#TimeTrackProvider#0" />
-                <element signature="docComment;method#millisDate#0;class#TimeTrackProvider#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ILibraryProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="861">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -106,28 +89,17 @@
       <file leaf-file-name="LibraryProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-              <folding>
-                <element signature="e#6190#6191#0" expanded="true" />
-                <element signature="e#6224#6225#0" expanded="true" />
-                <element signature="docComment;method#ListFiles#0;class#LibraryProvider#0" />
-                <element signature="method#ListFiles#0;class#LibraryProvider#0" />
-                <element signature="docComment;method#ListSubdirectories#0;class#LibraryProvider#0" />
-                <element signature="method#ListSubdirectories#0;class#LibraryProvider#0" />
-              </folding>
+            <state relative-caret-position="2646">
+              <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IControlWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/api/IControlWindow.java">
+      <file leaf-file-name=".angular-cli.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/.angular-cli.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -135,16 +107,32 @@
       <file leaf-file-name="ControlWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+            <state relative-caret-position="2562">
+              <caret line="151" column="15" selection-start-line="151" selection-start-column="15" selection-end-line="151" selection-end-column="15" />
               <folding>
-                <element signature="e#3810#3811#0" expanded="true" />
-                <element signature="e#3890#3891#0" expanded="true" />
-                <element signature="e#3945#3946#0" expanded="true" />
-                <element signature="e#3979#3980#0" expanded="true" />
-                <element signature="e#4054#4055#0" expanded="true" />
-                <element signature="e#4100#4101#0" expanded="true" />
-                <element signature="e#3856#3872#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#onExit#0;class#ControlWindow#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Desktop.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Desktop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5397">
+              <caret line="303" selection-start-line="303" selection-end-line="303" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayListProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="987">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,12 +140,34 @@
       </file>
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/resources/gui/sample.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="654">
+            <state relative-caret-position="1281">
               <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="IAudioPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -262,10 +272,7 @@
         <option value="$PROJECT_DIR$/frontend/src/app/business/components/player/player.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html" />
         <option value="$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/components/ISequentialLaunch.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/sample.fxml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/Controller.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java" />
@@ -276,8 +283,11 @@
         <option value="$PROJECT_DIR$/backend/src/main/resources/gui/sample.fxml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java" />
       </list>
     </option>
   </component>
@@ -305,11 +315,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="3863" />
-    <option name="height" value="2123" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="77" />
+    <option name="y" value="222" />
+    <option name="width" value="1440" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -317,6 +327,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,12 +346,6 @@
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
               <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="app_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,109 +362,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="controlWindow" type="462c0819:PsiDirectoryNode" />
-              <item name="implementation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-              <item name="timeTrack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-              <item name="timeTrack" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
@@ -486,22 +390,10 @@
               <item name="gui" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="musicSwitcher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSwitcher" type="9c53a853:ProjectViewModuleGroupNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,11 +404,11 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Auf&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;dataSer&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LPr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;AF&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;Contr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;ContrW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;PlaProv&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Audi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;ControlW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;Main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;data.ser&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="player&#9;FILE&#9;file:///Users/elumixor/IdeaProjects/musicSwitcher/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java&#10;data&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Auf&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;dataSer&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LPr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;AF&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;Contr&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;ContrW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;PlaProv&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Playlist&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/playList/implementation/PlayListProvider.java&#10;Audi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;ControlW&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java&#10;Main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;data.ser&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;Base&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/ControllerBase.java&#10;IST&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/status/api/IStatusProvider.java&#10;styles&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;dat&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;audio-fi&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/domain/audio-file.ts&#10;Audio&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/AudioFile.java&#10;main&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/Main.java&#10;вфеф&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/services/data.service.ts&#10;LIbrar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/providers/library/implementation/LibraryProvider.java&#10;HttpRes&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/domain/HttpResponse.java&#10;styl&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;image-pre&#9;null&#9;null&#10;theme&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;them&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/theme.scss&#10;style&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;app.mo&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/app.module.ts&#10;sty&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/styles.scss&#10;song&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/business/components/song/song.component.html&#10;songs&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/frontend/src/app/pages/songs/songs.component.html&#10;Librar&#9;FILE&#9;file://C:/Users/vlado/IdeaProjects/musicSwitcher/backend/src/main/java/controllers/LibraryController.java&#10;audioF&#9;PSI&#9;JAVA://domain.AudioFile&#10;audio&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/NetBeansProjects/musicSwitcher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17631918" />
@@ -538,155 +430,6 @@
       <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\backend\src\main\resources\gui" />
       <recent name="C:\Users\vlado\IdeaProjects\musicSwitcher\frontend\src\app\business\components\player" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/compiler.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/modules.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/components/DateHelper.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/providers/control/implementation/ControlProvider.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/providers/library/api/ILibraryProvider.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/java/providers/timeTrack/implementation/TimeTrackProvider.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/3rdpartylicenses.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/frontend/src/app/business/services/data.service.ts</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/add.70c1f25f88664931d999.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/add.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/album.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/next.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/note.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/pause.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/person.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/play.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/playlist.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/repeat.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/save.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/search.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/shuffle.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeDown.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/assets/images/volumeUp.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/favicon.ico</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/main.e967282a83822a111118.bundle.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/next.a9c637fc71c507231d23.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/note.5e7322f92a960613ffb0.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/pause.b66cda73139f51a8c9c8.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/play.dc196d0b438074d040cf.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/repeat.7c212398f7f8785ffab0.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/save.cdb0fa4b203da77fe345.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/shuffle.a3a51e9e5fdd878b1df3.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/volumeDown.a840643d258cc0792f46.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/backend/src/main/resources/static/volumeUp.1faf391537f77aeecfc8.png</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -832,11 +575,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -869,6 +607,8 @@
       <workItem from="1527763510493" duration="574000" />
       <workItem from="1527775751989" duration="9299000" />
       <workItem from="1527798745241" duration="15531000" />
+      <workItem from="1527848164796" duration="579000" />
+      <workItem from="1528356659359" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="Project structure">
       <created>1524416974441</created>
@@ -986,10 +726,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227791000" />
+    <option name="totallyTimeSpent" value="233727000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -997,7 +737,6 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="TypeScript" order="8" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1005,27 +744,29 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5673565" weight="0.32738557" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run Dashboard" order="8" sideWeight="0.61927086" weight="0.11636928" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4994143" weight="0.23584174" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994143" visible="true" weight="0.27540728" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994143" weight="0.2752404" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32971016" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32893717" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24990238" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972847" visible="true" weight="0.24930556" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" sideWeight="0.5027153" side_tool="true" weight="0.24990238" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49980476" weight="0.32971296" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.5673565" weight="0.32738557" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49980476" weight="0.32971296" />
+      <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.32994923" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1075,13 +816,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/status/implementation/StatusProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1089,18 +823,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/musicSwitcher.backend.eml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/musicSwitcher.backend.eml" />
     <entry file="file://$PROJECT_DIR$/backend/musicSwitcher.backend.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/.classpath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/.project">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/.classpath" />
+    <entry file="file://$PROJECT_DIR$/backend/.project" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -1118,8 +846,8 @@
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/util/DateHelper.java" />
     <entry file="file://$PROJECT_DIR$/frontend/.angular-cli.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="8" selection-end-column="55" />
+        <state relative-caret-position="210">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1144,38 +872,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="783" column="34" selection-start-line="783" selection-start-column="34" selection-end-line="783" selection-end-column="34" />
-          <folding>
-            <element signature="e#10351#10352#0" expanded="true" />
-            <element signature="e#10385#10386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/NoSuchElementException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Exception.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/RuntimeException.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Throwable.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/NoSuchElementException.java" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/DateHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1211,20 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="100" column="76" lean-forward="true" selection-start-line="100" selection-start-column="76" selection-end-line="100" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/pages/songs/songs.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1247,67 +933,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/sample.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/settingsWindow.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="11" column="59" lean-forward="true" selection-start-line="11" selection-start-column="59" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/description.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/sample.fxml" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/Controller.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/settingsWindow.iml" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/src/sample/Main.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/description.html" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/compiler.xml" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/settingsWindow/.idea/misc.xml" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/javafx.graphics/com/sun/glass/ui/win/WinApplication.java" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/Controller.java" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/domain/AudioFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
@@ -1326,9 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,16 +972,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/library/implementation/LibraryProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding>
-            <element signature="e#6190#6191#0" expanded="true" />
-            <element signature="e#6224#6225#0" expanded="true" />
-            <element signature="docComment;method#ListFiles#0;class#LibraryProvider#0" />
-            <element signature="method#ListFiles#0;class#LibraryProvider#0" />
-            <element signature="docComment;method#ListSubdirectories#0;class#LibraryProvider#0" />
-            <element signature="method#ListSubdirectories#0;class#LibraryProvider#0" />
-          </folding>
+        <state relative-caret-position="2646">
+          <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1358,17 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="docComment;class#TimeTrackProvider#0" />
-            <element signature="e#585#600#0" />
-            <element signature="e#606#624#0" />
-            <element signature="e#805#826#0" />
-            <element signature="docComment;method#TimeTrackProvider#0;class#TimeTrackProvider#0" />
-            <element signature="method#TimeTrackProvider#0;class#TimeTrackProvider#0" />
-            <element signature="method#track#0;class#TimeTrackProvider#0" />
-            <element signature="docComment;method#prettyProgress#0;class#TimeTrackProvider#0" />
-            <element signature="docComment;method#millisDate#0;class#TimeTrackProvider#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1376,34 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="68" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/gui/sample.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
-          <folding>
-            <element signature="e#3810#3811#0" expanded="true" />
-            <element signature="e#3890#3891#0" expanded="true" />
-            <element signature="e#3945#3946#0" expanded="true" />
-            <element signature="e#3979#3980#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4100#4101#0" expanded="true" />
-            <element signature="e#3856#3872#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1418,20 +1002,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/controllers/PlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/api/IAudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/audioPlayer/implementation/AudioPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/components/gui/controlWindow/implementation/ControlWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2562">
+          <caret line="151" column="15" selection-start-line="151" selection-start-column="15" selection-end-line="151" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#onExit#0;class#ControlWindow#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/providers/playList/implementation/PlayListProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/javafx.media/javafx/scene/media/MediaPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13104">
+          <caret line="722" column="16" selection-start-line="722" selection-start-column="16" selection-end-line="722" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/gui/sample.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1281">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4494">
-          <caret line="243" column="24" selection-start-line="243" selection-start-column="24" selection-end-line="243" selection-end-column="24" />
+        <state relative-caret-position="189">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding>
+            <element signature="e#903#925#0" />
             <element signature="n#!!doc;n#configPath#0;n#Main#0" />
+            <element signature="n#!!doc;n#statusProvider#0;n#Main#0" />
+            <element signature="e#1206#1224#0" />
+            <element signature="e#1797#2238#0" />
             <element signature="docComment;method#main#0;class#Main#0" />
+            <element signature="method#main#0;class#Main#0" />
+            <element signature="e#2728#2750#0" />
+            <element signature="docComment;method#launchControlWindow#0;class#Main#0" />
+            <element signature="method#launchControlWindow#0;class#Main#0" />
+            <element signature="e#3175#3200#0" />
+            <element signature="e#3245#3378#0" />
+            <element signature="e#3414#3681#0" />
+            <element signature="docComment;method#refreshLibrary#0;class#Main#0" />
+            <element signature="method#refreshLibrary#0;class#Main#0" />
+            <element signature="docComment;method#getProviders#0;class#Main#0" />
+            <element signature="method#getProviders#0;class#Main#0" />
+            <element signature="docComment;method#getRootPath#0;class#Main#0" />
+            <element signature="method#getRootPath#0;class#Main#0" />
+            <element signature="docComment;method#getLibraryCache#0;class#Main#0" />
+            <element signature="method#getLibraryCache#0;class#Main#0" />
+            <element signature="e#5338#5679#0" />
+            <element signature="docComment;method#getLibraryFull#0;class#Main#0" />
+            <element signature="method#getLibraryFull#0;class#Main#0" />
+            <element signature="e#6203#6415#0" />
+            <element signature="docComment;method#updateFiles#0;class#Main#0" />
+            <element signature="method#updateFiles#0;class#Main#0" />
+            <element signature="e#6779#6943#0" />
+            <element signature="docComment;method#updateMetadata#0;class#Main#0" />
+            <element signature="method#updateMetadata#0;class#Main#0" />
+            <element signature="e#7717#8028#0" />
+            <element signature="e#8059#8061#0" />
             <element signature="docComment;method#saveCache#0;class#Main#0" />
+            <element signature="method#saveCache#0;class#Main#0" />
+            <element signature="e#8792#8896#0" />
             <element signature="docComment;method#saveConfig#0;class#Main#0" />
             <element signature="method#saveConfig#0;class#Main#0" />
           </folding>

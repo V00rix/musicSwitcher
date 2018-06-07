@@ -14,7 +14,7 @@ public interface IAudioPlayer {
      * @param file File
      */
     default void setFile(AudioFile file) {
-        this.setFile(file.file.toURI().toString(), file.id);
+        this.setFile(file.file.toURI().toASCIIString(), file.id);
     }
 
     /**

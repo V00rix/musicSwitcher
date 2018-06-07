@@ -37,7 +37,6 @@ public class PlayListProvider implements IPlayListProvider, IProviderBase {
     //endregion
 
     //region Constructor
-
     /**
      * New instance of play list provider
      *

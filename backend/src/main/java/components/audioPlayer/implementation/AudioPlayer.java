@@ -48,6 +48,7 @@ public class AudioPlayer extends Application implements IAudioPlayer {
         Media audio = new Media(fileUri);
 
         player = new MediaPlayer(audio);
+        seek(0);
         volume(volume);
     }
     //endregion
